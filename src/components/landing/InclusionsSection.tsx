@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
+import { Check, X, Ship } from "lucide-react";
 
 const included = [
   "Todos os voos internacionais (GRU → SCL → SYD → SCL → GRU)",
@@ -30,8 +30,23 @@ const notIncluded = [
 
 export const InclusionsSection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-navy via-ocean-deep to-navy relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-turquoise/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-turquoise/5 to-transparent" />
+      </div>
+
+      {/* Floating ship icon */}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [0, 3, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+        className="absolute top-20 right-20 text-turquoise/10"
+      >
+        <Ship className="w-32 h-32" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,14 +66,14 @@ export const InclusionsSection = () => {
         </motion.div>
 
         {/* Two Columns */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Included */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="glass-card rounded-2xl p-8 border border-primary/30"
+            className="glass-card rounded-2xl p-8 border border-primary/30 hover:border-primary/50 transition-colors"
           >
             <h3 className="font-display text-2xl font-bold text-primary mb-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -89,7 +104,7 @@ export const InclusionsSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="glass-card rounded-2xl p-8 border border-destructive/30"
+            className="glass-card rounded-2xl p-8 border border-destructive/30 hover:border-destructive/50 transition-colors"
           >
             <h3 className="font-display text-2xl font-bold text-destructive mb-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-destructive/20 flex items-center justify-center">

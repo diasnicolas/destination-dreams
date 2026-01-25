@@ -1,10 +1,24 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, Globe } from "lucide-react";
+import { Phone, Mail, Globe, Anchor } from "lucide-react";
 
 export const FooterSection = () => {
   return (
-    <footer className="py-16 md:py-24 bg-background border-t border-border/30">
-      <div className="container mx-auto px-4">
+    <footer className="py-16 md:py-24 w-full bg-gradient-to-b from-navy to-ocean-deep border-t border-turquoise/20 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+      </div>
+
+      {/* Floating anchor */}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+        className="absolute top-10 right-20 text-turquoise/10"
+      >
+        <Anchor className="w-24 h-24" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +47,7 @@ export const FooterSection = () => {
           </p>
 
           {/* Signature */}
-          <div className="pt-8 border-t border-border/30">
+          <div className="pt-8 border-t border-turquoise/20">
             <p className="text-primary font-display italic text-lg mb-2">
               Bem-vindo à Travessia dos Eleitos.
             </p>
