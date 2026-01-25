@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Award, MapPin, Users, Shield } from "lucide-react";
+import { Award, MapPin, Users, Shield, Compass } from "lucide-react";
 
 const credentials = [
   {
@@ -22,13 +22,24 @@ const credentials = [
 
 export const ConnectionSection = () => {
   return (
-    <section className="py-20 md:py-32 section-ocean relative overflow-hidden">
-      {/* Decorative elements */}
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-ocean-medium to-ocean-deep relative overflow-hidden">
+      {/* Decorative ocean elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-turquoise/10 to-transparent" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
+      {/* Floating compass */}
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        className="absolute top-40 right-20 text-turquoise/10 hidden lg:block"
+      >
+        <Compass className="w-24 h-24" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -39,7 +50,7 @@ export const ConnectionSection = () => {
           >
             <div className="relative">
               {/* Main avatar placeholder */}
-              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-gradient-to-br from-navy-light to-ocean-deep flex items-center justify-center border-4 border-primary/30 shadow-glow">
+              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-gradient-to-br from-ocean-medium to-navy-light flex items-center justify-center border-4 border-primary/30 shadow-glow">
                 <span className="font-display text-6xl md:text-7xl text-primary font-bold">EM</span>
               </div>
               
@@ -97,8 +108,8 @@ export const ConnectionSection = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <credential.icon className="w-4 h-4 text-primary" />
+                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0">
+                    <credential.icon className="w-4 h-4 text-turquoise" />
                   </div>
                   <span className="text-foreground">{credential.text}</span>
                 </motion.div>

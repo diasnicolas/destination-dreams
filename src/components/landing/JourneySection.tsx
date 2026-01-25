@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import sydneyImage from "@/assets/sydney-opera.jpg";
 import polynesiaImage from "@/assets/polynesia-moorea.jpg";
 import hollywoodImage from "@/assets/hollywood.jpg";
+import { MapPin } from "lucide-react";
 
 const acts = [
   {
@@ -50,8 +51,21 @@ Você vive o glamour de Hollywood. E então você volta. Mas você não é mais 
 
 export const JourneySection = () => {
   return (
-    <section className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-navy via-ocean-deep to-navy relative overflow-hidden">
+      {/* Decorative ocean elements */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-turquoise/10 to-transparent" />
+
+      {/* Floating map pin */}
+      <motion.div
+        animate={{ y: [0, -15, 0] }}
+        transition={{ duration: 5, repeat: Infinity }}
+        className="absolute top-40 left-10 text-primary/10"
+      >
+        <MapPin className="w-20 h-20" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -70,7 +84,7 @@ export const JourneySection = () => {
         </motion.div>
 
         {/* Acts */}
-        <div className="space-y-24 md:space-y-32 max-w-6xl mx-auto">
+        <div className="space-y-24 md:space-y-32 max-w-7xl mx-auto">
           {acts.map((act, index) => (
             <motion.div
               key={act.number}
@@ -84,7 +98,7 @@ export const JourneySection = () => {
             >
               {/* Image */}
               <div className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                <div className="relative overflow-hidden rounded-2xl shadow-ocean">
+                <div className="relative overflow-hidden rounded-2xl shadow-ocean border border-turquoise/20">
                   <img
                     src={act.image}
                     alt={act.title}
@@ -105,7 +119,7 @@ export const JourneySection = () => {
               <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
                 <div className="space-y-6">
                   <div>
-                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+                    <span className="text-turquoise font-semibold text-sm tracking-widest uppercase">
                       Ato {act.number}
                     </span>
                     <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-2">
@@ -125,7 +139,7 @@ export const JourneySection = () => {
                     {act.highlights.map((highlight) => (
                       <span
                         key={highlight}
-                        className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
+                        className="px-3 py-1 text-xs font-medium bg-turquoise/10 text-turquoise rounded-full border border-turquoise/20"
                       >
                         {highlight}
                       </span>

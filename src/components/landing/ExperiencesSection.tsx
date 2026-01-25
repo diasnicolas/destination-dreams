@@ -47,12 +47,14 @@ const experiences = [
 
 export const ExperiencesSection = () => {
   return (
-    <section className="py-20 md:py-32 section-ocean relative overflow-hidden">
-      {/* Decorative elements */}
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-navy via-ocean-medium to-navy relative overflow-hidden">
+      {/* Decorative ocean elements */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-turquoise/10 to-transparent" />
       <div className="absolute top-1/4 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-turquoise/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,7 +73,7 @@ export const ExperiencesSection = () => {
         </motion.div>
 
         {/* Experiences Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.title}
@@ -79,7 +81,7 @@ export const ExperiencesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="experience-card glass-card rounded-2xl overflow-hidden group"
+              className="experience-card glass-card rounded-2xl overflow-hidden group border border-turquoise/20 hover:border-primary/40"
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
@@ -91,7 +93,7 @@ export const ExperiencesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                 
                 {/* Emoji overlay */}
-                <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-2xl">
+                <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-2xl border border-primary/30">
                   {experience.emoji}
                 </div>
               </div>
