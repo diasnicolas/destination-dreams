@@ -1,0 +1,142 @@
+import { motion } from "framer-motion";
+import sydneyImage from "@/assets/sydney-opera.jpg";
+import polynesiaImage from "@/assets/polynesia-moorea.jpg";
+import hollywoodImage from "@/assets/hollywood.jpg";
+
+const acts = [
+  {
+    number: "01",
+    title: "O Embarque",
+    subtitle: "Sydney — 4 Noites de Imersão",
+    description: `Você chega em Sydney em 10 de abril. Não é um check-in comum. É uma recepção VIP.
+
+Evandro está esperando você. Ele mostra a verdadeira Sydney — não a turística.
+
+Você visita a Opera House, o Harbour Bridge, The Rocks. Você explora o Royal Botanic Garden.
+
+Mas o momento mais marcante é em Jervis Bay. Você encontra cangurus em seu habitat.`,
+    image: sydneyImage,
+    highlights: ["Opera House", "Jervis Bay", "Cangurus", "Vinícola boutique"],
+  },
+  {
+    number: "02",
+    title: "A Navegação",
+    subtitle: "Anthem of the Seas — 16 Noites de Luxo",
+    description: `Você embarca no Anthem of the Seas. Este não é um cruzeiro comum. É um navio de classe mundial.
+
+Você navega pelo Pacífico Sul. Você para em Bay of Islands, Nova Zelândia. Você explora a Polinésia Francesa.
+
+À noite, você janta em restaurantes de classe mundial. Você assiste a shows de Broadway.
+
+Você chega em Honolulu transformado.`,
+    image: polynesiaImage,
+    highlights: ["Polinésia Francesa", "Nova Zelândia", "Shows de Broadway", "Gastronomia premium"],
+  },
+  {
+    number: "03",
+    title: "O Retorno",
+    subtitle: "Honolulu & Los Angeles — 6 Noites de Glamour",
+    description: `Você desembarca em Honolulu. Você fica no Halekulani, um dos hotéis mais luxuosos do mundo.
+
+Você visita Iolani Palace, o palácio real do Havaí. Você explora Manoa Falls.
+
+Você voa para Los Angeles. Você fica no The Beverly Hills Hotel.
+
+Você vive o glamour de Hollywood. E então você volta. Mas você não é mais o mesmo.`,
+    image: hollywoodImage,
+    highlights: ["Halekulani", "Beverly Hills Hotel", "Hollywood Walk of Fame", "Rodeo Drive"],
+  },
+];
+
+export const JourneySection = () => {
+  return (
+    <section className="py-20 md:py-32 bg-background">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 md:mb-24"
+        >
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+            <span className="text-foreground">A Jornada em </span>
+            <span className="text-gradient-gold">3 Atos</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            27 dias que transformarão sua vida, divididos em três atos inesquecíveis
+          </p>
+        </motion.div>
+
+        {/* Acts */}
+        <div className="space-y-24 md:space-y-32 max-w-6xl mx-auto">
+          {acts.map((act, index) => (
+            <motion.div
+              key={act.number}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
+                index % 2 === 1 ? "lg:grid-flow-dense" : ""
+              }`}
+            >
+              {/* Image */}
+              <div className={`relative ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                <div className="relative overflow-hidden rounded-2xl shadow-ocean">
+                  <img
+                    src={act.image}
+                    alt={act.title}
+                    className="w-full aspect-[4/3] object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                  
+                  {/* Act number overlay */}
+                  <div className="absolute top-6 left-6">
+                    <span className="font-display text-6xl md:text-7xl font-bold text-primary/30">
+                      {act.number}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className={index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
+                <div className="space-y-6">
+                  <div>
+                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">
+                      Ato {act.number}
+                    </span>
+                    <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mt-2 mb-2">
+                      {act.title}
+                    </h3>
+                    <p className="text-primary font-medium">
+                      {act.subtitle}
+                    </p>
+                  </div>
+
+                  <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {act.description}
+                  </div>
+
+                  {/* Highlights */}
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {act.highlights.map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
