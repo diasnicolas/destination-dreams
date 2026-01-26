@@ -10,23 +10,31 @@ import { HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "Como sei que minha segurança está garantida?",
-    answer: "Você viaja com um especialista certificado que conhece cada detalhe da rota. Você tem seguro de viagem Plus Reason com USD 75.000 de cobertura. Você está em um cruzeiro de classe mundial com padrões de segurança internacionais. Evandro está com você 24/7 para qualquer necessidade.",
+    answer: "Você viaja com um especialista certificado pelo Governo Australiano que conhece cada detalhe da rota. Você tem seguro de viagem Plus Reason com USD 75.000 de cobertura médica internacional. Você está em um cruzeiro de classe mundial (Anthem of the Seas) com padrões de segurança internacionais. Evandro está com você 24/7 para qualquer necessidade. Você nunca estará sozinho.",
   },
   {
     question: "Como funciona a logística? Preciso me preocupar com voos, hotéis, traslados?",
-    answer: "Tudo está incluído. Seus voos internacionais saem de São Paulo. Seus hotéis 4-5 estrelas estão reservados. Seus traslados são privativos. Você só precisa fazer as malas e aparecer. Nós cuidamos de todo o resto.",
+    answer: "Tudo está incluído. Seus voos internacionais saem de São Paulo (GRU → SCL → SYD → LAX → SCL → GRU). Seus hotéis 4-5 estrelas (Shangri-La Sydney, Halekulani, The Beverly Hills Hotel) estão reservados. Seus traslados são privativos em cada destino. Você só precisa fazer as malas e aparecer. Nós cuidamos de cada detalhe — do embarque ao retorno.",
   },
   {
     question: "Sou mais velho. Consigo acompanhar o ritmo?",
-    answer: "O ritmo é seu. Há atividades para todos os níveis. Você pode participar de tudo ou escolher o que prefere. Evandro adapta a programação às suas necessidades. O importante é você aproveitar cada momento no seu próprio ritmo.",
+    answer: "O ritmo é seu. Nosso público-alvo são executivos bem-sucedidos e aposentados de alta renda (50+ anos). Há atividades para todos os níveis. Você pode participar de tudo ou escolher o que prefere. Evandro adapta a programação às suas necessidades. Há dias de descanso no cruzeiro. O importante é você aproveitar cada momento no seu próprio ritmo.",
   },
   {
     question: "Não falo inglês. Como vou me comunicar?",
-    answer: "Evandro fala português. Ele é seu intérprete. Ele cuida de todas as comunicações com hotéis, restaurantes, e qualquer situação que surgir. Você nunca ficará sozinho ou sem entender o que está acontecendo.",
+    answer: "Evandro fala português fluente. Ele é seu intérprete pessoal. Ele cuida de todas as comunicações com hotéis, restaurantes, aeroportos, e qualquer situação que surgir. Você nunca ficará sozinho ou sem entender o que está acontecendo. Isso é parte do acompanhamento pessoal que oferecemos.",
   },
   {
     question: "Qual é o preço? Vale a pena?",
-    answer: "O preço é alto porque a qualidade é alta. Mas não é apenas sobre dinheiro. É sobre memórias que você carregará para o resto de sua vida. É sobre experiências que transformam quem você é. Entre em contato para uma consulta privada e discutiremos os detalhes do investimento.",
+    answer: "O investimento é alto porque a qualidade é excepcional. Hotéis 5 estrelas, cruzeiro de luxo, experiências exclusivas, acompanhamento pessoal de um especialista certificado. Mas não é apenas sobre dinheiro. É sobre memórias que você carregará para o resto de sua vida. É sobre experiências que transformam quem você é. Entre em contato para uma consulta privada e discutiremos os detalhes do investimento.",
+  },
+  {
+    question: "Quantas pessoas participam da viagem?",
+    answer: "Apenas 10 cabines e 20 viajantes. É uma experiência exclusiva e íntima. Isso permite que Evandro dê atenção personalizada a cada viajante. As vagas se preenchem rapidamente entre os círculos de elite. Em 2027, teremos apenas UMA saída. Você foi escolhido para receber essa mensagem por uma razão.",
+  },
+  {
+    question: "O que está incluído no preço?",
+    answer: "Todos os voos internacionais, 16 noites no cruzeiro Anthem of the Seas, hospedagem em hotéis 4-5 estrelas, acompanhamento pessoal de Evandro Mendes, city tours, experiências exclusivas (cangurus, golfinhos, vinícola), traslados privativos, seguro viagem USD 75.000, e suporte 24/7. Não estão incluídos: vistos, gorjetas, refeições não mencionadas, e despesas pessoais.",
   },
 ];
 

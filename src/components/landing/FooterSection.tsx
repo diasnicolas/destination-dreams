@@ -36,11 +36,21 @@ export const FooterSection = () => {
             </p>
           </div>
 
-          <p className="text-muted-foreground leading-relaxed">
-            Você sai de São Paulo como você é. Você retorna como alguém diferente. 
-            Renovado. Transformado. Você viveu experiências que poucas pessoas vivem. 
-            Você esteve em lugares que poucos vão.
-          </p>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Você sai de São Paulo como você é. Você retorna como alguém diferente. 
+              <strong className="text-foreground"> Renovado. Transformado.</strong>
+            </p>
+            <p>
+              Você viveu experiências que poucas pessoas vivem. 
+              Você esteve em lugares que poucos vão.
+              Você viu cangurus em seu habitat. Você navegou pela Polinésia Francesa.
+              Você caminhou por Hollywood como protagonista.
+            </p>
+            <p>
+              E essa é uma honra que você carregará para o resto de sua vida.
+            </p>
+          </div>
 
           <p className="text-lg text-foreground font-semibold">
             Você é um dos <span className="text-primary">eleitos</span>.
@@ -62,8 +72,8 @@ export const FooterSection = () => {
             </p>
             <div className="text-sm text-muted-foreground space-y-1 mt-2">
               <p>CEO, WE Travel UK</p>
-              <p>Aussie Specialist — Governo Australiano</p>
-              <p>Cadastur</p>
+              <p>Aussie Specialist — Certificado pelo Governo Australiano</p>
+              <p>Cadastur — Ministério do Turismo do Brasil</p>
             </div>
           </div>
 
