@@ -1,6 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-cruise.jpg";
+import { useState, useEffect } from "react";
+import heroCruise from "@/assets/hero-cruise.jpg";
+import sydneyOpera from "@/assets/sydney-opera.jpg";
+import polynesiaMoorea from "@/assets/polynesia-moorea.jpg";
+import honolulu from "@/assets/honolulu.jpg";
+import hollywood from "@/assets/hollywood.jpg";
+
+const heroImages = [
+  { src: heroCruise, alt: "Cruzeiro de luxo ao pôr do sol" },
+  { src: sydneyOpera, alt: "Sydney Opera House" },
+  { src: polynesiaMoorea, alt: "Polinésia Francesa - Moorea" },
+  { src: honolulu, alt: "Honolulu, Havaí" },
+  { src: hollywood, alt: "Hollywood, Los Angeles" },
+];
 
 const highlights = [
   {
@@ -26,19 +39,52 @@ const highlights = [
 ];
 
 export const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Images with Crossfade */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Cruzeiro de luxo ao pôr do sol"
-          className="w-full h-full object-cover"
-        />
+        <AnimatePresence mode="popLayout">
+          <motion.img
+            key={currentImageIndex}
+            src={heroImages[currentImageIndex].src}
+            alt={heroImages[currentImageIndex].alt}
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          />
+        </AnimatePresence>
         <div className="hero-overlay absolute inset-0" />
         
         {/* Wave pattern overlay */}
         <div className="absolute inset-0 wave-pattern" />
+        
+        {/* Image indicators */}
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentImageIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentImageIndex 
+                  ? "bg-primary w-6" 
+                  : "bg-white/40 hover:bg-white/60"
+              }`}
+              aria-label={`Ver imagem ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Content */}
