@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Play, Volume2, VolumeX } from "lucide-react";
 
-// Video testimonials data - usando vídeos placeholder (URLs de demonstração)
+// Video testimonials data - dados do PDF original
 const videoTestimonials = [
   {
     id: 1,
     videoUrl: "https://videos.pexels.com/video-files/4058343/4058343-uhd_1440_2560_25fps.mp4",
     thumbnail: "https://images.pexels.com/videos/4058343/free-video-4058343.jpg",
     author: "Roberto Almeida",
-    role: "Empresário, 58 anos",
-    quote: "Viajei para mais de 40 países. Mas essa jornada foi diferente.",
+    role: "Empresário, 58 anos • Mais de 40 países visitados",
+    quote: "Viajei para mais de 40 países. Mas essa jornada foi diferente. A expertise de Evandro transformou a forma como vejo a Austrália. Ele não é um guia turístico. Ele é um especialista que conhece cada detalhe.",
+    rating: 5,
   },
   {
     id: 2,
@@ -18,15 +19,17 @@ const videoTestimonials = [
     thumbnail: "https://images.pexels.com/videos/4057481/free-video-4057481.jpg",
     author: "Maria & José Santos",
     role: "Casal aposentado, 62 e 60 anos",
-    quote: "35 anos de casamento e essa viagem renovou nossa relação.",
+    quote: "Evandro cuidou de cada detalhe. Os momentos em Moorea foram os mais bonitos da nossa vida. 35 anos de casamento e essa viagem renovou nossa relação.",
+    rating: 5,
   },
   {
     id: 3,
     videoUrl: "https://videos.pexels.com/video-files/4536994/4536994-uhd_1440_2560_25fps.mp4",
     thumbnail: "https://images.pexels.com/videos/4536994/free-video-4536994.jpg",
     author: "Carla Mendonça",
-    role: "Executiva, 55 anos",
-    quote: "Já estive em mais de 50 países. Essa jornada superou todas as expectativas.",
+    role: "Executiva, 55 anos • Mais de 50 países visitados",
+    quote: "Já estive em mais de 50 países. Essa jornada superou todas as expectativas. Especialmente os momentos com Evandro. Ele realmente conhece a Austrália.",
+    rating: 5,
   },
   {
     id: 4,
@@ -34,7 +37,8 @@ const videoTestimonials = [
     thumbnail: "https://images.pexels.com/videos/5206966/pexels-photo-5206966.jpeg",
     author: "Fernando Costa",
     role: "Médico, 52 anos",
-    quote: "A experiência mais transformadora da minha vida.",
+    quote: "A experiência mais transformadora da minha vida. Você sai de São Paulo como você é. Você retorna como alguém diferente. Renovado.",
+    rating: 5,
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const videoTestimonials = [
     thumbnail: "https://images.pexels.com/videos/4057567/free-video-4057567.jpg",
     author: "Ana Paula Ferreira",
     role: "Advogada, 48 anos",
-    quote: "Cada momento foi pensado para criar memórias inesquecíveis.",
+    quote: "Cada momento foi pensado para criar memórias inesquecíveis. Não é turismo. É uma jornada de renovação.",
+    rating: 5,
   },
 ];
 

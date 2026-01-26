@@ -1,22 +1,49 @@
 import { motion } from "framer-motion";
-import { Award, MapPin, Users, Shield, Compass } from "lucide-react";
+import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
 
 const credentials = [
   {
     icon: Award,
-    text: "Especialista certificado em turismo australiano",
+    text: "Aussie Travel Specialist — Certificação oficial do Governo Australiano",
   },
   {
     icon: MapPin,
-    text: "3 anos de vivência em Sydney",
+    text: "3 anos de vivência em Sydney — conhece cada rua, cada história, cada segredo",
   },
   {
     icon: Users,
-    text: "Acompanhamento pessoal do embarque ao retorno",
+    text: "Acompanhamento pessoal do embarque ao retorno — não delega, não terceiriza",
   },
   {
     icon: Shield,
-    text: "Histórico de grupos bem-sucedidos",
+    text: "Histórico de grupos bem-sucedidos — viajantes satisfeitos e transformados",
+  },
+];
+
+const certifications = [
+  {
+    icon: Award,
+    name: "Aussie Travel Specialist",
+    issuer: "Governo Australiano",
+    description: "Certificação oficial para especialistas em turismo australiano",
+  },
+  {
+    icon: BadgeCheck,
+    name: "Cadastur",
+    issuer: "Ministério do Turismo (Brasil)",
+    description: "Cadastro oficial de profissionais de turismo",
+  },
+  {
+    icon: Globe,
+    name: "3 Anos em Sydney",
+    issuer: "Vivência Autêntica",
+    description: "Conhecimento profundo da cultura e destinos australianos",
+  },
+  {
+    icon: Briefcase,
+    name: "CEO, WE Travel UK",
+    issuer: "Empresa Premium",
+    description: "Especialista em viagens premium para brasileiros",
   },
 ];
 
@@ -70,6 +97,14 @@ export const ConnectionSection = () => {
               >
                 <span className="text-xs font-semibold text-primary">Cadastur</span>
               </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute top-1/2 -right-8 md:right-[-60px] glass-card px-4 py-2 rounded-full border border-turquoise/30 hidden md:block"
+              >
+                <span className="text-xs font-semibold text-turquoise">CEO WE Travel UK</span>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -80,6 +115,9 @@ export const ConnectionSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <span className="text-turquoise font-semibold text-sm tracking-widest uppercase mb-4 block">
+              Quem Guia Sua Jornada
+            </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Sua jornada é </span>
               <span className="text-gradient-gold">orquestrada</span>
@@ -88,12 +126,16 @@ export const ConnectionSection = () => {
             <div className="space-y-4 mb-8 text-muted-foreground">
               <p className="text-lg leading-relaxed">
                 <strong className="text-foreground">Evandro Mendes</strong> não é um guia turístico. 
-                É o CEO da WE Travel UK e um <strong className="text-primary">Aussie Specialist certificado</strong>.
+                É o CEO da WE Travel UK e um <strong className="text-primary">Aussie Specialist certificado pelo Governo Australiano</strong>.
               </p>
               <p className="text-lg leading-relaxed">
-                Viveu <strong className="text-foreground">3 anos em Sydney</strong>. 
-                Conhece cada rua, cada história, cada segredo. 
-                E <strong className="text-primary">acompanha pessoalmente</strong>.
+                Esta certificação é uma das mais respeitadas no turismo australiano. 
+                Apenas profissionais como Evandro a receberam porque <strong className="text-foreground">viveu 3 anos em Sydney</strong>, 
+                porque conhece cada detalhe do país.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Ele acompanha <strong className="text-primary">pessoalmente</strong> cada grupo.
+                Ele não delega. Ele não terceiriza. Ele está com você.
               </p>
             </div>
 
@@ -106,17 +148,44 @@ export const ConnectionSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center gap-3"
+                  className="flex items-start gap-3"
                 >
-                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <credential.icon className="w-4 h-4 text-turquoise" />
                   </div>
-                  <span className="text-foreground">{credential.text}</span>
+                  <span className="text-foreground text-sm leading-relaxed">{credential.text}</span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
+
+        {/* Certifications Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto"
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <cert.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
+              <p className="text-xs text-primary mb-1">{cert.issuer}</p>
+              <p className="text-xs text-muted-foreground line-clamp-2">{cert.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

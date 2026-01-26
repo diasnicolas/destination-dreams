@@ -8,44 +8,47 @@ const acts = [
   {
     number: "01",
     title: "O Embarque",
-    subtitle: "Sydney — 4 Noites de Imersão",
-    description: `Você chega em Sydney em 10 de abril. Não é um check-in comum. É uma recepção VIP.
+    subtitle: "Sydney — 4 Noites de Imersão Australiana",
+    description: `Você chega em Sydney em 10 de abril. Não é um check-in comum. É uma recepção VIP no aeroporto.
 
-Evandro está esperando você. Ele mostra a verdadeira Sydney — não a turística.
+Evandro está esperando você. Ele mostra a verdadeira Sydney — não a turística. A Opera House por dentro. O Harbour Bridge com suas histórias. The Rocks, o bairro histórico. O Royal Botanic Garden com plantas nativas.
 
-Você visita a Opera House, o Harbour Bridge, The Rocks. Você explora o Royal Botanic Garden.
+Mas o momento mais marcante é em Jervis Bay. Você encontra cangurus em seu habitat natural. Você vê golfinhos em passeio privativo. Você almoça na Crooked River Estate com vinhos australianos.
 
-Mas o momento mais marcante é em Jervis Bay. Você encontra cangurus em seu habitat.`,
+No quarto dia, você embarca no Anthem of the Seas. Pronto para cruzar o Pacífico.`,
     image: sydneyImage,
-    highlights: ["Opera House", "Jervis Bay", "Cangurus", "Vinícola boutique"],
+    highlights: ["Recepção VIP", "Opera House", "Jervis Bay", "Cangurus livres", "Golfinhos", "Vinícola boutique"],
+    stats: { nights: 4, hotel: "Shangri-La Sydney 5★" },
   },
   {
     number: "02",
     title: "A Navegação",
-    subtitle: "Anthem of the Seas — 16 Noites de Luxo",
-    description: `Você embarca no Anthem of the Seas. Este não é um cruzeiro comum. É um navio de classe mundial.
+    subtitle: "Anthem of the Seas — 16 Noites de Luxo Transpacífico",
+    description: `Você embarca no Anthem of the Seas. Este não é um cruzeiro comum. É um navio de classe mundial com capacidade para 4.000 passageiros, mas seu grupo é de apenas 20 viajantes + Evandro.
 
-Você navega pelo Pacífico Sul. Você para em Bay of Islands, Nova Zelândia. Você explora a Polinésia Francesa.
+Você navega pelo Pacífico Sul. Você para em Bay of Islands, Nova Zelândia — paisagens espetaculares e cultura Maori. Você explora 3 ilhas da Polinésia Francesa: Papeete, Moorea e Raiatea. Snorkel em águas cristalinas. Almoço em bungalow à beira-mar.
 
-À noite, você janta em restaurantes de classe mundial. Você assiste a shows de Broadway.
+À noite, você janta em restaurantes de classe mundial. Você assiste a shows de Broadway. Você tem dias em alto-mar para descansar, refletir, renovar-se. Você cruza a Linha Internacional de Data.
 
 Você chega em Honolulu transformado.`,
     image: polynesiaImage,
-    highlights: ["Polinésia Francesa", "Nova Zelândia", "Shows de Broadway", "Gastronomia premium"],
+    highlights: ["Bay of Islands", "Papeete", "Moorea", "Raiatea", "Shows de Broadway", "Cruzamento da Linha de Data"],
+    stats: { nights: 16, hotel: "Anthem of the Seas" },
   },
   {
     number: "03",
     title: "O Retorno",
     subtitle: "Honolulu & Los Angeles — 6 Noites de Glamour",
-    description: `Você desembarca em Honolulu. Você fica no Halekulani, um dos hotéis mais luxuosos do mundo.
+    description: `Você desembarca em Honolulu. Você fica no Halekulani, um dos hotéis mais luxuosos do mundo. Jantar à beira-mar com culinária havaiana.
 
-Você visita Iolani Palace, o palácio real do Havaí. Você explora Manoa Falls.
+Você visita Iolani Palace, o único palácio real dos Estados Unidos. Honolulu Museum of Art. Manoa Falls, uma cachoeira de 64 metros. Waikiki Beach. Jantar de despedida no La Mer at Halekulani.
 
-Você voa para Los Angeles. Você fica no The Beverly Hills Hotel.
+Você voa para Los Angeles. Você fica no The Beverly Hills Hotel. Hollywood Walk of Fame. TCL Chinese Theatre com pegadas de celebridades. Dolby Theatre, o palco do Oscar. Rodeo Drive com Gucci, Louis Vuitton, Prada. Beverly Hills Mansion Tour.
 
-Você vive o glamour de Hollywood. E então você volta. Mas você não é mais o mesmo.`,
+Jantar final no Nobu Malibu ou Mastro's com Wagyu Beef. E então você volta para São Paulo. Mas você não é mais o mesmo.`,
     image: hollywoodImage,
-    highlights: ["Halekulani", "Beverly Hills Hotel", "Hollywood Walk of Fame", "Rodeo Drive"],
+    highlights: ["Halekulani 5★", "Iolani Palace", "Beverly Hills Hotel 5★", "Walk of Fame", "Rodeo Drive", "Nobu Malibu"],
+    stats: { nights: 6, hotel: "Halekulani + Beverly Hills Hotel" },
   },
 ];
 

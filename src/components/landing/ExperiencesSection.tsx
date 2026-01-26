@@ -10,38 +10,58 @@ const experiences = [
   {
     emoji: "🦘",
     title: "Cangurus em Habitat Natural",
-    description: "Interação autêntica com cangurus livres em Jervis Bay. Uma experiência que não é encenada. Você está na natureza. Este é um momento que ficará com você para sempre.",
+    description: "Interação autêntica com cangurus livres em Jervis Bay. Você não está em um zoológico. Você está na natureza. Os cangurus estão livres. Este é um momento que ficará com você para sempre.",
     image: kangaroosImage,
+    location: "Jervis Bay, Austrália",
   },
   {
     emoji: "🐬",
     title: "Avistamento de Golfinhos",
-    description: "Passeio privativo em barco para observar golfinhos em seu habitat natural. Águas cristalinas e momentos mágicos. Uma experiência que transforma sua perspectiva sobre a vida.",
+    description: "Passeio privativo em barco para observar golfinhos em seu habitat natural. Você está em um barco privativo com apenas 20 pessoas. Águas azul-turquesa. Momento mágico. Uma experiência que transforma sua perspectiva sobre a vida.",
     image: dolphinsImage,
+    location: "Jervis Bay, Austrália",
   },
   {
     emoji: "🍷",
     title: "Almoço em Vinícola Boutique",
-    description: "Crooked River Estate com almoço harmonizado em vinhos locais. Vista para vinhedos. Uma celebração da boa vida.",
+    description: "Crooked River Estate com almoço harmonizado em vinhos locais. Vista para vinhedos. Entrada de queijos e embutidos locais. Cordeiro grelhado com vegetais. Mousse de chocolate. Seleção de vinhos australianos. Uma celebração da boa vida.",
     image: wineryImage,
+    location: "Hunter Valley, Austrália",
+  },
+  {
+    emoji: "🏔️",
+    title: "Blue Mountains",
+    description: "Exploração das montanhas azuis com guia especializado. Paisagens espetaculares e natureza australiana intocada. Você caminha através de florestas. Você vê cachoeiras. Você observa vistas que tiram o fôlego. Uma jornada de descoberta e renovação.",
+    image: kangaroosImage,
+    location: "Blue Mountains, Austrália",
   },
   {
     emoji: "🌊",
     title: "Polinésia Francesa",
-    description: "3 ilhas paradisíacas: Papeete, Moorea e Raiatea. O coração do paraíso em um cruzeiro de classe mundial. Uma experiência que redefine o conceito de beleza.",
+    description: "3 ilhas paradisíacas: Papeete, Moorea e Raiatea. O coração do paraíso em um cruzeiro de classe mundial. Você navega pelas águas mais bonitas do mundo. Snorkel, praias, bungalows à beira-mar. Uma experiência que redefine o conceito de beleza.",
     image: polynesiaImage,
+    location: "Taiti, Moorea, Raiatea",
   },
   {
     emoji: "🌴",
     title: "Honolulu & Diamond Head",
-    description: "Iolani Palace, Manoa Falls, e o Halekulani, um dos hotéis mais luxuosos do mundo. O glamour havaiano em sua essência mais pura.",
+    description: "Iolani Palace, o palácio real do Havaí. Honolulu Museum of Art. Manoa Falls, uma cachoeira de 64 metros. Waikiki Beach. E o Halekulani, um dos hotéis mais luxuosos do mundo. O glamour havaiano em sua essência mais pura.",
     image: honoluluImage,
+    location: "Honolulu, Havaí",
   },
   {
     emoji: "✨",
     title: "Hollywood & Beverly Hills",
-    description: "Walk of Fame, TCL Chinese Theatre, Rodeo Drive. The Beverly Hills Hotel. Você vive o glamour de Hollywood como protagonista.",
+    description: "Walk of Fame com estrelas de celebridades. TCL Chinese Theatre com pegadas históricas. Dolby Theatre, palco do Oscar. Rodeo Drive com Gucci, Louis Vuitton, Prada, Chanel. The Beverly Hills Hotel. Você vive o glamour de Hollywood como protagonista.",
     image: hollywoodImage,
+    location: "Los Angeles, CA",
+  },
+  {
+    emoji: "🛳️",
+    title: "Luxo Inabalável",
+    description: "Hotéis 5 estrelas: Shangri-La Sydney, Halekulani, The Beverly Hills Hotel. Anthem of the Seas, um navio de classe mundial. Gastronomia de classe mundial. Shows de Broadway. Spas e relaxamento. Você vive o luxo em cada momento.",
+    image: polynesiaImage,
+    location: "Toda a jornada",
   },
 ];
 
@@ -73,7 +93,7 @@ export const ExperiencesSection = () => {
         </motion.div>
 
         {/* Experiences Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.title}
@@ -84,7 +104,7 @@ export const ExperiencesSection = () => {
               className="experience-card glass-card rounded-2xl overflow-hidden group border border-turquoise/20 hover:border-primary/40"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 <img
                   src={experience.image}
                   alt={experience.title}
@@ -93,17 +113,22 @@ export const ExperiencesSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                 
                 {/* Emoji overlay */}
-                <div className="absolute bottom-4 left-4 w-12 h-12 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-2xl border border-primary/30">
+                <div className="absolute bottom-4 left-4 w-10 h-10 rounded-full bg-background/80 backdrop-blur flex items-center justify-center text-xl border border-primary/30">
                   {experience.emoji}
+                </div>
+
+                {/* Location badge */}
+                <div className="absolute top-3 right-3 px-2 py-1 rounded-full bg-background/60 backdrop-blur text-xs text-primary">
+                  {experience.location}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="font-display text-xl font-bold text-foreground mb-3">
+              <div className="p-5">
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">
                   {experience.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-4">
                   {experience.description}
                 </p>
               </div>
