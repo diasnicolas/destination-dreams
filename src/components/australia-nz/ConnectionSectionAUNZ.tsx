@@ -1,0 +1,236 @@
+import { motion } from "framer-motion";
+import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
+import donoImage from "@/assets/dono.webp";
+
+const credentials = [
+  {
+    icon: MapPin,
+    text: "3 anos vivendo em Sydney — conhece a Austrália como ninguém",
+  },
+  {
+    icon: Globe,
+    text: "8 anos de experiência em Londres — perspectiva global",
+  },
+  {
+    icon: Award,
+    text: "Mais de 50 países visitados — roteiros testados pessoalmente",
+  },
+  {
+    icon: Users,
+    text: "Centenas de clientes satisfeitos — viajantes transformados",
+  },
+];
+
+const discoveries = [
+  "Guias locais que conhecem lugares que turistas nunca vão",
+  "Experiências com animais selvagens em habitat natural",
+  "Vinícolas escondidas com os melhores vinhos da Austrália",
+  "Pontos de avistamento de golfinhos que só os locais conhecem",
+  "Roteiros que respeitam a natureza e a cultura aborígine",
+];
+
+const certifications = [
+  {
+    icon: Award,
+    name: "Aussie Travel Specialist",
+    issuer: "Governo Australiano",
+    description: "Certificação oficial para especialistas",
+  },
+  {
+    icon: BadgeCheck,
+    name: "Cadastur",
+    issuer: "Ministério do Turismo",
+    description: "Cadastro oficial de profissionais",
+  },
+  {
+    icon: Globe,
+    name: "3 Anos em Sydney",
+    issuer: "Vivência Autêntica",
+    description: "Conhecimento profundo da Oceania",
+  },
+  {
+    icon: Briefcase,
+    name: "CEO, WE Travel UK",
+    issuer: "Empresa Premium",
+    description: "Viagens de alto padrão",
+  },
+];
+
+export const ConnectionSectionAUNZ = () => {
+  return (
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-ocean-medium to-ocean-deep relative overflow-hidden">
+      {/* Decorative ocean elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+
+      {/* Floating compass */}
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        className="absolute top-40 right-20 text-turquoise/10 hidden lg:block"
+      >
+        <Compass className="w-24 h-24" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative">
+              {/* Main avatar image */}
+              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
+                <img 
+                  src={donoImage} 
+                  alt="Evandro Mendes" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Floating badges */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -top-4 -right-4 md:top-4 md:right-0 glass-card px-4 py-2 rounded-full border border-primary/30"
+              >
+                <span className="text-xs font-semibold text-primary">3 Anos em Sydney</span>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="absolute -bottom-4 -left-4 md:bottom-4 md:left-0 glass-card px-4 py-2 rounded-full border border-primary/30"
+              >
+                <span className="text-xs font-semibold text-primary">Aussie Specialist</span>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute top-1/2 -right-8 md:right-[-60px] glass-card px-4 py-2 rounded-full border border-turquoise/30 hidden md:block"
+              >
+                <span className="text-xs font-semibold text-turquoise">50+ países</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-turquoise font-semibold text-sm tracking-widest uppercase mb-4 block">
+              Quem Criou Este Roteiro
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <span className="text-foreground">Quem Sou Eu Para </span>
+              <span className="text-gradient-gold">Criar Esse Roteiro?</span>
+            </h2>
+
+            <div className="space-y-4 mb-8 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                Meu nome é <strong className="text-foreground">Evandro Mendes</strong>. 
+                Sou fundador da We Travel UK.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Eu passei <strong className="text-primary">3 ANOS em Sydney</strong>. 
+                Explorei cada canto dessa cidade. Criei experiências que você 
+                <strong className="text-foreground"> NÃO VAI ENCONTRAR</strong> em outro roteiro.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Viajei por mais de <strong className="text-primary">50 países</strong>. 
+                Conheci as melhores agências do mundo. Mas foi em Sydney que entendi 
+                o que significa criar um roteiro transformador.
+              </p>
+            </div>
+
+            {/* Credentials List */}
+            <div className="space-y-3">
+              {credentials.map((credential, index) => (
+                <motion.div
+                  key={credential.text}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <credential.icon className="w-4 h-4 text-turquoise" />
+                  </div>
+                  <span className="text-foreground text-sm leading-relaxed">{credential.text}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* What I Discovered Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="glass-card rounded-2xl p-8 md:p-12 mt-16 max-w-4xl mx-auto border border-primary/20"
+        >
+          <h3 className="font-display text-2xl font-bold text-center text-foreground mb-6">
+            O Que Eu Descobri em Sydney
+          </h3>
+          <div className="space-y-3">
+            {discoveries.map((discovery, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="flex items-center gap-3"
+              >
+                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                <span className="text-muted-foreground">{discovery}</span>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-center text-lg text-foreground font-display mt-6">
+            Tudo isso eu trouxe para esse roteiro. Porque você merecia viver a 
+            <span className="text-primary font-bold"> verdadeira Austrália</span>.
+          </p>
+        </motion.div>
+
+        {/* Certifications Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-5xl mx-auto"
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <cert.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
+              <p className="text-xs text-primary mb-1">{cert.issuer}</p>
+              <p className="text-xs text-muted-foreground">{cert.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
