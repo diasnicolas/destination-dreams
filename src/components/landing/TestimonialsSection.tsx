@@ -1,52 +1,49 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, Play, Volume2, VolumeX } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight, Play, Volume2, VolumeX, Pause } from "lucide-react";
 
-// Video testimonials data - dados do PDF original
+// Video testimonials data - IDs do YouTube
 const videoTestimonials = [
   {
     id: 1,
-    videoUrl: "https://videos.pexels.com/video-files/4058343/4058343-uhd_1440_2560_25fps.mp4",
-    thumbnail: "https://images.pexels.com/videos/4058343/free-video-4058343.jpg",
-    author: "Roberto Almeida",
-    role: "Empresário, 58 anos • Mais de 40 países visitados",
-    quote: "Viajei para mais de 40 países. Mas essa jornada foi diferente. A expertise de Evandro transformou a forma como vejo a Austrália. Ele não é um guia turístico. Ele é um especialista que conhece cada detalhe.",
+    youtubeId: "zt1AWYoak9M",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/NILZA-V1.webp",
     rating: 5,
   },
   {
     id: 2,
-    videoUrl: "https://videos.pexels.com/video-files/4057481/4057481-uhd_1440_2560_25fps.mp4",
-    thumbnail: "https://images.pexels.com/videos/4057481/free-video-4057481.jpg",
-    author: "Maria & José Santos",
-    role: "Casal aposentado, 62 e 60 anos",
-    quote: "Evandro cuidou de cada detalhe. Os momentos em Moorea foram os mais bonitos da nossa vida. 35 anos de casamento e essa viagem renovou nossa relação.",
+    youtubeId: "lZGfewjR8NU",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/MARCIA-V1.webp",
     rating: 5,
   },
   {
     id: 3,
-    videoUrl: "https://videos.pexels.com/video-files/4536994/4536994-uhd_1440_2560_25fps.mp4",
-    thumbnail: "https://images.pexels.com/videos/4536994/free-video-4536994.jpg",
-    author: "Carla Mendonça",
-    role: "Executiva, 55 anos • Mais de 50 países visitados",
-    quote: "Já estive em mais de 50 países. Essa jornada superou todas as expectativas. Especialmente os momentos com Evandro. Ele realmente conhece a Austrália.",
+    youtubeId: "eDH59WZtY8I",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/ELIANA-V1.webp",
     rating: 5,
   },
   {
     id: 4,
-    videoUrl: "https://videos.pexels.com/video-files/5206966/5206966-uhd_1440_2560_25fps.mp4",
-    thumbnail: "https://images.pexels.com/videos/5206966/pexels-photo-5206966.jpeg",
-    author: "Fernando Costa",
-    role: "Médico, 52 anos",
-    quote: "A experiência mais transformadora da minha vida. Você sai de São Paulo como você é. Você retorna como alguém diferente. Renovado.",
+    youtubeId: "smY8udqeLEM",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/TAIS-V1.webp",
     rating: 5,
   },
   {
     id: 5,
-    videoUrl: "https://videos.pexels.com/video-files/4057567/4057567-uhd_1440_2560_25fps.mp4",
-    thumbnail: "https://images.pexels.com/videos/4057567/free-video-4057567.jpg",
-    author: "Ana Paula Ferreira",
-    role: "Advogada, 48 anos",
-    quote: "Cada momento foi pensado para criar memórias inesquecíveis. Não é turismo. É uma jornada de renovação.",
+    youtubeId: "2mo0BZ2rq4g",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/LUNA-V1.webp",
+    rating: 5,
+  },
+  {
+    id: 6,
+    youtubeId: "DKfHPBgQpj8",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/DANI-V1.webp",
+    rating: 5,
+  },
+  {
+    id: 7,
+    youtubeId: "1_s1-_o7uCE",
+    thumbnail: "https://wetraveluk.com.br/grupo/wp-content/uploads/2025/08/ELIANA-2-V1.webp",
     rating: 5,
   },
 ];
@@ -54,14 +51,21 @@ const videoTestimonials = [
 interface VideoCardProps {
   testimonial: typeof videoTestimonials[0];
   isActive?: boolean;
+  isPlaying: boolean;
+  onPlay: (id: number) => void;
+  onPause: () => void;
 }
 
-const VideoCard = ({ testimonial, isActive = false }: VideoCardProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+const VideoCard = ({ testimonial, isActive = false, isPlaying, onPlay, onPause }: VideoCardProps) => {
   const [isMuted, setIsMuted] = useState(true);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const handlePlayClick = () => {
-    setIsPlaying(true);
+    if (isPlaying) {
+      onPause();
+    } else {
+      onPlay(testimonial.id);
+    }
   };
 
   const toggleMute = (e: React.MouseEvent) => {
@@ -69,13 +73,51 @@ const VideoCard = ({ testimonial, isActive = false }: VideoCardProps) => {
     setIsMuted(!isMuted);
   };
 
+  // Gera a URL do iframe do YouTube otimizada para vertical
+  const getYouTubeIframeUrl = (playing: boolean) => {
+    const baseUrl = `https://www.youtube.com/embed/${testimonial.youtubeId}`;
+    const params = new URLSearchParams({
+      autoplay: playing ? '1' : '0',
+      mute: isMuted ? '1' : '0',
+      controls: '0',
+      modestbranding: '1',
+      rel: '0',
+      playsinline: '1',
+      enablejsapi: '1',
+      origin: window.location.origin,
+      iv_load_policy: '3',
+      fs: '0',
+      autohide: '1',
+      showinfo: '0',
+      vq: 'hd720',
+    });
+    
+    return `${baseUrl}?${params.toString()}`;
+  };
+
+  // Atualiza o iframe quando o estado de play muda
+  useEffect(() => {
+    if (iframeRef.current && iframeRef.current.src) {
+      // Para pausar o vídeo, recarregamos o iframe sem autoplay
+      iframeRef.current.src = getYouTubeIframeUrl(isPlaying);
+    }
+  }, [isPlaying, isMuted]);
+
+  if (!testimonial.youtubeId || testimonial.youtubeId.length !== 11) {
+    return (
+      <div className={`aspect-[9/16] rounded-2xl overflow-hidden bg-navy border-2 border-border/30 flex items-center justify-center`}>
+        <p className="text-muted-foreground text-center p-4">Vídeo indisponível</p>
+      </div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`relative aspect-[9/16] rounded-2xl overflow-hidden bg-navy border-2 transition-all duration-300 ${
+      className={`relative aspect-[9/16] rounded-2xl overflow-hidden bg-black border-2 transition-all duration-300 flex-shrink-0 ${
         isActive ? "border-primary shadow-gold" : "border-border/30"
       }`}
     >
@@ -84,63 +126,84 @@ const VideoCard = ({ testimonial, isActive = false }: VideoCardProps) => {
           {/* Thumbnail */}
           <img
             src={testimonial.thumbnail}
-            alt={testimonial.author}
+            alt="Depoimento"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
+          
+          {/* Overlay escuro para melhor legibilidade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
           
           {/* Play Button Overlay */}
           <div 
             onClick={handlePlayClick}
-            className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent flex flex-col items-center justify-center cursor-pointer group"
+            className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer group"
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center mb-4 group-hover:bg-primary transition-colors shadow-gold"
+              className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:bg-primary transition-colors shadow-2xl shadow-primary/50"
             >
               <Play className="w-7 h-7 text-primary-foreground ml-1" fill="currentColor" />
             </motion.div>
-            
-            {/* Quote */}
-            <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="text-sm text-foreground font-display italic mb-2 line-clamp-2">
-                "{testimonial.quote}"
-              </p>
-              <p className="text-sm font-semibold text-primary">{testimonial.author}</p>
-              <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-            </div>
           </div>
         </>
       ) : (
-        <>
-          {/* Video Player */}
-          <video
-            src={testimonial.videoUrl}
-            autoPlay
-            loop
-            muted={isMuted}
-            playsInline
-            className="w-full h-full object-cover"
-          />
+        <div className="w-full h-full relative bg-black">
+          {/* Container para vídeo vertical */}
+          <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+            <iframe
+              ref={iframeRef}
+              src={getYouTubeIframeUrl(true)}
+              title="Depoimento"
+              className="absolute w-[177.78%] h-full max-w-none"
+              style={{
+                height: '100%',
+                width: '177.78%',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                objectFit: 'cover',
+              }}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+            
+            {/* Overlay para cortar bordas laterais */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
+          </div>
           
           {/* Video Controls */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background to-transparent">
-            <div className="flex items-center justify-between mb-2">
+          <div className="absolute inset-0 flex flex-col justify-end p-4 bg-gradient-to-t from-black via-black/40 to-transparent z-10">
+            <div className="flex items-center justify-between">
+              <button
+                onClick={handlePlayClick}
+                className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center hover:bg-black/80 transition-all duration-300 z-20 pointer-events-auto backdrop-blur-sm border border-white/20 hover:border-primary/50"
+              >
+                <Pause className="w-6 h-6 text-white" />
+              </button>
+              
               <button
                 onClick={toggleMute}
-                className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center hover:bg-muted transition-colors"
+                className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center hover:bg-black/80 transition-all duration-300 z-20 pointer-events-auto backdrop-blur-sm border border-white/20 hover:border-primary/50"
               >
                 {isMuted ? (
-                  <VolumeX className="w-5 h-5 text-foreground" />
+                  <VolumeX className="w-6 h-6 text-white" />
                 ) : (
-                  <Volume2 className="w-5 h-5 text-foreground" />
+                  <Volume2 className="w-6 h-6 text-white" />
                 )}
               </button>
             </div>
-            <p className="text-sm font-semibold text-primary">{testimonial.author}</p>
-            <p className="text-xs text-muted-foreground">{testimonial.role}</p>
           </div>
-        </>
+          
+          {/* Indicador de que é um vídeo */}
+          <div className="absolute top-4 right-4 z-10">
+            <div className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/20">
+              <span className="text-xs text-white font-medium">VÍDEO</span>
+            </div>
+          </div>
+        </div>
       )}
     </motion.div>
   );
@@ -148,19 +211,66 @@ const VideoCard = ({ testimonial, isActive = false }: VideoCardProps) => {
 
 export const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const goToPrevious = () => {
-    setCurrentIndex(currentIndex === 0 ? videoTestimonials.length - 1 : currentIndex - 1);
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePlay = (id: number) => {
+    setPlayingVideoId(id);
   };
 
-  const goToNext = () => {
-    setCurrentIndex(currentIndex === videoTestimonials.length - 1 ? 0 : currentIndex + 1);
+  const handlePause = () => {
+    setPlayingVideoId(null);
+  };
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: -containerRef.current.clientWidth * 0.8,
+        behavior: 'smooth'
+      });
+    }
+    // Atualiza índice baseado na posição aproximada
+    setCurrentIndex(prev => Math.max(0, prev - 3));
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({
+        left: containerRef.current.clientWidth * 0.8,
+        behavior: 'smooth'
+      });
+    }
+    // Atualiza índice baseado na posição aproximada
+    setCurrentIndex(prev => Math.min(videoTestimonials.length - 1, prev + 3));
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    if (containerRef.current) {
+      const cardWidth = containerRef.current.clientWidth / (isMobile ? 1 : 3);
+      containerRef.current.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
     <section className="py-20 md:py-32 w-full bg-gradient-to-b from-navy via-ocean-deep to-navy relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-turquoise/10 rounded-full blur-3xl" />
       </div>
@@ -172,71 +282,83 @@ export const TestimonialsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
             <span className="text-gradient-gold">Histórias</span>
             <span className="text-foreground"> de quem já atendeu ao chamado</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
             Depoimentos reais de viajantes que viveram a experiência
           </p>
         </motion.div>
 
-        {/* Desktop: Grid of videos */}
-        <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 max-w-7xl mx-auto">
-          {videoTestimonials.map((testimonial, index) => (
-            <VideoCard 
-              key={testimonial.id} 
-              testimonial={testimonial}
-              isActive={index === 2}
+        {/* Desktop: Carousel horizontal */}
+        <div className="relative max-w-7xl mx-auto">
+          {/* Botão de navegação esquerda */}
+          <button
+            onClick={scrollLeft}
+            className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center hover:bg-black/70 transition-all duration-300 border border-primary/30 hover:border-primary/60 shadow-lg z-20"
+            aria-label="Vídeos anteriores"
+          >
+            <ChevronLeft className="w-6 h-6 md:w-7 md:h-7 text-white" />
+          </button>
+
+          {/* Container do carousel - scrollbar escondido */}
+          <div 
+            ref={containerRef}
+            className="flex overflow-x-auto gap-4 md:gap-6 px-2 py-4 scrollbar-none"
+          >
+            {videoTestimonials.map((testimonial) => (
+              <div 
+                key={testimonial.id} 
+                className="flex-shrink-0 w-[280px] md:w-[320px]"
+              >
+                <VideoCard 
+                  testimonial={testimonial}
+                  isActive={currentIndex === testimonial.id - 1}
+                  isPlaying={playingVideoId === testimonial.id}
+                  onPlay={handlePlay}
+                  onPause={handlePause}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Botão de navegação direita */}
+          <button
+            onClick={scrollRight}
+            className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center hover:bg-black/70 transition-all duration-300 border border-primary/30 hover:border-primary/60 shadow-lg z-20"
+            aria-label="Próximos vídeos"
+          >
+            <ChevronRight className="w-6 h-6 md:w-7 md:h-7 text-white" />
+          </button>
+        </div>
+
+        {/* Dots Indicator para desktop */}
+        <div className="hidden md:flex justify-center gap-3 mt-8">
+          {videoTestimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`transition-all duration-300 ${
+                index === currentIndex 
+                  ? "w-8 h-2 bg-primary rounded-full" 
+                  : "w-2 h-2 bg-white/30 rounded-full hover:bg-white/50"
+              }`}
+              aria-label={`Ir para vídeo ${index + 1}`}
             />
           ))}
         </div>
 
-        {/* Mobile: Carousel */}
-        <div className="md:hidden relative">
-          {/* Video Container */}
-          <div className="flex justify-center">
-            <div className="w-full max-w-[280px]">
-              <VideoCard 
-                testimonial={videoTestimonials[currentIndex]} 
-                isActive={true}
-              />
-            </div>
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <button
-              onClick={goToPrevious}
-              className="w-12 h-12 rounded-full bg-muted/50 flex items-center justify-center hover:bg-muted transition-colors border border-primary/30"
-            >
-              <ChevronLeft className="w-6 h-6 text-foreground" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex gap-2">
-              {videoTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex 
-                      ? "bg-primary w-6" 
-                      : "bg-muted-foreground/30"
-                  }`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={goToNext}
-              className="w-12 h-12 rounded-full bg-muted/50 flex items-center justify-center hover:bg-muted transition-colors border border-primary/30"
-            >
-              <ChevronRight className="w-6 h-6 text-foreground" />
-            </button>
-          </div>
+        {/* Contador de vídeos */}
+        <div className="text-center mt-6">
+          <p className="text-white/70 text-sm md:text-base">
+            <span className="text-primary font-semibold">{currentIndex + 1}</span>
+            <span className="mx-2">/</span>
+            <span>{videoTestimonials.length}</span>
+            <span className="ml-4 text-white/60">• Clique para reproduzir/pausar</span>
+          </p>
         </div>
       </div>
     </section>

@@ -1,18 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroCruise from "@/assets/hero-cruise.jpg";
-import sydneyOpera from "@/assets/sydney-opera.jpg";
-import polynesiaMoorea from "@/assets/polynesia-moorea.jpg";
-import honolulu from "@/assets/honolulu.jpg";
-import hollywood from "@/assets/hollywood.jpg";
+import heroCruise from "@/assets/cruzeiro-01/cruzeiro.webp";
+import sydneyOpera from "@/assets/cruzeiro-01/sidney.webp";
+import borabora from "@/assets/cruzeiro-01/borabora.webp";
+import havai from "@/assets/cruzeiro-01/havai.webp";
 
 const heroImages = [
-  { src: heroCruise, alt: "Cruzeiro de luxo ao pôr do sol" },
-  { src: sydneyOpera, alt: "Sydney Opera House" },
-  { src: polynesiaMoorea, alt: "Polinésia Francesa - Moorea" },
-  { src: honolulu, alt: "Honolulu, Havaí" },
-  { src: hollywood, alt: "Hollywood, Los Angeles" },
+  { src: heroCruise, alt: "Cruzeiro Anthem Oh the seas" },
+  { src: sydneyOpera, alt: "Sydney" },
+  { src: borabora, alt: "Bora Bora" },
+  { src: havai, alt: "Havaí" }
 ];
 
 const highlights = [

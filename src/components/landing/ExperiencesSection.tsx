@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import kangaroosImage from "@/assets/kangaroos-jervis.jpg";
-import dolphinsImage from "@/assets/dolphins.jpg";
-import wineryImage from "@/assets/winery.jpg";
-import polynesiaImage from "@/assets/polynesia-moorea.jpg";
-import honoluluImage from "@/assets/honolulu.jpg";
-import hollywoodImage from "@/assets/hollywood.jpg";
+import kangaroosImage from "@/assets/cruzeiro-01/cangurus.webp";
+import dolphinsImage from "@/assets/cruzeiro-01/dolphins.webp";
+import wineryImage from "@/assets/cruzeiro-01/winery.webp";
+import polynesiaImage from "@/assets/cruzeiro-01/borabora.webp";
+import honoluluImage from "@/assets/cruzeiro-01/havai.webp";
+import hollywoodImage from "@/assets/cruzeiro-01/hollywood.webp";
 
 const experiences = [
   {
@@ -29,13 +29,6 @@ const experiences = [
     location: "Hunter Valley, Austrália",
   },
   {
-    emoji: "🏔️",
-    title: "Blue Mountains",
-    description: "Exploração das montanhas azuis com guia especializado. Paisagens espetaculares e natureza australiana intocada. Você caminha através de florestas. Você vê cachoeiras. Você observa vistas que tiram o fôlego. Uma jornada de descoberta e renovação.",
-    image: kangaroosImage,
-    location: "Blue Mountains, Austrália",
-  },
-  {
     emoji: "🌊",
     title: "Polinésia Francesa",
     description: "3 ilhas paradisíacas: Papeete, Moorea e Raiatea. O coração do paraíso em um cruzeiro de classe mundial. Você navega pelas águas mais bonitas do mundo. Snorkel, praias, bungalows à beira-mar. Uma experiência que redefine o conceito de beleza.",
@@ -55,14 +48,7 @@ const experiences = [
     description: "Walk of Fame com estrelas de celebridades. TCL Chinese Theatre com pegadas históricas. Dolby Theatre, palco do Oscar. Rodeo Drive com Gucci, Louis Vuitton, Prada, Chanel. The Beverly Hills Hotel. Você vive o glamour de Hollywood como protagonista.",
     image: hollywoodImage,
     location: "Los Angeles, CA",
-  },
-  {
-    emoji: "🛳️",
-    title: "Luxo Inabalável",
-    description: "Hotéis 5 estrelas: Shangri-La Sydney, Halekulani, The Beverly Hills Hotel. Anthem of the Seas, um navio de classe mundial. Gastronomia de classe mundial. Shows de Broadway. Spas e relaxamento. Você vive o luxo em cada momento.",
-    image: polynesiaImage,
-    location: "Toda a jornada",
-  },
+  }
 ];
 
 export const ExperiencesSection = () => {
@@ -93,7 +79,7 @@ export const ExperiencesSection = () => {
         </motion.div>
 
         {/* Experiences Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.title}

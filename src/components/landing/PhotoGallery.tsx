@@ -1,14 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
-import kangaroosImage from "@/assets/kangaroos-jervis.jpg";
-import dolphinsImage from "@/assets/dolphins.jpg";
-import wineryImage from "@/assets/winery.jpg";
-import polynesiaImage from "@/assets/polynesia-moorea.jpg";
-import honoluluImage from "@/assets/honolulu.jpg";
-import hollywoodImage from "@/assets/hollywood.jpg";
-import sydneyImage from "@/assets/sydney-opera.jpg";
-import heroImage from "@/assets/hero-cruise.jpg";
+import kangaroosImage from "@/assets/cruzeiro-01/cangurus.webp";
+import dolphinsImage from "@/assets/cruzeiro-01/dolphins.webp";
+import wineryImage from "@/assets/cruzeiro-01/winery.webp";
+import polynesiaImage from "@/assets/cruzeiro-01/borabora.webp";
+import honoluluImage from "@/assets/cruzeiro-01/havai.webp";
+import hollywoodImage from "@/assets/cruzeiro-01/hollywood.webp";
+import sydneyImage from "@/assets/cruzeiro-01/sidney.webp";
+import heroImage from "@/assets/cruzeiro-01/cruzeiro.webp";
 
 const galleryImages = [
   { src: heroImage, title: "Cruzeiro de Luxo", category: "Cruzeiro" },

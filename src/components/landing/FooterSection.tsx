@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, Globe, Anchor } from "lucide-react";
+import { Phone, Mail, Globe, Anchor, Instagram } from "lucide-react";
 
 export const FooterSection = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="py-16 md:py-24 w-full bg-gradient-to-b from-navy to-ocean-deep border-t border-turquoise/20 relative overflow-hidden">
       {/* Decorative elements */}
@@ -74,24 +75,34 @@ export const FooterSection = () => {
               <p>CEO, WE Travel UK</p>
               <p>Aussie Specialist — Certificado pelo Governo Australiano</p>
               <p>Cadastur — Ministério do Turismo do Brasil</p>
+              <p>CNPJ: <span className="text-foreground">45.759.934/0001-40</span></p>
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 pt-8 text-muted-foreground">
             <a
-              href="tel:+5511999999999"
+              href="tel:+5513982263757"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Phone className="w-4 h-4" />
-              <span>(11) 99999-9999</span>
+              <span>(13) 98226-3757</span>
             </a>
             <a
               href="mailto:contato@wetraveluk.com"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Mail className="w-4 h-4" />
-              <span>contato@wetraveluk.com</span>
+              <span>contato@wetraveluk.com.br</span>
+            </a>
+            <a
+              href="https://instagram.com/wetravel_uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
+            >
+              <Instagram className="w-4 h-4" />
+              <span>@wetravel_uk</span>
             </a>
             <a
               href="https://wetraveluk.com"
@@ -100,13 +111,13 @@ export const FooterSection = () => {
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Globe className="w-4 h-4" />
-              <span>wetraveluk.com</span>
+              <span>wetraveluk.com.br</span>
             </a>
           </div>
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground pt-8">
-            © 2025 WE Travel UK. Todos os direitos reservados.
+            © {currentYear} WE Travel UK. Todos os direitos reservados.
           </p>
         </motion.div>
       </div>

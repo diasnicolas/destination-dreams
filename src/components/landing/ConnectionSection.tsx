@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
+import donoImage from "@/assets/dono.webp";
 
 const credentials = [
   {
@@ -76,9 +77,13 @@ export const ConnectionSection = () => {
             className="relative"
           >
             <div className="relative">
-              {/* Main avatar placeholder */}
-              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full bg-gradient-to-br from-ocean-medium to-navy-light flex items-center justify-center border-4 border-primary/30 shadow-glow">
-                <span className="font-display text-6xl md:text-7xl text-primary font-bold">EM</span>
+              {/* Main avatar image */}
+              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
+                <img 
+                  src={donoImage} 
+                  alt="Evandro Mendes" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Floating badges */}

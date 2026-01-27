@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import sydneyImage from "@/assets/sydney-opera.jpg";
-import polynesiaImage from "@/assets/polynesia-moorea.jpg";
-import hollywoodImage from "@/assets/hollywood.jpg";
+import sydneyImage from "@/assets/cruzeiro-01/sidney.webp";
+import polynesiaImage from "@/assets/cruzeiro-01/borabora.webp";
+import hollywoodImage from "@/assets/cruzeiro-01/hollywood.webp";
 import { MapPin } from "lucide-react";
 
 const acts = [
