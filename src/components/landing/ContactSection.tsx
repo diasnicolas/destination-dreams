@@ -11,10 +11,75 @@ export const ContactSection = () => {
     travelers: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Função para converter o valor de travelers para número
+  const parseTravelersValue = (value: string) => {
+    if (value === "4+") {
+      return 4; // ou o valor que a API espera para "4 ou mais"
+    }
+    return parseInt(value, 10) || 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Sua solicitação foi enviada! Em breve entraremos em contato.");
-    setFormData({ name: "", email: "", phone: "", travelers: "" });
+    
+    // Validação básica
+    if (!formData.name || !formData.email || !formData.phone || !formData.travelers) {
+      toast.error("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Preparar o corpo da requisição conforme especificado
+      const requestBody = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        travelers: parseTravelersValue(formData.travelers) // Convertendo para número
+      };
+
+      console.log("Enviando dados:", requestBody); // Para debug
+
+      // Fazer a requisição POST com os headers corretos
+      const response = await fetch("https://wetraveluk.com.br/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer kRPXbr9REX04TIHDj7xj6v8TmJugoeFOyvFwwJ2oxfwy6u6COXiybV94plWK4gUbJjEE1AyCJK8mUTrFxpcU7ZkoyVm9f05SSg6ghy2fmmKI5",
+          "origin": "https://wetraveluk.com.br"
+        },
+        body: JSON.stringify(requestBody)
+      });
+
+      console.log("Resposta da API:", {
+        status: response.status,
+        ok: response.ok
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
+      }
+
+      const data = await response.json();
+      console.log("Dados da resposta:", data);
+      
+      // Verificar se a resposta foi bem sucedida
+      if (data.success || response.ok) {
+        toast.success("Sua solicitação foi enviada! Em breve entraremos em contato.");
+        setFormData({ name: "", email: "", phone: "", travelers: "" });
+      } else {
+        toast.error("Houve um problema ao enviar sua solicitação. Tente novamente.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      toast.error("Erro ao enviar o formulário. Por favor, tente novamente mais tarde.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,6 +145,7 @@ export const ContactSection = () => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className="input-luxury"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -96,6 +162,7 @@ export const ContactSection = () => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="input-luxury"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -112,6 +179,7 @@ export const ContactSection = () => {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 className="input-luxury"
+                disabled={isSubmitting}
               />
             </div>
 
@@ -126,6 +194,7 @@ export const ContactSection = () => {
                 value={formData.travelers}
                 onChange={(e) => setFormData({ ...formData, travelers: e.target.value })}
                 className="input-luxury"
+                disabled={isSubmitting}
               >
                 <option value="">Quantas pessoas viajam?</option>
                 <option value="1">1 pessoa</option>
@@ -138,10 +207,20 @@ export const ContactSection = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="btn-luxury w-full rounded-md text-center flex items-center justify-center gap-2"
+              className="btn-luxury w-full rounded-md text-center flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
             >
-              <Send className="w-5 h-5" />
-              Agendar Minha Consulta Privada
+              {isSubmitting ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  Enviando...
+                </>
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+                  Quero saber mais
+                </>
+              )}
             </button>
 
             {/* Privacy Note */}

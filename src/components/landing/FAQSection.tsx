@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Não falo inglês. Como vou me comunicar?",
-    answer: "Evandro fala português fluente. Ele é seu intérprete pessoal. Ele cuida de todas as comunicações com hotéis, restaurantes, aeroportos, e qualquer situação que surgir. Você nunca ficará sozinho ou sem entender o que está acontecendo. Isso é parte do acompanhamento pessoal que oferecemos.",
+    answer: "Evandro fala inglês fluente. Ele é seu intérprete pessoal. Ele cuida de todas as comunicações com hotéis, restaurantes, aeroportos, e qualquer situação que surgir. Você nunca ficará sozinho ou sem entender o que está acontecendo. Isso é parte do acompanhamento pessoal que oferecemos.",
   },
   {
     question: "Qual é o preço? Vale a pena?",

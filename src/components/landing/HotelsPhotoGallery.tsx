@@ -1,23 +1,17 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
-import bondibeachImage from "@/assets/cruzeiro-01/bondi_beach.webp";
-import bluemontainsImage from "@/assets/cruzeiro-01/blue_montains.webp";
-import darlinggarbourImage from "@/assets/cruzeiro-01/darling_harbour.webp";
-import beverlyhillsImage from "@/assets/cruzeiro-01/beverly_hills.webp";
-import calcadafamaImage from "@/assets/cruzeiro-01/calcada_fama.webp";
-import universalstudiosImage from "@/assets/cruzeiro-01/universal_studios.webp";
+import losangelesImage from "@/assets/cruzeiro-01/hotel-LosAngeles.webp";
+import honoluluImage from "@/assets/cruzeiro-01/hotel-Honolulu.webp";
+import sydneyImage from "@/assets/cruzeiro-01/hotel-Sydney.webp";
 
 const galleryImages = [
-  { src: bondibeachImage, title: "Bondi Beach", category: "Praia" },
-  { src: bluemontainsImage, title: "Blue Montains", category: "Natureza" },
-  { src: darlinggarbourImage, title: "Darling Harbour", category: "Experiências" },
-  { src: beverlyhillsImage, title: "Beverly Hills", category: "Experiências" },
-  { src: calcadafamaImage, title: "Calçada da Fama", category: "Experiências" },
-  { src: universalstudiosImage, title: "Universal Studios", category: "Experiências" },
+  { src: losangelesImage, title: "Los Angeles", category: "Hotel Hyatt Figueroa" },
+  { src: honoluluImage, title: "Honolulu", category: "Ilikai Hotel" },
+  { src: sydneyImage, title: "Sydney", category: "Hotel Hyatt Regency" },
 ];
 
-export const PhotoGallery = () => {
+export const HotelsPhotoGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const openLightbox = (index: number) => setSelectedIndex(index);
@@ -60,16 +54,16 @@ export const PhotoGallery = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-foreground">Galeria de </span>
-            <span className="text-gradient-gold">Experiências</span>
+            <span className="text-foreground">Onde você vai se </span>
+            <span className="text-gradient-gold">Hospedar</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Clique nas imagens para explorar os destinos em detalhe
+            Clique nas imagens para explorar os hotéis
           </p>
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}

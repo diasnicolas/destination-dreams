@@ -106,7 +106,7 @@ export const ConnectionSectionAUNZ = () => {
                 transition={{ duration: 5, repeat: Infinity }}
                 className="absolute -bottom-4 -left-4 md:bottom-4 md:left-0 glass-card px-4 py-2 rounded-full border border-primary/30"
               >
-                <span className="text-xs font-semibold text-primary">Aussie Specialist</span>
+                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
               </motion.div>
 
               <motion.div

@@ -11,6 +11,14 @@ const stats = [
 ];
 
 export const UrgencySection = () => {
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
   return (
     <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-navy to-ocean-deep relative overflow-hidden">
       {/* Ocean wave decorative elements */}
@@ -133,12 +141,12 @@ export const UrgencySection = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <a
-            href="#formulario"
+          <button
+            onClick={() => scrollToSection("#formulario")}
             className="btn-luxury inline-block rounded-md animate-pulse-gold"
           >
             Agendar Consulta Privada Agora
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check, X, Ship } from "lucide-react";
 
 const included = [
-  "Todos os voos internacionais (GRU → SCL → SYD → SCL → GRU)",
+  "Todos os voos internacionais (GRU → SCL → SYD → AKL → SCL → GRU)",
   "Hospedagem em hotéis 4-5 estrelas",
   "16 noites em cruzeiro Anthem of the Seas",
   "Acompanhamento pessoal de Evandro Mendes",

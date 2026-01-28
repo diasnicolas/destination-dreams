@@ -10,6 +10,7 @@ import { UrgencySection } from "@/components/landing/UrgencySection";
 import { InclusionsSection } from "@/components/landing/InclusionsSection";
 import { ContactSection } from "@/components/landing/ContactSection";
 import { FooterSection } from "@/components/landing/FooterSection";
+import { HotelsPhotoGallery } from "@/components/landing/HotelsPhotoGallery";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <DetailedItinerary />
       <ExperiencesSection />
       <PhotoGallery />
+      <HotelsPhotoGallery />
       <TestimonialsSection />
       <FAQSection />
       <UrgencySection />

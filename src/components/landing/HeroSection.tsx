@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import heroCruise from "@/assets/cruzeiro-01/cruzeiro.webp";
 import sydneyOpera from "@/assets/cruzeiro-01/sidney.webp";
 import borabora from "@/assets/cruzeiro-01/borabora.webp";
@@ -22,7 +23,7 @@ const highlights = [
   {
     icon: User,
     title: "Acompanhamento pessoal",
-    description: "Evandro Mendes (CEO, Aussie Specialist)",
+    description: "Evandro Mendes (CEO, Aussie Travel Specialist)",
   },
   {
     icon: Globe,
@@ -46,6 +47,13 @@ export const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -155,17 +163,17 @@ export const HeroSection = () => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <a
-              href="#formulario"
-              className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
-            >
-              Descubra se seu nome está na lista
-            </a>
-          </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 1 }}
+>
+  <button
+    onClick={() => scrollToSection("#formulario")}
+    className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
+  >
+    Descubra se seu nome está na lista
+  </button>
+</motion.div>
         </div>
       </div>
 

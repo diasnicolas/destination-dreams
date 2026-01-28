@@ -169,14 +169,12 @@ const phases = [
       {
         day: 10,
         date: "17 de Abril",
-        title: "Bay of Islands, Nova Zelândia",
-        location: "Nova Zelândia",
+        title: "Navegação",
+        location: "Mais um dia no mar",
         highlights: [
-          "Desembarque às 10h30",
-          "Caminhadas e paisagens espetaculares",
-          "História e cultura Maori",
-          "Almoço em restaurante local",
-          "Reembarque às 20h00"
+          "Shows premiados",
+          "Festas temáticas",
+          "Privilégio de conviver com um grupo seleto"
         ],
         icon: "camera" as const
       },
@@ -533,7 +531,7 @@ export const DetailedItinerary = () => {
             { icon: Clock, value: "27", label: "Dias" },
             { icon: Hotel, value: "10", label: "Noites em Hotéis 5★" },
             { icon: Ship, value: "16", label: "Noites no Cruzeiro" },
-            { icon: MapPin, value: "4", label: "Países" }
+            { icon: MapPin, value: "3", label: "Países" }
           ].map((stat, index) => (
             <div key={index} className="glass-card rounded-xl p-4 text-center border border-turquoise/20">
               <stat.icon className="w-6 h-6 text-primary mx-auto mb-2" />

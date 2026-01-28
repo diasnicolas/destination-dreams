@@ -11,44 +11,45 @@ const acts = [
     subtitle: "Sydney — 4 Noites de Imersão Australiana",
     description: `Você chega em Sydney em 10 de abril. Não é um check-in comum. É uma recepção VIP no aeroporto.
 
-Evandro está esperando você. Ele mostra a verdadeira Sydney — não a turística. A Opera House por dentro. O Harbour Bridge com suas histórias. The Rocks, o bairro histórico. O Royal Botanic Garden com plantas nativas.
+Evandro está esperando você. Ele mostra a verdadeira Sydney, não a turística. A Opera House por dentro. O Harbour Bridge com suas histórias. The Rocks, o bairro histórico. O Royal Botanic Garden com plantas nativas.
 
 Mas o momento mais marcante é em Jervis Bay. Você encontra cangurus em seu habitat natural. Você vê golfinhos em passeio privativo. Você almoça na Crooked River Estate com vinhos australianos.
 
 No quarto dia, você embarca no Anthem of the Seas. Pronto para cruzar o Pacífico.`,
     image: sydneyImage,
     highlights: ["Recepção VIP", "Opera House", "Jervis Bay", "Cangurus livres", "Golfinhos", "Vinícola boutique"],
-    stats: { nights: 4, hotel: "Shangri-La Sydney 5★" },
+    stats: { nights: 4, hotel: "Hotel Hyatt Regency" },
   },
   {
     number: "02",
     title: "A Navegação",
     subtitle: "Anthem of the Seas — 16 Noites de Luxo Transpacífico",
-    description: `Você embarca no Anthem of the Seas. Este não é um cruzeiro comum. É um navio de classe mundial com capacidade para 4.000 passageiros, mas seu grupo é de apenas 20 viajantes + Evandro.
+    description: `Você navega pelo Pacífico Sul, vivendo dias de conforto, contemplação e experiências cuidadosamente selecionadas.
 
-Você navega pelo Pacífico Sul. Você para em Bay of Islands, Nova Zelândia — paisagens espetaculares e cultura Maori. Você explora 3 ilhas da Polinésia Francesa: Papeete, Moorea e Raiatea. Snorkel em águas cristalinas. Almoço em bungalow à beira-mar.
+A jornada começa com 3 noites no Havaí, em Honolulu, onde o clima tropical, as praias icônicas e o ritmo descontraído convidam a desacelerar e entrar no espírito da viagem.
 
-À noite, você janta em restaurantes de classe mundial. Você assiste a shows de Broadway. Você tem dias em alto-mar para descansar, refletir, renovar-se. Você cruza a Linha Internacional de Data.
+Em seguida, você embarca em um cruzeiro exclusivo pelo Pacífico Sul, explorando três ilhas da Polinésia Francesa: Papeete, Moorea e Raiatea, cenários de águas cristalinas, natureza exuberante e cultura ancestral.
+Snorkel em lagoas transparentes, momentos de relaxamento e almoço em bangalô à beira-mar, com o mar como horizonte.
 
-Você chega em Honolulu transformado.`,
+Entre um destino e outro, dias em alto-mar permitem descansar, refletir e renovar-se, aproveitando toda a estrutura do navio com tranquilidade e conforto.
+
+Em um momento especial da viagem, você cruza a Linha Internacional de Data, vivendo a experiência simbólica de ganhar um novo dia, um privilégio de poucas jornadas no mundo.`,
     image: polynesiaImage,
-    highlights: ["Bay of Islands", "Papeete", "Moorea", "Raiatea", "Shows de Broadway", "Cruzamento da Linha de Data"],
+    highlights: ["Papeete", "Moorea", "Raiatea", "Shows de Broadway", "Cruzamento da Linha de Data", "Honolulu"],
     stats: { nights: 16, hotel: "Anthem of the Seas" },
   },
   {
     number: "03",
     title: "O Retorno",
     subtitle: "Honolulu & Los Angeles — 6 Noites de Glamour",
-    description: `Você desembarca em Honolulu. Você fica no Halekulani, um dos hotéis mais luxuosos do mundo. Jantar à beira-mar com culinária havaiana.
+    description: `Após o cruzeiro, você retorna a Honolulu para mais 3 noites, aproveitando o melhor da ilha com calma, sem pressa e sem correria.
 
-Você visita Iolani Palace, o único palácio real dos Estados Unidos. Honolulu Museum of Art. Manoa Falls, uma cachoeira de 64 metros. Waikiki Beach. Jantar de despedida no La Mer at Halekulani.
+Para encerrar, a viagem segue para Los Angeles, com 3 noites para viver a cidade do cinema, da música e da arte. Passeios icônicos, gastronomia de alto nível e o charme da Califórnia completam essa jornada de forma elegante e memorável.
 
-Você voa para Los Angeles. Você fica no The Beverly Hills Hotel. Hollywood Walk of Fame. TCL Chinese Theatre com pegadas de celebridades. Dolby Theatre, o palco do Oscar. Rodeo Drive com Gucci, Louis Vuitton, Prada. Beverly Hills Mansion Tour.
-
-Jantar final no Nobu Malibu ou Mastro's com Wagyu Beef. E então você volta para São Paulo. Mas você não é mais o mesmo.`,
+Uma experiência pensada para quem valoriza tempo, conforto e histórias que merecem ser vividas com calma.`,
     image: hollywoodImage,
-    highlights: ["Halekulani 5★", "Iolani Palace", "Beverly Hills Hotel 5★", "Walk of Fame", "Rodeo Drive", "Nobu Malibu"],
-    stats: { nights: 6, hotel: "Halekulani + Beverly Hills Hotel" },
+    highlights: ["Hotel Hyatt Figueroa 5★", "Iolani Palace", "Ilikai Hotel 5★", "Walk of Fame", "Rodeo Drive", "Nobu Malibu"],
+    stats: { nights: 6, hotel: "Hotel Hyatt Figueroa + Ilikai Hotel" },
   },
 ];
 

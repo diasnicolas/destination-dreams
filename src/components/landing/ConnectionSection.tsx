@@ -92,7 +92,7 @@ export const ConnectionSection = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -top-4 -right-4 md:top-4 md:right-0 glass-card px-4 py-2 rounded-full border border-primary/30"
               >
-                <span className="text-xs font-semibold text-primary">Aussie Specialist</span>
+                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
               </motion.div>
               
               <motion.div
@@ -130,8 +130,8 @@ export const ConnectionSection = () => {
 
             <div className="space-y-4 mb-8 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                <strong className="text-foreground">Evandro Mendes</strong> não é um guia turístico. 
-                É o CEO da WE Travel UK e um <strong className="text-primary">Aussie Specialist certificado pelo Governo Australiano</strong>.
+                <strong className="text-foreground">Evandro Mendes</strong> não é um guia de turismo. 
+                É o CEO da WE Travel UK e um <strong className="text-primary">Aussie Travel Specialist certificado pelo Governo Australiano</strong>.
               </p>
               <p className="text-lg leading-relaxed">
                 Esta certificação é uma das mais respeitadas no turismo australiano. 

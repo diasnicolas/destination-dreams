@@ -71,7 +71,7 @@ export const FooterSectionAUNZ = () => {
             </p>
             <div className="text-sm text-muted-foreground space-y-1 mt-2">
               <p>CEO, WE Travel UK</p>
-              <p>Aussie Specialist — Certificado pelo Governo Australiano</p>
+              <p>Aussie Travel Specialist — Certificado pelo Governo Australiano</p>
               <p>3 anos vivendo em Sydney</p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Globe, Anchor, Instagram } from "lucide-react";
+import cadasturImage from "@/assets/logoCadastur.png";
 
 export const FooterSection = () => {
   const currentYear = new Date().getFullYear();
@@ -73,9 +74,23 @@ export const FooterSection = () => {
             </p>
             <div className="text-sm text-muted-foreground space-y-1 mt-2">
               <p>CEO, WE Travel UK</p>
-              <p>Aussie Specialist — Certificado pelo Governo Australiano</p>
-              <p>Cadastur — Ministério do Turismo do Brasil</p>
-              <p>CNPJ: <span className="text-foreground">45.759.934/0001-40</span></p>
+              <p>Aussie Travel Specialist — Certificado pelo Governo Australiano</p>
+             <div className="flex items-center justify-center gap-2">
+  <div className="flex items-center gap-4">
+    {/* Logo do CADASTUR */}
+    <div className="flex items-center  px-4 py-2 shadow-sm">
+      <div className="w-24 h-10 flex items-center justify-center">
+        <img 
+          src={cadasturImage} 
+          alt="Logo CADASTUR" 
+          className="w-full h-full object-contain"
+          
+        />
+      </div>
+    </div>
+    <span className="text-foreground text-sm md:text-base">45.759.934/0001-40</span>
+  </div>
+</div>
             </div>
           </div>
 
@@ -105,7 +120,7 @@ export const FooterSection = () => {
               <span>@wetravel_uk</span>
             </a>
             <a
-              href="https://wetraveluk.com"
+              href="https://wetraveluk.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
