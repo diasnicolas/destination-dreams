@@ -187,7 +187,7 @@ export const ConnectionSection = () => {
               </div>
               <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
               <p className="text-xs text-primary mb-1">{cert.issuer}</p>
-              <p className="text-xs text-muted-foreground line-clamp-2">{cert.description}</p>
+              <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
             </motion.div>
           ))}
         </motion.div>

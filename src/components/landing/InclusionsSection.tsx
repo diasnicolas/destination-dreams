@@ -20,7 +20,7 @@ const included = [
 
 const notIncluded = [
   "Refeições não mencionadas no roteiro",
-  "Vistos para Austrália, Nova Zelândia e EUA",
+  "Vistos para Austrália e EUA",
   "Gorjetas para funcionários",
   "Atividades opcionais não mencionadas",
   "Bebidas alcoólicas não incluídas nas refeições",
