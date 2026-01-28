@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Globe, Anchor, Instagram } from "lucide-react";
+import cadasturImage from "@/assets/logoCadastur.png";
 
 export const FooterSectionAUNZ = () => {
   const currentYear = new Date().getFullYear();
@@ -72,7 +73,18 @@ export const FooterSectionAUNZ = () => {
             <div className="text-sm text-muted-foreground space-y-1 mt-2">
               <p>CEO, WE Travel UK</p>
               <p>Aussie Travel Specialist — Certificado pelo Governo Australiano</p>
-              <p>3 anos vivendo em Sydney</p>
+              <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center px-4 py-2 shadow-sm">
+                  <div className="w-24 h-10 flex items-center justify-center">
+                    <img 
+                      src={cadasturImage} 
+                      alt="Logo CADASTUR" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <span className="text-foreground text-sm md:text-base">45.759.934/0001-40</span>
+              </div>
             </div>
           </div>
 
@@ -102,7 +114,7 @@ export const FooterSectionAUNZ = () => {
               <span>@wetravel_uk</span>
             </a>
             <a
-              href="https://wetraveluk.com"
+              href="https://wetraveluk.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
@@ -116,6 +128,19 @@ export const FooterSectionAUNZ = () => {
           <p className="text-xs text-muted-foreground pt-8">
             © {currentYear} WE Travel UK. Todos os direitos reservados.
           </p>
+
+          {/* ZapTurize Link */}
+          <div className="pt-6 border-t border-turquoise/10">
+            <a
+              href="https://zapturize.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors animated-underline"
+            >
+              <span>Desenvolvido por</span>
+              <span className="font-medium text-foreground">ZapTurize</span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </footer>
