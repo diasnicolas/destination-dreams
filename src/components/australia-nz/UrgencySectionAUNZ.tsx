@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Anchor, Waves, AlertCircle, Users } from "lucide-react";
+import { CountdownTimer } from "@/components/landing/CountdownTimer";
 
 const stats = [
   { number: "18", label: "Dias" },
@@ -19,6 +20,12 @@ const steps = [
 ];
 
 export const UrgencySectionAUNZ = () => {
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-navy to-ocean-deep relative overflow-hidden">
       {/* Ocean wave decorative elements */}
@@ -60,6 +67,20 @@ export const UrgencySectionAUNZ = () => {
           <p className="text-muted-foreground text-lg">
             Essa oportunidade não vai durar para sempre.
           </p>
+        </motion.div>
+
+        {/* Countdown Timer */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-12"
+        >
+          <p className="text-center text-sm text-muted-foreground uppercase tracking-widest mb-4">
+            Embarque em Março de 2027
+          </p>
+          <CountdownTimer targetDate="2027-03-01T00:00:00" />
         </motion.div>
 
         {/* Urgency Box */}
@@ -172,12 +193,12 @@ export const UrgencySectionAUNZ = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-center mt-12"
         >
-          <a
-            href="#formulario"
+          <button
+            onClick={() => scrollToSection("#formulario")}
             className="btn-luxury inline-block rounded-md animate-pulse-gold text-lg px-12 py-5"
           >
             QUERO ME REDESCOBRIR - AGENDAR CONSULTA
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

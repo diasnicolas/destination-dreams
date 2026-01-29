@@ -276,4 +276,734 @@
   ::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.5);
   }
+
+  /* Pulse animation for gold/primary buttons */
+  .animate-pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% {
+      box-shadow: 0 10px 40px hsla(var(--primary), 0.25);
+    }
+    50% {
+      box-shadow: 0 10px 60px hsla(var(--primary), 0.45);
+    }
+  }
 }
+
+/* ========================================
+   PAGE-SPECIFIC THEMES
+   ======================================== */
+
+/* Australia & New Zealand Theme - Outback & Ocean */
+.theme-australia {
+  --background: 20 35% 6%;
+  --foreground: 35 25% 95%;
+
+  --card: 20 30% 10%;
+  --card-foreground: 35 25% 95%;
+
+  --popover: 20 30% 10%;
+  --popover-foreground: 35 25% 95%;
+
+  --primary: 25 75% 55%;
+  --primary-foreground: 20 35% 8%;
+
+  --secondary: 175 55% 40%;
+  --secondary-foreground: 35 25% 95%;
+
+  --muted: 20 25% 15%;
+  --muted-foreground: 20 15% 60%;
+
+  --accent: 175 50% 45%;
+  --accent-foreground: 35 25% 95%;
+
+  --border: 20 20% 20%;
+  --input: 20 20% 20%;
+  --ring: 25 75% 55%;
+
+  /* Custom Australia colors */
+  --ocean-deep: 200 50% 15%;
+  --ocean-medium: 180 45% 30%;
+  --turquoise: 175 55% 45%;
+  --gold-champagne: 25 75% 55%;
+  --gold-light: 30 70% 65%;
+  --gold-dark: 20 65% 40%;
+  --navy: 200 40% 18%;
+  --navy-light: 195 35% 28%;
+
+  /* Gradients */
+  --gradient-ocean: linear-gradient(135deg, hsl(200 50% 15%) 0%, hsl(175 45% 30%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(25 75% 55%) 0%, hsl(35 70% 65%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(20, 35%, 8%, 0.9) 0%, hsla(175, 45%, 30%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(20 35% 6%) 0%, hsl(200 50% 15%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(20, 30%, 15%, 0.6) 0%, hsla(20, 35%, 8%, 0.8) 100%);
+  
+  /* Shadows */
+  --shadow-gold: 0 10px 40px hsla(25, 75%, 55%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(200, 50%, 15%, 0.5);
+  --shadow-card: 0 15px 50px hsla(20, 40%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(25, 75%, 55%, 0.15);
+}
+
+/* Override component styles for Australia theme */
+.theme-australia .hero-overlay {
+  background: linear-gradient(
+    180deg,
+    hsla(20, 35%, 8%, 0.85) 0%,
+    hsla(20, 35%, 8%, 0.6) 50%,
+    hsla(175, 45%, 30%, 0.75) 100%
+  );
+}
+
+.theme-australia .glass-card {
+  background: linear-gradient(145deg, hsla(20, 30%, 15%, 0.6) 0%, hsla(20, 35%, 8%, 0.8) 100%);
+}
+
+.theme-australia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(25 75% 55%) 0%, hsl(35 70% 65%) 100%);
+}
+
+.theme-australia .btn-luxury {
+  background: hsl(25 75% 55%);
+  box-shadow: 0 10px 40px hsla(25, 75%, 55%, 0.25);
+}
+
+.theme-australia .btn-luxury:hover {
+  background: hsl(30 70% 65%);
+  box-shadow: 0 15px 50px hsla(25, 75%, 55%, 0.35);
+}
+
+.theme-australia .gold-border-left {
+  border-color: hsl(25 75% 55%);
+}
+
+.theme-australia .animated-underline::after {
+  background: hsl(25 75% 55%);
+}
+
+.theme-australia .stat-number {
+  color: hsl(25 75% 55%);
+}
+
+.theme-australia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(25, 75%, 55%, 0.5);
+}
+
+/* ========================================
+   África & Maurício Theme - Safari & Savana
+   ======================================== */
+.theme-africa {
+  --background: 35 30% 6%;
+  --foreground: 40 25% 95%;
+
+  --card: 35 25% 10%;
+  --card-foreground: 40 25% 95%;
+
+  --popover: 35 25% 10%;
+  --popover-foreground: 40 25% 95%;
+
+  --primary: 45 85% 50%;
+  --primary-foreground: 35 30% 8%;
+
+  --secondary: 145 45% 35%;
+  --secondary-foreground: 40 25% 95%;
+
+  --muted: 35 20% 15%;
+  --muted-foreground: 35 15% 55%;
+
+  --accent: 145 40% 40%;
+  --accent-foreground: 40 25% 95%;
+
+  --border: 35 20% 20%;
+  --input: 35 20% 20%;
+  --ring: 45 85% 50%;
+
+  --ocean-deep: 35 35% 12%;
+  --ocean-medium: 145 35% 25%;
+  --turquoise: 145 45% 40%;
+  --gold-champagne: 45 85% 50%;
+  --gold-light: 48 80% 60%;
+  --gold-dark: 40 70% 38%;
+  --navy: 35 30% 15%;
+  --navy-light: 35 25% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(35 35% 12%) 0%, hsl(145 35% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(45 85% 50%) 0%, hsl(48 80% 60%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(35, 30%, 8%, 0.9) 0%, hsla(145, 35%, 25%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(35 30% 6%) 0%, hsl(35 35% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(35, 25%, 15%, 0.6) 0%, hsla(35, 30%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(45, 85%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(35, 35%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(35, 30%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(45, 85%, 50%, 0.15);
+}
+
+.theme-africa .hero-overlay {
+  background: linear-gradient(180deg, hsla(35, 30%, 8%, 0.85) 0%, hsla(35, 30%, 8%, 0.6) 50%, hsla(145, 35%, 25%, 0.75) 100%);
+}
+
+.theme-africa .glass-card {
+  background: linear-gradient(145deg, hsla(35, 25%, 15%, 0.6) 0%, hsla(35, 30%, 8%, 0.8) 100%);
+}
+
+.theme-africa .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(45 85% 50%) 0%, hsl(48 80% 60%) 100%);
+}
+
+.theme-africa .btn-luxury {
+  background: hsl(45 85% 50%);
+  box-shadow: 0 10px 40px hsla(45, 85%, 50%, 0.25);
+}
+
+.theme-africa .btn-luxury:hover {
+  background: hsl(48 80% 60%);
+  box-shadow: 0 15px 50px hsla(45, 85%, 50%, 0.35);
+}
+
+.theme-africa .gold-border-left {
+  border-color: hsl(45 85% 50%);
+}
+
+.theme-africa .animated-underline::after {
+  background: hsl(45 85% 50%);
+}
+
+.theme-africa .stat-number {
+  color: hsl(45 85% 50%);
+}
+
+.theme-africa ::-webkit-scrollbar-thumb:hover {
+  background: hsla(45, 85%, 50%, 0.5);
+}
+
+/* ========================================
+   China Theme - Imperial Red & Gold
+   ======================================== */
+.theme-china {
+  --background: 0 25% 6%;
+  --foreground: 45 20% 95%;
+
+  --card: 0 20% 10%;
+  --card-foreground: 45 20% 95%;
+
+  --popover: 0 20% 10%;
+  --popover-foreground: 45 20% 95%;
+
+  --primary: 0 75% 50%;
+  --primary-foreground: 45 20% 95%;
+
+  --secondary: 45 80% 50%;
+  --secondary-foreground: 0 25% 8%;
+
+  --muted: 0 15% 15%;
+  --muted-foreground: 0 10% 55%;
+
+  --accent: 45 75% 55%;
+  --accent-foreground: 0 25% 8%;
+
+  --border: 0 15% 20%;
+  --input: 0 15% 20%;
+  --ring: 0 75% 50%;
+
+  --ocean-deep: 0 30% 12%;
+  --ocean-medium: 0 25% 22%;
+  --turquoise: 45 80% 50%;
+  --gold-champagne: 0 75% 50%;
+  --gold-light: 0 70% 60%;
+  --gold-dark: 0 65% 40%;
+  --navy: 0 25% 14%;
+  --navy-light: 0 20% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(0 30% 12%) 0%, hsl(0 25% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(0 75% 50%) 0%, hsl(0 70% 60%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(0, 25%, 8%, 0.9) 0%, hsla(0, 25%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(0 25% 6%) 0%, hsl(0 30% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(0, 20%, 15%, 0.6) 0%, hsla(0, 25%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(0, 75%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(0, 30%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(0, 25%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(0, 75%, 50%, 0.15);
+}
+
+.theme-china .hero-overlay {
+  background: linear-gradient(180deg, hsla(0, 25%, 8%, 0.85) 0%, hsla(0, 25%, 8%, 0.6) 50%, hsla(0, 25%, 18%, 0.75) 100%);
+}
+
+.theme-china .glass-card {
+  background: linear-gradient(145deg, hsla(0, 20%, 15%, 0.6) 0%, hsla(0, 25%, 8%, 0.8) 100%);
+}
+
+.theme-china .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(0 75% 50%) 0%, hsl(45 80% 55%) 100%);
+}
+
+.theme-china .btn-luxury {
+  background: hsl(0 75% 50%);
+  box-shadow: 0 10px 40px hsla(0, 75%, 50%, 0.25);
+}
+
+.theme-china .btn-luxury:hover {
+  background: hsl(0 70% 60%);
+  box-shadow: 0 15px 50px hsla(0, 75%, 50%, 0.35);
+}
+
+.theme-china .gold-border-left {
+  border-color: hsl(0 75% 50%);
+}
+
+.theme-china .animated-underline::after {
+  background: hsl(0 75% 50%);
+}
+
+.theme-china .stat-number {
+  color: hsl(0 75% 50%);
+}
+
+.theme-china ::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 75%, 50%, 0.5);
+}
+
+/* ========================================
+   Japão & China Theme - Cherry Blossom & Zen
+   ======================================== */
+.theme-japao {
+  --background: 340 20% 6%;
+  --foreground: 340 15% 95%;
+
+  --card: 340 15% 10%;
+  --card-foreground: 340 15% 95%;
+
+  --popover: 340 15% 10%;
+  --popover-foreground: 340 15% 95%;
+
+  --primary: 340 65% 60%;
+  --primary-foreground: 340 20% 8%;
+
+  --secondary: 0 0% 95%;
+  --secondary-foreground: 340 20% 10%;
+
+  --muted: 340 15% 15%;
+  --muted-foreground: 340 10% 55%;
+
+  --accent: 340 60% 65%;
+  --accent-foreground: 340 20% 8%;
+
+  --border: 340 12% 20%;
+  --input: 340 12% 20%;
+  --ring: 340 65% 60%;
+
+  --ocean-deep: 340 25% 12%;
+  --ocean-medium: 340 20% 22%;
+  --turquoise: 340 60% 65%;
+  --gold-champagne: 340 65% 60%;
+  --gold-light: 340 60% 70%;
+  --gold-dark: 340 55% 45%;
+  --navy: 340 22% 14%;
+  --navy-light: 340 18% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(340 25% 12%) 0%, hsl(340 20% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(340 65% 60%) 0%, hsl(340 60% 70%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(340, 20%, 8%, 0.9) 0%, hsla(340, 20%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(340 20% 6%) 0%, hsl(340 25% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(340, 15%, 15%, 0.6) 0%, hsla(340, 20%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(340, 65%, 60%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(340, 25%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(340, 20%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(340, 65%, 60%, 0.15);
+}
+
+.theme-japao .hero-overlay {
+  background: linear-gradient(180deg, hsla(340, 20%, 8%, 0.85) 0%, hsla(340, 20%, 8%, 0.6) 50%, hsla(340, 20%, 18%, 0.75) 100%);
+}
+
+.theme-japao .glass-card {
+  background: linear-gradient(145deg, hsla(340, 15%, 15%, 0.6) 0%, hsla(340, 20%, 8%, 0.8) 100%);
+}
+
+.theme-japao .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(340 65% 60%) 0%, hsl(340 60% 75%) 100%);
+}
+
+.theme-japao .btn-luxury {
+  background: hsl(340 65% 60%);
+  box-shadow: 0 10px 40px hsla(340, 65%, 60%, 0.25);
+}
+
+.theme-japao .btn-luxury:hover {
+  background: hsl(340 60% 70%);
+  box-shadow: 0 15px 50px hsla(340, 65%, 60%, 0.35);
+}
+
+.theme-japao .gold-border-left {
+  border-color: hsl(340 65% 60%);
+}
+
+.theme-japao .animated-underline::after {
+  background: hsl(340 65% 60%);
+}
+
+.theme-japao .stat-number {
+  color: hsl(340 65% 60%);
+}
+
+.theme-japao ::-webkit-scrollbar-thumb:hover {
+  background: hsla(340, 65%, 60%, 0.5);
+}
+
+/* ========================================
+   Puglia & Costa Amalfitana Theme - Mediterranean
+   ======================================== */
+.theme-italia {
+  --background: 200 35% 6%;
+  --foreground: 45 25% 95%;
+
+  --card: 200 30% 10%;
+  --card-foreground: 45 25% 95%;
+
+  --popover: 200 30% 10%;
+  --popover-foreground: 45 25% 95%;
+
+  --primary: 200 70% 50%;
+  --primary-foreground: 45 25% 95%;
+
+  --secondary: 25 75% 55%;
+  --secondary-foreground: 200 35% 8%;
+
+  --muted: 200 25% 15%;
+  --muted-foreground: 200 15% 55%;
+
+  --accent: 45 80% 55%;
+  --accent-foreground: 200 35% 8%;
+
+  --border: 200 20% 20%;
+  --input: 200 20% 20%;
+  --ring: 200 70% 50%;
+
+  --ocean-deep: 200 45% 15%;
+  --ocean-medium: 200 40% 28%;
+  --turquoise: 200 65% 50%;
+  --gold-champagne: 200 70% 50%;
+  --gold-light: 200 65% 60%;
+  --gold-dark: 200 60% 40%;
+  --navy: 200 38% 16%;
+  --navy-light: 200 32% 24%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(200 45% 15%) 0%, hsl(200 40% 28%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(200 65% 60%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(200, 35%, 8%, 0.9) 0%, hsla(200, 40%, 25%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(200 35% 6%) 0%, hsl(200 45% 15%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(200, 70%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(200, 45%, 15%, 0.5);
+  --shadow-card: 0 15px 50px hsla(200, 35%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(200, 70%, 50%, 0.15);
+}
+
+.theme-italia .hero-overlay {
+  background: linear-gradient(180deg, hsla(200, 35%, 8%, 0.85) 0%, hsla(200, 35%, 8%, 0.6) 50%, hsla(200, 40%, 25%, 0.75) 100%);
+}
+
+.theme-italia .glass-card {
+  background: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+}
+
+.theme-italia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(45 80% 60%) 100%);
+}
+
+.theme-italia .btn-luxury {
+  background: hsl(200 70% 50%);
+  box-shadow: 0 10px 40px hsla(200, 70%, 50%, 0.25);
+}
+
+.theme-italia .btn-luxury:hover {
+  background: hsl(200 65% 60%);
+  box-shadow: 0 15px 50px hsla(200, 70%, 50%, 0.35);
+}
+
+.theme-italia .gold-border-left {
+  border-color: hsl(200 70% 50%);
+}
+
+.theme-italia .animated-underline::after {
+  background: hsl(200 70% 50%);
+}
+
+.theme-italia .stat-number {
+  color: hsl(200 70% 50%);
+}
+
+.theme-italia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(200, 70%, 50%, 0.5);
+}
+
+/* ========================================
+   Reino Unido Theme - British Royal Green & Gold
+   ======================================== */
+.theme-uk {
+  --background: 150 30% 5%;
+  --foreground: 45 20% 95%;
+
+  --card: 150 25% 9%;
+  --card-foreground: 45 20% 95%;
+
+  --popover: 150 25% 9%;
+  --popover-foreground: 45 20% 95%;
+
+  --primary: 150 50% 40%;
+  --primary-foreground: 45 20% 95%;
+
+  --secondary: 45 70% 50%;
+  --secondary-foreground: 150 30% 8%;
+
+  --muted: 150 20% 14%;
+  --muted-foreground: 150 12% 50%;
+
+  --accent: 45 65% 55%;
+  --accent-foreground: 150 30% 8%;
+
+  --border: 150 18% 18%;
+  --input: 150 18% 18%;
+  --ring: 150 50% 40%;
+
+  --ocean-deep: 150 35% 12%;
+  --ocean-medium: 150 30% 22%;
+  --turquoise: 150 45% 45%;
+  --gold-champagne: 150 50% 40%;
+  --gold-light: 150 45% 50%;
+  --gold-dark: 150 45% 30%;
+  --navy: 150 32% 13%;
+  --navy-light: 150 26% 20%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(150 35% 12%) 0%, hsl(150 30% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(150 50% 40%) 0%, hsl(150 45% 50%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(150, 30%, 7%, 0.9) 0%, hsla(150, 30%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(150 30% 5%) 0%, hsl(150 35% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(150, 25%, 14%, 0.6) 0%, hsla(150, 30%, 7%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(150, 50%, 40%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(150, 35%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(150, 30%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(150, 50%, 40%, 0.15);
+}
+
+.theme-uk .hero-overlay {
+  background: linear-gradient(180deg, hsla(150, 30%, 7%, 0.85) 0%, hsla(150, 30%, 7%, 0.6) 50%, hsla(150, 30%, 18%, 0.75) 100%);
+}
+
+.theme-uk .glass-card {
+  background: linear-gradient(145deg, hsla(150, 25%, 14%, 0.6) 0%, hsla(150, 30%, 7%, 0.8) 100%);
+}
+
+.theme-uk .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(150 50% 40%) 0%, hsl(45 70% 55%) 100%);
+}
+
+.theme-uk .btn-luxury {
+  background: hsl(150 50% 40%);
+  box-shadow: 0 10px 40px hsla(150, 50%, 40%, 0.25);
+}
+
+.theme-uk .btn-luxury:hover {
+  background: hsl(150 45% 50%);
+  box-shadow: 0 15px 50px hsla(150, 50%, 40%, 0.35);
+}
+
+.theme-uk .gold-border-left {
+  border-color: hsl(150 50% 40%);
+}
+
+.theme-uk .animated-underline::after {
+  background: hsl(150 50% 40%);
+}
+
+.theme-uk .stat-number {
+  color: hsl(150 50% 40%);
+}
+
+.theme-uk ::-webkit-scrollbar-thumb:hover {
+  background: hsla(150, 50%, 40%, 0.5);
+}
+
+/* ========================================
+   Suíça Theme - Alpine Blue & Snow
+   ======================================== */
+.theme-suica {
+  --background: 210 35% 6%;
+  --foreground: 210 15% 95%;
+
+  --card: 210 30% 10%;
+  --card-foreground: 210 15% 95%;
+
+  --popover: 210 30% 10%;
+  --popover-foreground: 210 15% 95%;
+
+  --primary: 210 80% 55%;
+  --primary-foreground: 210 15% 95%;
+
+  --secondary: 0 70% 50%;
+  --secondary-foreground: 210 15% 95%;
+
+  --muted: 210 20% 15%;
+  --muted-foreground: 210 12% 55%;
+
+  --accent: 0 65% 55%;
+  --accent-foreground: 210 15% 95%;
+
+  --border: 210 18% 20%;
+  --input: 210 18% 20%;
+  --ring: 210 80% 55%;
+
+  --ocean-deep: 210 40% 14%;
+  --ocean-medium: 210 35% 25%;
+  --turquoise: 210 70% 55%;
+  --gold-champagne: 210 80% 55%;
+  --gold-light: 210 75% 65%;
+  --gold-dark: 210 70% 42%;
+  --navy: 210 35% 14%;
+  --navy-light: 210 30% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(210 40% 14%) 0%, hsl(210 35% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(210 80% 55%) 0%, hsl(210 75% 65%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(210, 35%, 8%, 0.9) 0%, hsla(210, 35%, 20%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(210 35% 6%) 0%, hsl(210 40% 14%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(210, 30%, 15%, 0.6) 0%, hsla(210, 35%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(210, 80%, 55%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(210, 40%, 14%, 0.5);
+  --shadow-card: 0 15px 50px hsla(210, 35%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(210, 80%, 55%, 0.15);
+}
+
+.theme-suica .hero-overlay {
+  background: linear-gradient(180deg, hsla(210, 35%, 8%, 0.85) 0%, hsla(210, 35%, 8%, 0.6) 50%, hsla(210, 35%, 20%, 0.75) 100%);
+}
+
+.theme-suica .glass-card {
+  background: linear-gradient(145deg, hsla(210, 30%, 15%, 0.6) 0%, hsla(210, 35%, 8%, 0.8) 100%);
+}
+
+.theme-suica .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(210 80% 55%) 0%, hsl(210 75% 70%) 100%);
+}
+
+.theme-suica .btn-luxury {
+  background: hsl(210 80% 55%);
+  box-shadow: 0 10px 40px hsla(210, 80%, 55%, 0.25);
+}
+
+.theme-suica .btn-luxury:hover {
+  background: hsl(210 75% 65%);
+  box-shadow: 0 15px 50px hsla(210, 80%, 55%, 0.35);
+}
+
+.theme-suica .gold-border-left {
+  border-color: hsl(210 80% 55%);
+}
+
+.theme-suica .animated-underline::after {
+  background: hsl(210 80% 55%);
+}
+
+.theme-suica .stat-number {
+  color: hsl(210 80% 55%);
+}
+
+.theme-suica ::-webkit-scrollbar-thumb:hover {
+  background: hsla(210, 80%, 55%, 0.5);
+}
+
+/* ========================================
+   Tailândia & Dubai Theme - Royal Purple & Gold
+   ======================================== */
+.theme-tailandia {
+  --background: 270 30% 6%;
+  --foreground: 45 20% 95%;
+
+  --card: 270 25% 10%;
+  --card-foreground: 45 20% 95%;
+
+  --popover: 270 25% 10%;
+  --popover-foreground: 45 20% 95%;
+
+  --primary: 45 85% 55%;
+  --primary-foreground: 270 30% 8%;
+
+  --secondary: 270 50% 55%;
+  --secondary-foreground: 45 20% 95%;
+
+  --muted: 270 20% 15%;
+  --muted-foreground: 270 12% 55%;
+
+  --accent: 270 45% 60%;
+  --accent-foreground: 45 20% 95%;
+
+  --border: 270 18% 20%;
+  --input: 270 18% 20%;
+  --ring: 45 85% 55%;
+
+  --ocean-deep: 270 35% 12%;
+  --ocean-medium: 270 30% 22%;
+  --turquoise: 270 45% 55%;
+  --gold-champagne: 45 85% 55%;
+  --gold-light: 45 80% 65%;
+  --gold-dark: 45 75% 42%;
+  --navy: 270 32% 14%;
+  --navy-light: 270 26% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(270 35% 12%) 0%, hsl(270 30% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 80% 65%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(270, 30%, 8%, 0.9) 0%, hsla(270, 30%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(270 30% 6%) 0%, hsl(270 35% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(270, 25%, 15%, 0.6) 0%, hsla(270, 30%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(45, 85%, 55%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(270, 35%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(270, 30%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(45, 85%, 55%, 0.15);
+}
+
+.theme-tailandia .hero-overlay {
+  background: linear-gradient(180deg, hsla(270, 30%, 8%, 0.85) 0%, hsla(270, 30%, 8%, 0.6) 50%, hsla(270, 30%, 18%, 0.75) 100%);
+}
+
+.theme-tailandia .glass-card {
+  background: linear-gradient(145deg, hsla(270, 25%, 15%, 0.6) 0%, hsla(270, 30%, 8%, 0.8) 100%);
+}
+
+.theme-tailandia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 80% 70%) 100%);
+}
+
+.theme-tailandia .btn-luxury {
+  background: hsl(45 85% 55%);
+  box-shadow: 0 10px 40px hsla(45, 85%, 55%, 0.25);
+}
+
+.theme-tailandia .btn-luxury:hover {
+  background: hsl(45 80% 65%);
+  box-shadow: 0 15px 50px hsla(45, 85%, 55%, 0.35);
+}
+
+.theme-tailandia .gold-border-left {
+  border-color: hsl(45 85% 55%);
+}
+
+.theme-tailandia .animated-underline::after {
+  background: hsl(45 85% 55%);
+}
+
+.theme-tailandia .stat-number {
+  color: hsl(45 85% 55%);
+}
+
+.theme-tailandia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(45, 85%, 55%, 0.5);
+}
+

@@ -4,29 +4,21 @@ import donoImage from "@/assets/dono.webp";
 
 const credentials = [
   {
-    icon: MapPin,
-    text: "3 anos vivendo em Sydney — conhece a Austrália como ninguém",
-  },
-  {
-    icon: Globe,
-    text: "8 anos de experiência em Londres — perspectiva global",
-  },
-  {
     icon: Award,
-    text: "Mais de 50 países visitados — roteiros testados pessoalmente",
+    text: "Aussie Travel Specialist — Certificação oficial do Governo Australiano",
+  },
+  {
+    icon: MapPin,
+    text: "3 anos de vivência em Sydney — conhece cada rua, cada história, cada segredo",
   },
   {
     icon: Users,
-    text: "Centenas de clientes satisfeitos — viajantes transformados",
+    text: "Acompanhamento pessoal do embarque ao retorno — não delega, não terceiriza",
   },
-];
-
-const discoveries = [
-  "Guias locais que conhecem lugares que turistas nunca vão",
-  "Experiências com animais selvagens em habitat natural",
-  "Vinícolas escondidas com os melhores vinhos da Austrália",
-  "Pontos de avistamento de golfinhos que só os locais conhecem",
-  "Roteiros que respeitam a natureza e a cultura aborígine",
+  {
+    icon: Shield,
+    text: "Histórico de grupos bem-sucedidos — viajantes satisfeitos e transformados",
+  },
 ];
 
 const certifications = [
@@ -34,25 +26,25 @@ const certifications = [
     icon: Award,
     name: "Aussie Travel Specialist",
     issuer: "Governo Australiano",
-    description: "Certificação oficial para especialistas",
+    description: "Certificação oficial para especialistas em turismo australiano",
   },
   {
     icon: BadgeCheck,
     name: "Cadastur",
-    issuer: "Ministério do Turismo",
-    description: "Cadastro oficial de profissionais",
+    issuer: "Ministério do Turismo (Brasil)",
+    description: "Cadastro oficial de profissionais de turismo",
   },
   {
     icon: Globe,
     name: "3 Anos em Sydney",
     issuer: "Vivência Autêntica",
-    description: "Conhecimento profundo da Oceania",
+    description: "Conhecimento profundo da cultura e destinos australianos",
   },
   {
     icon: Briefcase,
     name: "CEO, WE Travel UK",
     issuer: "Empresa Premium",
-    description: "Viagens de alto padrão",
+    description: "Especialista em viagens premium para brasileiros",
   },
 ];
 
@@ -62,6 +54,8 @@ export const ConnectionSectionAUNZ = () => {
       {/* Decorative ocean elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-turquoise/10 to-transparent" />
 
       {/* Floating compass */}
       <motion.div
@@ -98,7 +92,7 @@ export const ConnectionSectionAUNZ = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -top-4 -right-4 md:top-4 md:right-0 glass-card px-4 py-2 rounded-full border border-primary/30"
               >
-                <span className="text-xs font-semibold text-primary">3 Anos em Sydney</span>
+                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
               </motion.div>
               
               <motion.div
@@ -106,7 +100,7 @@ export const ConnectionSectionAUNZ = () => {
                 transition={{ duration: 5, repeat: Infinity }}
                 className="absolute -bottom-4 -left-4 md:bottom-4 md:left-0 glass-card px-4 py-2 rounded-full border border-primary/30"
               >
-                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
+                <span className="text-xs font-semibold text-primary">Cadastur</span>
               </motion.div>
 
               <motion.div
@@ -114,7 +108,7 @@ export const ConnectionSectionAUNZ = () => {
                 transition={{ duration: 6, repeat: Infinity }}
                 className="absolute top-1/2 -right-8 md:right-[-60px] glass-card px-4 py-2 rounded-full border border-turquoise/30 hidden md:block"
               >
-                <span className="text-xs font-semibold text-turquoise">50+ países</span>
+                <span className="text-xs font-semibold text-turquoise">CEO WE Travel UK</span>
               </motion.div>
             </div>
           </motion.div>
@@ -127,27 +121,26 @@ export const ConnectionSectionAUNZ = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-turquoise font-semibold text-sm tracking-widest uppercase mb-4 block">
-              Quem Criou Este Roteiro
+              Quem Guia Sua Jornada
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              <span className="text-foreground">Quem Sou Eu Para </span>
-              <span className="text-gradient-gold">Criar Esse Roteiro?</span>
+              <span className="text-foreground">Sua jornada é </span>
+              <span className="text-gradient-gold">orquestrada</span>
             </h2>
 
             <div className="space-y-4 mb-8 text-muted-foreground">
               <p className="text-lg leading-relaxed">
-                Meu nome é <strong className="text-foreground">Evandro Mendes</strong>. 
-                Sou fundador da We Travel UK.
+                <strong className="text-foreground">Evandro Mendes</strong> não é um guia de turismo. 
+                É o CEO da WE Travel UK e um <strong className="text-primary">Aussie Travel Specialist certificado pelo Governo Australiano</strong>.
               </p>
               <p className="text-lg leading-relaxed">
-                Eu passei <strong className="text-primary">3 ANOS em Sydney</strong>. 
-                Explorei cada canto dessa cidade. Criei experiências que você 
-                <strong className="text-foreground"> NÃO VAI ENCONTRAR</strong> em outro roteiro.
+                Esta certificação é uma das mais respeitadas no turismo australiano. 
+                Apenas profissionais como Evandro a receberam porque <strong className="text-foreground">viveu 3 anos em Sydney</strong>, 
+                porque conhece cada detalhe do país.
               </p>
               <p className="text-lg leading-relaxed">
-                Viajei por mais de <strong className="text-primary">50 países</strong>. 
-                Conheci as melhores agências do mundo. Mas foi em Sydney que entendi 
-                o que significa criar um roteiro transformador.
+                Ele acompanha <strong className="text-primary">pessoalmente</strong> cada grupo.
+                Ele não delega. Ele não terceiriza. Ele está com você.
               </p>
             </div>
 
@@ -172,45 +165,13 @@ export const ConnectionSectionAUNZ = () => {
           </motion.div>
         </div>
 
-        {/* What I Discovered Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="glass-card rounded-2xl p-8 md:p-12 mt-16 max-w-4xl mx-auto border border-primary/20"
-        >
-          <h3 className="font-display text-2xl font-bold text-center text-foreground mb-6">
-            O Que Eu Descobri em Sydney
-          </h3>
-          <div className="space-y-3">
-            {discoveries.map((discovery, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                className="flex items-center gap-3"
-              >
-                <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                <span className="text-muted-foreground">{discovery}</span>
-              </motion.div>
-            ))}
-          </div>
-          <p className="text-center text-lg text-foreground font-display mt-6">
-            Tudo isso eu trouxe para esse roteiro. Porque você merecia viver a 
-            <span className="text-primary font-bold"> verdadeira Austrália</span>.
-          </p>
-        </motion.div>
-
         {/* Certifications Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-5xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto"
         >
           {certifications.map((cert, index) => (
             <motion.div
@@ -226,7 +187,7 @@ export const ConnectionSectionAUNZ = () => {
               </div>
               <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
               <p className="text-xs text-primary mb-1">{cert.issuer}</p>
-              <p className="text-xs text-muted-foreground">{cert.description}</p>
+              <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
             </motion.div>
           ))}
         </motion.div>

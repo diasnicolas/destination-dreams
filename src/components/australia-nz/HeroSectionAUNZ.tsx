@@ -49,6 +49,13 @@ export const HeroSectionAUNZ = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Images with Crossfade */}
@@ -172,12 +179,12 @@ export const HeroSectionAUNZ = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <a
-              href="#formulario"
+            <button
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO ME REDESCOBRIR
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>

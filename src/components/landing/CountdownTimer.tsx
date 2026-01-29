@@ -8,10 +8,14 @@ interface TimeLeft {
   seconds: number;
 }
 
-const calculateTimeLeft = (): TimeLeft => {
-  const targetDate = new Date("2027-04-08T00:00:00");
+interface CountdownTimerProps {
+  targetDate?: string; // ISO date string, e.g., "2027-04-08T00:00:00"
+}
+
+const calculateTimeLeft = (targetDate: string): TimeLeft => {
+  const target = new Date(targetDate);
   const now = new Date();
-  const difference = targetDate.getTime() - now.getTime();
+  const difference = target.getTime() - now.getTime();
 
   if (difference <= 0) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -25,16 +29,16 @@ const calculateTimeLeft = (): TimeLeft => {
   };
 };
 
-export const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+export const CountdownTimer = ({ targetDate = "2027-04-08T00:00:00" }: CountdownTimerProps) => {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(targetDate));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   const timeUnits = [
     { value: timeLeft.days, label: "Dias" },
