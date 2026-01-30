@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotel01 from "@/assets/japao-china/hotel-01.jpeg";
+import hotel02 from "@/assets/japao-china/hotel-02.jpeg";
+import hotel03 from "@/assets/japao-china/hotel-03.jpeg";
+import hotel04 from "@/assets/japao-china/hotel-04.jpeg";
+import hotel05 from "@/assets/japao-china/hotel-05.jpeg";
+import hotel06 from "@/assets/japao-china/hotel-06.webp";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Doha", category: "Hyatt Regency Oryx" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Kyoto", category: "Hotel Anteroom" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Nagoya", category: "Nikko Style" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Toyama", category: "Hotel Toyama" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Beijing", category: "Hotel Beijing" },
-  { src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80", title: "Shanghai", category: "Hotel Shanghai" },
+  { src: hotel01, title: "Doha", category: "Hyatt Regency Oryx" },
+  { src: hotel02, title: "Kyoto", category: "Hotel Anteroom" },
+  { src: hotel03, title: "Nagoya", category: "Nikko Style" },
+  { src: hotel04, title: "Toyama", category: "Hotel Toyama" },
+  { src: hotel05, title: "Beijing", category: "Hotel Beijing" },
+  { src: hotel06, title: "Shanghai", category: "Hotel Shanghai" },
 ];
 
 export const HotelsPhotoGalleryJC = () => {

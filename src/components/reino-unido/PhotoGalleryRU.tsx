@@ -2,13 +2,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import imgBigBen from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.jpg";
+import imgTowerBridge from "@/assets/reino-unido/photo-1486299267070-83823f5448dd.jpg";
+import imgHotel from "@/assets/reino-unido/photo-1566073771259-6a8506099945.jpg";
+import imgHighlands from "@/assets/reino-unido/photo-1587974928442-77dc3e0dba72.jpg";
+import imgBath from "@/assets/reino-unido/photo-1590077428593-a55bb07c4665.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80", title: "Big Ben & Westminster", category: "Londres" },
-  { src: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=800&q=80", title: "Tower Bridge", category: "Londres" },
-  { src: "https://images.unsplash.com/photo-1548678747-4c42e1c15e0c?w=800&q=80", title: "Castelo de Edinburgh", category: "Escócia" },
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Catedral de Durham", category: "Durham" },
-  { src: "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800&q=80", title: "Highlands", category: "Inverness" },
-  { src: "https://images.unsplash.com/photo-1590077428593-a55bb07c4665?w=800&q=80", title: "Bath", category: "Termas Romanas" },
+  { src: imgBigBen, title: "Big Ben & Westminster", category: "Londres" },
+  { src: imgTowerBridge, title: "Tower Bridge", category: "Londres" },
+  { src: imgHotel, title: "Castelo de Edinburgh", category: "Escócia" },
+  { src: imgHotel, title: "Catedral de Durham", category: "Durham" },
+  { src: imgHighlands, title: "Highlands", category: "Inverness" },
+  { src: imgBath, title: "Bath", category: "Termas Romanas" },
 ];
 
 export const PhotoGalleryRU = () => {

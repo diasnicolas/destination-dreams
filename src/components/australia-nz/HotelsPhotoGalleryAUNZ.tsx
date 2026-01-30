@@ -2,13 +2,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+// Imagens locais dos hotéis
+import hotel01 from "@/assets/australia-nz-02/hotel-01.jpeg";
+import hotel02 from "@/assets/australia-nz-02/hotel-02.jpeg";
+import hotel03 from "@/assets/australia-nz-02/hotel-03.jpeg";
+import hotel04 from "@/assets/australia-nz-02/hotel-04.jpeg";
+import hotel05 from "@/assets/australia-nz-02/hotel-05.jpeg";
+import hotel06 from "@/assets/australia-nz-02/hotel-06.webp";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Sydney", category: "Park Hyatt Sydney" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Cairns", category: "Pullman Cairns" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Melbourne", category: "Crown Towers Melbourne" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Queenstown", category: "Sofitel Queenstown" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Rotorua", category: "Regent of Rotorua" },
-  { src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80", title: "Auckland", category: "Sofitel Auckland" },
+  { src: hotel01, title: "Auckland", category: "SkyCity" },
+  { src: hotel02, title: "Rotorua", category: "Rydges" },
+  { src: hotel03, title: "Queenstown", category: "Double Three by Hilton" },
+  { src: hotel04, title: "Melbourne", category: "Melbourne Welcome Hotel" },
+  { src: hotel05, title: "Cairns", category: "Hilton Cairns" },
+  { src: hotel06, title: "Sydney", category: "" },
 ];
 
 export const HotelsPhotoGalleryAUNZ = () => {
@@ -63,7 +71,7 @@ export const HotelsPhotoGalleryAUNZ = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}

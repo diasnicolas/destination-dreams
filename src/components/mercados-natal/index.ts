@@ -1,0 +1,12 @@
+export { HeroSectionMN } from "./HeroSectionMN";
+export { ConnectionSectionMN } from "./ConnectionSectionMN";
+export { ProblemSectionMN } from "./ProblemSectionMN";
+export { JourneySectionMN } from "./JourneySectionMN";
+export { DetailedItineraryMN } from "./DetailedItineraryMN";
+export { ExperiencesSectionMN } from "./ExperiencesSectionMN";
+export { PhotoGalleryMN } from "./PhotoGalleryMN";
+export { HotelsPhotoGalleryMN } from "./HotelsPhotoGalleryMN";
+export { InclusionsSectionMN } from "./InclusionsSectionMN";
+export { FAQSectionMN } from "./FAQSectionMN";
+export { UrgencySectionMN } from "./UrgencySectionMN";
+export { FooterSectionMN } from "./FooterSectionMN";

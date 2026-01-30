@@ -2,17 +2,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
-// Placeholder images - usando imagens existentes do projeto
-import sydneyImage from "@/assets/cruzeiro-01/sidney.webp";
-import boraboraImage from "@/assets/cruzeiro-01/borabora.webp";
-import kangaroosImage from "@/assets/cruzeiro-01/cangurus.webp";
-import dolphinsImage from "@/assets/cruzeiro-01/dolphins.webp";
+import image01 from "@/assets/australia-nz-02/photo-1624138784614-87fd1b6528f8.jpg";
+import image02 from "@/assets/australia-nz-02/photo-1462275646964-a0e3386b89fa.jpg";
+import image03 from "@/assets/australia-nz-02/photo-1507699622108-4be3abd695ad.jpg";
+import image04 from "@/assets/australia-nz-02/photo-1568430462989-44163eb1752f.jpg";
 
+// Imagens do Unsplash
 const heroImages = [
-  { src: sydneyImage, alt: "Sydney Opera House" },
-  { src: kangaroosImage, alt: "Cangurus na Natureza" },
-  { src: boraboraImage, alt: "Nova Zelândia" },
-  { src: dolphinsImage, alt: "Golfinhos" },
+  { src: image01, alt: "Sydney Opera House" },
+  { src: image02, alt: "Cangurus na Natureza" },
+  { src: image03, alt: "Nova Zelândia - Queenstown" },
+  { src: image04, alt: "Golfinhos" },
 ];
 
 const highlights = [

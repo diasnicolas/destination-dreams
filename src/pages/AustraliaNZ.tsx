@@ -7,30 +7,34 @@ import { BenefitsSectionAUNZ } from "@/components/australia-nz/BenefitsSectionAU
 import { FAQSectionAUNZ } from "@/components/australia-nz/FAQSectionAUNZ";
 import { InclusionsSectionAUNZ } from "@/components/australia-nz/InclusionsSectionAUNZ";
 import { UrgencySectionAUNZ } from "@/components/australia-nz/UrgencySectionAUNZ";
-import { ContactSectionAUNZ } from "@/components/australia-nz/ContactSectionAUNZ";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionAUNZ } from "@/components/australia-nz/ConnectionSectionAUNZ";
 import { PhotoGalleryAUNZ } from "@/components/australia-nz/PhotoGalleryAUNZ";
 import { HotelsPhotoGalleryAUNZ } from "@/components/australia-nz/HotelsPhotoGalleryAUNZ";
 import { FooterSectionAUNZ } from "@/components/australia-nz/FooterSectionAUNZ";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const AustraliaNZ = () => {
   return (
     <main className="theme-australia min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.australiaNZ} />
       <HeroSectionAUNZ />
-      <ProblemSectionAUNZ />
       <ConnectionSectionAUNZ />
+      <ProblemSectionAUNZ />
       <JourneySectionAUNZ />
       <DetailedItineraryAUNZ />
       <ExperiencesSectionAUNZ />
       <PhotoGalleryAUNZ />
       <HotelsPhotoGalleryAUNZ />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.australiaNZ} />
       <BenefitsSectionAUNZ />
       <FAQSectionAUNZ />
       <InclusionsSectionAUNZ />
       <UrgencySectionAUNZ />
-      <ContactSectionAUNZ />
+      <ContactSection destino="Austrália & Nova Zelândia 2027" />
       <FooterSectionAUNZ />
     </main>
   );

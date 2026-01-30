@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CountdownTimer } from "@/components/landing/CountdownTimer";
+import { CountdownTimer } from "@/components/common/CountdownTimer";
 
 export const UrgencySectionJC = () => {
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+    const contactSection = document.getElementById("formulario");
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 

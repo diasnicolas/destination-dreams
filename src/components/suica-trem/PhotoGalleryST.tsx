@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import imgMatterhorn from "@/assets/suica-trem/photo-1527668752968-14dc70a27c95.jpg";
+import imgJungfraujoch from "@/assets/suica-trem/photo-1530122037265-a5f1f91d3b99.jpg";
+import imgAlpes from "@/assets/suica-trem/photo-1506905925346-21bda4d32df4.jpg";
+import imgLucerna from "@/assets/suica-trem/photo-1504218727796-db522606b16f.jpg";
+import imgGlacierExpress from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
+import imgStMoritz from "@/assets/suica-trem/photo-1516483638261-f4dbaf036963.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?w=800&q=80", title: "Matterhorn", category: "Zermatt" },
-  { src: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80", title: "Jungfraujoch", category: "Topo da Europa" },
-  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80", title: "Alpes Suíços", category: "Interlaken" },
-  { src: "https://images.unsplash.com/photo-1504218727796-db522606b16f?w=800&q=80", title: "Lucerna", category: "Ponte da Capela" },
-  { src: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=800&q=80", title: "Glacier Express", category: "Trem Panorâmico" },
-  { src: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80", title: "St. Moritz", category: "Vilarejo Alpino" },
+  { src: imgMatterhorn, title: "Matterhorn", category: "Zermatt" },
+  { src: imgJungfraujoch, title: "Jungfraujoch", category: "Topo da Europa" },
+  { src: imgAlpes, title: "Alpes Suíços", category: "Interlaken" },
+  { src: imgLucerna, title: "Lucerna", category: "Ponte da Capela" },
+  { src: imgGlacierExpress, title: "Glacier Express", category: "Trem Panorâmico" },
+  { src: imgStMoritz, title: "St. Moritz", category: "Vilarejo Alpino" },
 ];
 
 export const PhotoGalleryST = () => {

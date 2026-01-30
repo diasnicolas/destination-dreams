@@ -6,29 +6,33 @@ import { ExperiencesSectionAM } from "@/components/africa-mauricio/ExperiencesSe
 import { FAQSectionAM } from "@/components/africa-mauricio/FAQSectionAM";
 import { UrgencySectionAM } from "@/components/africa-mauricio/UrgencySectionAM";
 import { InclusionsSectionAM } from "@/components/africa-mauricio/InclusionsSectionAM";
-import { ContactSectionAM } from "@/components/africa-mauricio/ContactSectionAM";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionAM } from "@/components/africa-mauricio/ConnectionSectionAM";
 import { PhotoGalleryAM } from "@/components/africa-mauricio/PhotoGalleryAM";
 import { HotelsPhotoGalleryAM } from "@/components/africa-mauricio/HotelsPhotoGalleryAM";
 import { FooterSectionAM } from "@/components/africa-mauricio/FooterSectionAM";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const AfricaMauricio = () => {
   return (
     <main className="theme-africa min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.africaMauricio} />
       <HeroSectionAM />
-      <ProblemSectionAM />
       <ConnectionSectionAM />
+      <ProblemSectionAM />
       <JourneySectionAM />
       <DetailedItineraryAM />
       <ExperiencesSectionAM />
       <PhotoGalleryAM />
       <HotelsPhotoGalleryAM />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.africaMauricio} />
       <FAQSectionAM />
       <UrgencySectionAM />
       <InclusionsSectionAM />
-      <ContactSectionAM />
+      <ContactSection destino="África do Sul & Ilhas Maurício" />
       <FooterSectionAM />
     </main>
   );

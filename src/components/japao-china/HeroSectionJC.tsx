@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import photo1493976040374 from "@/assets/japao-china/photo-1493976040374-85c8e12f0c0e.jpg";
+import photo1490806843957 from "@/assets/japao-china/photo-1490806843957-31f4c9a91c65.jpg";
+import photo1508804185872 from "@/assets/japao-china/photo-1508804185872-d7badad00f7d.jpg";
+import photo1474181487882 from "@/assets/japao-china/photo-1474181487882-5abf3f0ba6c2.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=1920", alt: "Templo em Kyoto" },
-  { src: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?auto=format&fit=crop&q=80&w=1920", alt: "Monte Fuji" },
-  { src: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=80&w=1920", alt: "Grande Muralha da China" },
-  { src: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?auto=format&fit=crop&q=80&w=1920", alt: "Shanghai" }
+  { src: photo1493976040374, alt: "Templo em Kyoto" },
+  { src: photo1490806843957, alt: "Monte Fuji" },
+  { src: photo1508804185872, alt: "Grande Muralha da China" },
+  { src: photo1474181487882, alt: "Shanghai" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionJC = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO VIAJAR ENTRE DOIS MUNDOS

@@ -1,0 +1,12 @@
+export { HeroSectionGR } from "./HeroSectionGR";
+export { ProblemSectionGR } from "./ProblemSectionGR";
+export { ConnectionSectionGR } from "./ConnectionSectionGR";
+export { JourneySectionGR } from "./JourneySectionGR";
+export { ExperiencesSectionGR } from "./ExperiencesSectionGR";
+export { DetailedItineraryGR } from "./DetailedItineraryGR";
+export { PhotoGalleryGR } from "./PhotoGalleryGR";
+export { HotelsPhotoGalleryGR } from "./HotelsPhotoGalleryGR";
+export { InclusionsSectionGR } from "./InclusionsSectionGR";
+export { FAQSectionGR } from "./FAQSectionGR";
+export { UrgencySectionGR } from "./UrgencySectionGR";
+export { FooterSectionGR } from "./FooterSectionGR";

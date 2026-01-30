@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import photo1508804185872 from "@/assets/china/photo-1508804185872-d7badad00f7d.jpg";
+import photo1547981609 from "@/assets/china/photo-1547981609-4b6bfe67ca0b.jpg";
+import photo1545893835 from "@/assets/china/photo-1545893835-abaa50cbe628.jpg";
+import photo1474181487882 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=80&w=1920", alt: "Grande Muralha da China" },
-  { src: "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&q=80&w=1920", alt: "Cidade Proibida" },
-  { src: "https://images.unsplash.com/photo-1545893835-abaa50cbe628?auto=format&fit=crop&q=80&w=1920", alt: "Guerreiros de Terracota" },
-  { src: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?auto=format&fit=crop&q=80&w=1920", alt: "Shanghai Skyline" }
+  { src: photo1508804185872, alt: "Grande Muralha da China" },
+  { src: photo1547981609, alt: "Cidade Proibida" },
+  { src: photo1545893835, alt: "Guerreiros de Terracota" },
+  { src: photo1474181487882, alt: "Shanghai Skyline" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionCH = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO EXPLORAR AS MARAVILHAS DA CHINA

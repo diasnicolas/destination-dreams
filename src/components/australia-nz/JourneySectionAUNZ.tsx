@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import sydneyImage from "@/assets/cruzeiro-01/sidney.webp";
-import kangaroosImage from "@/assets/cruzeiro-01/cangurus.webp";
-import boraboraImage from "@/assets/cruzeiro-01/borabora.webp";
 import { MapPin } from "lucide-react";
+
+// Imagens locais
+import sydneyImage from "@/assets/australia-nz-02/photo-1624138784614-87fd1b6528f8.jpg";
+import kangaroosImage from "@/assets/australia-nz-02/photo-1462275646964-a0e3386b89fa.jpg";
+import newZealandImage from "@/assets/australia-nz-02/photo-1507699622108-4be3abd695ad.jpg";
 
 const phases = [
   {
@@ -46,7 +48,7 @@ Você navega pelo Milford Sound — montanhas gigantes e cachoeiras caindo diret
 Em Rotorua, você vê os gêiseres e assiste ao show Maori autêntico.
 
 Em Auckland, você reflete sobre tudo que viveu. E volta para casa diferente.`,
-    image: boraboraImage,
+    image: newZealandImage,
     highlights: ["Hobbiton", "Milford Sound", "Gêiseres", "Cultura Maori"],
     stats: { nights: 8, hotel: "Hotéis 4-5★" },
   },

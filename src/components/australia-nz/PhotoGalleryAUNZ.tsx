@@ -2,13 +2,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+// Imagens locais
+import sydneyOperaHouse from "@/assets/australia-nz-02/photo-1624138784614-87fd1b6528f8.jpg";
+import grandeBarreira from "@/assets/australia-nz-02/photo-1523482580672-f109ba8cb9be.jpg";
+import greatOceanRoad from "@/assets/australia-nz-02/photo-1506973035872-a4ec16b8e8d9.jpg";
+import queenstown from "@/assets/australia-nz-02/photo-1507699622108-4be3abd695ad.jpg";
+import hobbiton from "@/assets/australia-nz-02/photo-1469521669194-babb45599def.jpg";
+import milfordSound from "@/assets/australia-nz-02/photo-1531804226530-70f8004aa44e.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=800&q=80", title: "Sydney Opera House", category: "Sydney" },
-  { src: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&q=80", title: "Grande Barreira de Corais", category: "Cairns" },
-  { src: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80", title: "Great Ocean Road", category: "Melbourne" },
-  { src: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=800&q=80", title: "Queenstown", category: "Nova Zelândia" },
-  { src: "https://images.unsplash.com/photo-1469521669194-babb45599def?w=800&q=80", title: "Hobbiton", category: "Rotorua" },
-  { src: "https://images.unsplash.com/photo-1531804226530-70f8004aa44e?w=800&q=80", title: "Milford Sound", category: "Nova Zelândia" },
+  { src: sydneyOperaHouse, title: "Sydney Opera House", category: "Sydney" },
+  { src: grandeBarreira, title: "Grande Barreira de Corais", category: "Cairns" },
+  { src: greatOceanRoad, title: "Great Ocean Road", category: "Melbourne" },
+  { src: queenstown, title: "Queenstown", category: "Nova Zelândia" },
+  { src: hobbiton, title: "Hobbiton", category: "Rotorua" },
+  { src: milfordSound, title: "Milford Sound", category: "Nova Zelândia" },
 ];
 
 export const PhotoGalleryAUNZ = () => {

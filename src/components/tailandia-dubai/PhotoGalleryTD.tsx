@@ -2,13 +2,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import imgBangkok from "@/assets/tailandia-dubai/photo-1528181304800-259b08848526.jpg";
+import imgKrabi from "@/assets/tailandia-dubai/photo-1504214208698-ea1916a2195a.jpg";
+import imgPhiPhi from "@/assets/tailandia-dubai/photo-1519451241324-20b4ea2c4220.jpg";
+import imgBurj from "@/assets/tailandia-dubai/photo-1512453979798-5ea266f8880c.jpg";
+import imgDubaiMarina from "@/assets/tailandia-dubai/photo-1518684079-3c830dcef090.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=80", title: "Templos de Bangkok", category: "Bangkok" },
-  { src: "https://images.unsplash.com/photo-1512553955780-9f6e83a57a70?w=800&q=80", title: "Festival das Lanternas", category: "Chiang Mai" },
-  { src: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80", title: "Praias de Krabi", category: "Krabi" },
-  { src: "https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=800&q=80", title: "Phi Phi Islands", category: "Phuket" },
-  { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", title: "Burj Khalifa", category: "Dubai" },
-  { src: "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80", title: "Dubai Marina", category: "Dubai" },
+  { src: imgBangkok, title: "Templos de Bangkok", category: "Bangkok" },
+  { src: imgBangkok, title: "Festival das Lanternas", category: "Chiang Mai" },
+  { src: imgKrabi, title: "Praias de Krabi", category: "Krabi" },
+  { src: imgPhiPhi, title: "Phi Phi Islands", category: "Phuket" },
+  { src: imgBurj, title: "Burj Khalifa", category: "Dubai" },
+  { src: imgDubaiMarina, title: "Dubai Marina", category: "Dubai" },
 ];
 
 export const PhotoGalleryTD = () => {

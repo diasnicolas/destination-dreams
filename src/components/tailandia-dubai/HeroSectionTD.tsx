@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import imgBangkok from "@/assets/tailandia-dubai/photo-1528181304800-259b08848526.jpg";
+import imgTemplos from "@/assets/tailandia-dubai/photo-1552465011-b4e21bf6e79a.jpg";
+import imgPraias from "@/assets/tailandia-dubai/photo-1537956965359-7573183d1f57.jpg";
+import imgDubai from "@/assets/tailandia-dubai/photo-1512453979798-5ea266f8880c.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&q=80&w=1920", alt: "Festival das Lanternas" },
-  { src: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=1920", alt: "Templos Bangkok" },
-  { src: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&q=80&w=1920", alt: "Praias Tailândia" },
-  { src: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1920", alt: "Dubai Skyline" }
+  { src: imgBangkok, alt: "Festival das Lanternas" },
+  { src: imgTemplos, alt: "Templos Bangkok" },
+  { src: imgPraias, alt: "Praias Tailândia" },
+  { src: imgDubai, alt: "Dubai Skyline" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionTD = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO VIVER A MAGIA DO FESTIVAL DAS LANTERNAS

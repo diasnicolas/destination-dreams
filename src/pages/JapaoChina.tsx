@@ -6,29 +6,33 @@ import { ExperiencesSectionJC } from "@/components/japao-china/ExperiencesSectio
 import { FAQSectionJC } from "@/components/japao-china/FAQSectionJC";
 import { UrgencySectionJC } from "@/components/japao-china/UrgencySectionJC";
 import { InclusionsSectionJC } from "@/components/japao-china/InclusionsSectionJC";
-import { ContactSectionJC } from "@/components/japao-china/ContactSectionJC";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionJC } from "@/components/japao-china/ConnectionSectionJC";
 import { PhotoGalleryJC } from "@/components/japao-china/PhotoGalleryJC";
 import { HotelsPhotoGalleryJC } from "@/components/japao-china/HotelsPhotoGalleryJC";
 import { FooterSectionJC } from "@/components/japao-china/FooterSectionJC";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const JapaoChina = () => {
   return (
     <main className="theme-japao min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.japaoChina} />
       <HeroSectionJC />
-      <ProblemSectionJC />
       <ConnectionSectionJC />
+      <ProblemSectionJC />
       <JourneySectionJC />
       <DetailedItineraryJC />
       <ExperiencesSectionJC />
       <PhotoGalleryJC />
       <HotelsPhotoGalleryJC />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.japaoChina} />
       <FAQSectionJC />
       <UrgencySectionJC />
       <InclusionsSectionJC />
-      <ContactSectionJC />
+      <ContactSection destino="Japão & China" />
       <FooterSectionJC />
     </main>
   );

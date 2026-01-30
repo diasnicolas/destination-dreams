@@ -2,12 +2,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotelBangkok from "@/assets/tailandia-dubai/photo-1566073771259-6a8506099945.jpg";
+import hotelChiangMai from "@/assets/tailandia-dubai/photo-1582719508461-905c673771fd.jpg";
+import hotelKrabi from "@/assets/tailandia-dubai/photo-1551882547-ff40c63fe5fa.jpg";
+import hotelPhuket from "@/assets/tailandia-dubai/photo-1520250497591-112f2f40a3f4.jpg";
+import hotelDubai from "@/assets/tailandia-dubai/photo-1578683010236-d716f9a3f461.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Bangkok", category: "Eastin Grand Sathorn" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Chiang Mai", category: "Eurana Boutique" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Krabi", category: "Resort Krabi" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Phuket", category: "Resort Phuket" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Dubai", category: "Hotel Dubai" },
+  { src: hotelBangkok, title: "Bangkok", category: "Eastin Grand Sathorn" },
+  { src: hotelChiangMai, title: "Chiang Mai", category: "Eurana Boutique" },
+  { src: hotelKrabi, title: "Krabi", category: "Resort Krabi" },
+  { src: hotelPhuket, title: "Phuket", category: "Resort Phuket" },
+  { src: hotelDubai, title: "Dubai", category: "Hotel Dubai" },
 ];
 
 export const HotelsPhotoGalleryTD = () => {

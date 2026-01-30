@@ -6,29 +6,33 @@ import { ExperiencesSectionTD } from "@/components/tailandia-dubai/ExperiencesSe
 import { FAQSectionTD } from "@/components/tailandia-dubai/FAQSectionTD";
 import { UrgencySectionTD } from "@/components/tailandia-dubai/UrgencySectionTD";
 import { InclusionsSectionTD } from "@/components/tailandia-dubai/InclusionsSectionTD";
-import { ContactSectionTD } from "@/components/tailandia-dubai/ContactSectionTD";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionTD } from "@/components/tailandia-dubai/ConnectionSectionTD";
 import { PhotoGalleryTD } from "@/components/tailandia-dubai/PhotoGalleryTD";
 import { HotelsPhotoGalleryTD } from "@/components/tailandia-dubai/HotelsPhotoGalleryTD";
 import { FooterSectionTD } from "@/components/tailandia-dubai/FooterSectionTD";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const TailandiaDubai = () => {
   return (
     <main className="theme-tailandia min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.tailandiaDubai} />
       <HeroSectionTD />
-      <ProblemSectionTD />
       <ConnectionSectionTD />
+      <ProblemSectionTD />
       <JourneySectionTD />
       <DetailedItineraryTD />
       <ExperiencesSectionTD />
       <PhotoGalleryTD />
       <HotelsPhotoGalleryTD />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.tailandiaDubai} />
       <FAQSectionTD />
       <UrgencySectionTD />
       <InclusionsSectionTD />
-      <ContactSectionTD />
+      <ContactSection destino="Tailândia & Dubai" />
       <FooterSectionTD />
     </main>
   );

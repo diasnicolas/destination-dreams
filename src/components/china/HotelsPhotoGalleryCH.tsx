@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotel01 from "@/assets/china/hotel-01.jpeg";
+import hotel02 from "@/assets/china/hotel-02.jpeg";
+import hotel03 from "@/assets/china/hotel-03.jpeg";
+import hotel04 from "@/assets/china/hotel-04.jpeg";
+import hotel05 from "@/assets/china/hotel-05.jpeg";
+import hotel06 from "@/assets/china/hotel-06.webp";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Dubai", category: "Hotel Conexão" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Beijing", category: "Hotel 5 Estrelas" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Xian", category: "Hotel Centro" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Chengdu", category: "Hotel Panda" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Zhangjiajie", category: "Hotel Montanha" },
-  { src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80", title: "Shanghai", category: "Hotel Bund" },
+  { src: hotel01, title: "Dubai", category: "Hotel Conexão" },
+  { src: hotel02, title: "Beijing", category: "Hotel 5 Estrelas" },
+  { src: hotel03, title: "Xian", category: "Hotel Centro" },
+  { src: hotel04, title: "Chengdu", category: "Hotel Panda" },
+  { src: hotel05, title: "Zhangjiajie", category: "Hotel Montanha" },
+  { src: hotel06, title: "Shanghai", category: "Hotel Bund" },
 ];
 
 export const HotelsPhotoGalleryCH = () => {

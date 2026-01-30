@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import photo1516426122078 from "@/assets/africa-mauricio/photo-1516426122078-c23e76319801.jpg";
+import photo1580060839134 from "@/assets/africa-mauricio/photo-1580060839134-75a5edca2e99.jpg";
+import photo1585849834908 from "@/assets/africa-mauricio/photo-1585849834908-3481231155e8.jpg";
+import photo1590523741831 from "@/assets/africa-mauricio/photo-1590523741831-ab7e8b8f9c7f.jpg";
+import photo1547471080 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
+import photo1596005554384 from "@/assets/africa-mauricio/photo-1596005554384-d293674c91d7.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80", title: "Safári no Kruger", category: "Big Five" },
-  { src: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80", title: "Table Mountain", category: "Cape Town" },
-  { src: "https://images.unsplash.com/photo-1585849834908-3481231155e8?w=800&q=80", title: "Vinícolas de Stellenbosch", category: "Vinícola" },
-  { src: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=800&q=80", title: "Praias de Maurício", category: "Ilhas Maurício" },
-  { src: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80", title: "Elefantes Africanos", category: "Safári" },
-  { src: "https://images.unsplash.com/photo-1596005554384-d293674c91d7?w=800&q=80", title: "Johannesburg", category: "Cidade" },
+  { src: photo1516426122078, title: "Safári no Kruger", category: "Big Five" },
+  { src: photo1580060839134, title: "Table Mountain", category: "Cape Town" },
+  { src: photo1585849834908, title: "Vinícolas de Stellenbosch", category: "Vinícola" },
+  { src: photo1590523741831, title: "Praias de Maurício", category: "Ilhas Maurício" },
+  { src: photo1547471080, title: "Elefantes Africanos", category: "Safári" },
+  { src: photo1596005554384, title: "Johannesburg", category: "Cidade" },
 ];
 
 export const PhotoGalleryAM = () => {

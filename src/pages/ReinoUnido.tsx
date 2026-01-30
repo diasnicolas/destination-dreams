@@ -6,29 +6,33 @@ import { ExperiencesSectionRU } from "@/components/reino-unido/ExperiencesSectio
 import { FAQSectionRU } from "@/components/reino-unido/FAQSectionRU";
 import { UrgencySectionRU } from "@/components/reino-unido/UrgencySectionRU";
 import { InclusionsSectionRU } from "@/components/reino-unido/InclusionsSectionRU";
-import { ContactSectionRU } from "@/components/reino-unido/ContactSectionRU";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionRU } from "@/components/reino-unido/ConnectionSectionRU";
 import { PhotoGalleryRU } from "@/components/reino-unido/PhotoGalleryRU";
 import { HotelsPhotoGalleryRU } from "@/components/reino-unido/HotelsPhotoGalleryRU";
 import { FooterSectionRU } from "@/components/reino-unido/FooterSectionRU";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const ReinoUnido = () => {
   return (
     <main className="theme-uk min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.reinoUnido} />
       <HeroSectionRU />
-      <ProblemSectionRU />
       <ConnectionSectionRU />
+      <ProblemSectionRU />
       <JourneySectionRU />
       <DetailedItineraryRU />
       <ExperiencesSectionRU />
       <PhotoGalleryRU />
       <HotelsPhotoGalleryRU />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.reinoUnido} />
       <FAQSectionRU />
       <UrgencySectionRU />
       <InclusionsSectionRU />
-      <ContactSectionRU />
+      <ContactSection destino="Reino Unido" />
       <FooterSectionRU />
     </main>
   );

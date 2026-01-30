@@ -2,13 +2,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotelLondres from "@/assets/reino-unido/PARK_PLAZA_LONDRES.jpeg";
+import hotelDurham from "@/assets/reino-unido/Radisson_Blu_Hotel_Durham.jpeg";
+import hotelEdinburgh from "@/assets/reino-unido/Apex_City_of_EdinburghHotel.jpeg";
+import hotelInverness from "@/assets/reino-unido/River_Ness_Hotel.avif";
+import hotelLiverpool from "@/assets/reino-unido/Hotel_Indigo_Liverpool.jpeg";
+import hotelBath from "@/assets/reino-unido/Lansdown_Grove_Hotel.jpeg";
+import hotelDublin from "@/assets/reino-unido/Moxy_Dublin_City.jpeg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Londres", category: "Park Plaza Westminster" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Durham", category: "Radisson Blu Durham" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Edinburgh", category: "Apex City Hotel" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Inverness", category: "River Ness Hotel" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Liverpool", category: "Hotel Liverpool" },
-  { src: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80", title: "Bath", category: "The Gainsborough" },
+  { src: hotelLondres, title: "Londres", category: "Park Plaza Westminster" },
+  { src: hotelDurham, title: "Durham", category: "Radisson Blu Durham" },
+  { src: hotelEdinburgh, title: "Edinburgh", category: "Apex City Hotel" },
+  { src: hotelInverness, title: "Inverness", category: "River Ness Hotel" },
+  { src: hotelLiverpool, title: "Liverpool", category: "Hotel Indigo Liverpool" },
+  { src: hotelBath, title: "Bath", category: "Lansdown Grove Hotel" },
+  { src: hotelDublin, title: "Dublin", category: "Moxy Dublin City" },
 ];
 
 export const HotelsPhotoGalleryRU = () => {

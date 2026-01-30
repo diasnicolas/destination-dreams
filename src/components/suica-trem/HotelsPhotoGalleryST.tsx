@@ -2,12 +2,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotelLucerna from "@/assets/suica-trem/Hotel_Continental_Park_Luzern.webp";
+import hotelInterlaken from "@/assets/suica-trem/Hotel_Interlaken.jpeg";
+import hotelZermatt from "@/assets/suica-trem/Schweizerhof_Zermatt.avif";
+import hotelStMoritz from "@/assets/suica-trem/Hotel_Steffani.webp";
+import hotelZurique from "@/assets/suica-trem/CENTRAL_PLAZA.jpeg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Lucerna", category: "Continental Park" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Interlaken", category: "Hotel Interlaken" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Zermatt", category: "Schweizerhof Zermatt" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "St. Moritz", category: "Hotel Steffani" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Zurique", category: "Hotel Zurique" },
+  { src: hotelLucerna, title: "Lucerna", category: "Hotel Continental Park" },
+  { src: hotelInterlaken, title: "Interlaken", category: "Hotel Interlaken" },
+  { src: hotelZermatt, title: "Zermatt", category: "Schweizerhof Zermatt" },
+  { src: hotelStMoritz, title: "St. Moritz", category: "Hotel Steffani" },
+  { src: hotelZurique, title: "Zurique", category: "Hotel Central Plaza" },
 ];
 
 export const HotelsPhotoGalleryST = () => {
@@ -62,7 +68,7 @@ export const HotelsPhotoGalleryST = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}

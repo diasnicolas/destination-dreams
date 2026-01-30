@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
-import kangaroosImage from "@/assets/cruzeiro-01/cangurus.webp";
-import dolphinsImage from "@/assets/cruzeiro-01/dolphins.webp";
-import wineryImage from "@/assets/cruzeiro-01/winery.webp";
-import boraboraImage from "@/assets/cruzeiro-01/borabora.webp";
-import sydneyImage from "@/assets/cruzeiro-01/sidney.webp";
-import hollywoodImage from "@/assets/cruzeiro-01/hollywood.webp";
+
+// Imagens locais para Austrália e Nova Zelândia
+import kangaroosImage from "@/assets/australia-nz-02/photo-1462275646964-a0e3386b89fa.jpg";
+import dolphinsImage from "@/assets/australia-nz-02/photo-1568430462989-44163eb1752f.jpg";
+import coralReefImage from "@/assets/australia-nz-02/photo-1523482580672-f109ba8cb9be.jpg";
+import twelveApostlesImage from "@/assets/australia-nz-02/photo-1506973035872-a4ec16b8e8d9.jpg";
+import hobbitonImage from "@/assets/australia-nz-02/photo-1469521669194-babb45599def.jpg";
+import maoriImage from "@/assets/australia-nz-02/maori_shows.webp";
+import geyserImage from "@/assets/australia-nz-02/photo-1589871973318-9ca1258faa5d.jpg";
+import milfordSoundImage from "@/assets/australia-nz-02/photo-1531804226530-70f8004aa44e.jpg";
+
+// Nota: geyserImage não disponível, usando fallback
 
 const experiences = [
   {
@@ -25,42 +31,42 @@ const experiences = [
     emoji: "✈️",
     title: "Sobrevoo da Barreira de Corais",
     description: "Vista aérea da maior estrutura viva do planeta em um hidravião. Cores que você nunca viu antes. Um momento de tirar o fôlego.",
-    image: boraboraImage,
+    image: coralReefImage,
     location: "Cairns, Austrália",
   },
   {
     emoji: "🏔️",
     title: "Great Ocean Road & 12 Apóstolos",
     description: "Veja as formações rochosas gigantes ao pôr do sol. O oceano se quebrando nas rochas. Uma paisagem que fica na memória para sempre.",
-    image: sydneyImage,
+    image: twelveApostlesImage,
     location: "Melbourne, Austrália",
   },
   {
     emoji: "🧙",
     title: "Hobbiton — O Condado",
     description: "Caminhe pelo cenário do Senhor dos Anéis. Visite as casas dos hobbits. A ficção vira realidade. Um momento mágico e emocionante.",
-    image: hollywoodImage,
+    image: hobbitonImage,
     location: "Queenstown, Nova Zelândia",
   },
   {
     emoji: "🌋",
     title: "Gêiseres de Rotorua",
     description: "Veja a Terra viva em ação. Vapores subindo do solo. Lama borbulhando. A geotermia neozelandesa em toda sua glória.",
-    image: wineryImage,
+    image: geyserImage,
     location: "Rotorua, Nova Zelândia",
   },
   {
     emoji: "🎭",
     title: "Show Maori Autêntico",
     description: "Dança, música e tradição da Nova Zelândia. Uma imersão cultural profunda na rica herança do povo Maori.",
-    image: boraboraImage,
+    image: maoriImage,
     location: "Rotorua, Nova Zelândia",
   },
   {
     emoji: "🏞️",
     title: "Milford Sound",
     description: "Navegue pelas cachoeiras mais bonitas do mundo. Montanhas gigantes. Um fjord neozelandês que parece saído de um filme.",
-    image: dolphinsImage,
+    image: milfordSoundImage,
     location: "Queenstown, Nova Zelândia",
   },
 ];

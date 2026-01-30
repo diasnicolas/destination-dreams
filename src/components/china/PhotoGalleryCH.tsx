@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import photo1508804185872 from "@/assets/china/photo-1508804185872-d7badad00f7d.jpg";
+import photo1537519646099 from "@/assets/china/photo-1537519646099-335112f03225.jpg";
+import photo1591017403286 from "@/assets/china/photo-1591017403286-fd8493524e1e.jpg";
+import photo1524492412937 from "@/assets/china/photo-1524492412937-b28074a5d7da.jpg";
+import photo1513002749550 from "@/assets/china/photo-1513002749550-c59d786b8e6c.jpg";
+import photo1474181487882 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80", title: "Grande Muralha da China", category: "Beijing" },
-  { src: "https://images.unsplash.com/photo-1537519646099-335112f03225?w=800&q=80", title: "Cidade Proibida", category: "Beijing" },
-  { src: "https://images.unsplash.com/photo-1591017403286-fd8493524e1e?w=800&q=80", title: "Guerreiros de Terracota", category: "Xian" },
-  { src: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80", title: "Zhangjiajie", category: "Parque Avatar" },
-  { src: "https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?w=800&q=80", title: "Pandas Gigantes", category: "Chengdu" },
-  { src: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=800&q=80", title: "Shanghai Skyline", category: "Shanghai" },
+  { src: photo1508804185872, title: "Grande Muralha da China", category: "Beijing" },
+  { src: photo1537519646099, title: "Cidade Proibida", category: "Beijing" },
+  { src: photo1591017403286, title: "Guerreiros de Terracota", category: "Xian" },
+  { src: photo1524492412937, title: "Zhangjiajie", category: "Parque Avatar" },
+  { src: photo1513002749550, title: "Pandas Gigantes", category: "Chengdu" },
+  { src: photo1474181487882, title: "Shanghai Skyline", category: "Shanghai" },
 ];
 
 export const PhotoGalleryCH = () => {

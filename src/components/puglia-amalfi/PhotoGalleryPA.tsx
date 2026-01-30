@@ -2,13 +2,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import imgAlberobello from "@/assets/puglia-amalfi/photo-1534308983496-4fabb1a015ee.jpg";
+import imgCosta from "@/assets/puglia-amalfi/photo-1516483638261-f4dbaf036963.jpg";
+import imgPositano from "@/assets/puglia-amalfi/photo-1515859005217-8a1f08870f59.jpg";
+import imgMatera from "@/assets/puglia-amalfi/photo-1498307833015-e7b400441eb8.jpg";
+import imgPolignano from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1533934455784-70e4834c8a67?w=800&q=80", title: "Polignano a Mare", category: "Puglia" },
-  { src: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=800&q=80", title: "Alberobello Trulli", category: "UNESCO" },
-  { src: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80", title: "Costa Amalfitana", category: "Amalfi" },
-  { src: "https://images.unsplash.com/photo-1515859005217-8a1f08870f59?w=800&q=80", title: "Positano", category: "Costa Amalfitana" },
-  { src: "https://images.unsplash.com/photo-1602778562848-95a789c4c809?w=800&q=80", title: "Capri", category: "Ilha" },
-  { src: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?w=800&q=80", title: "Matera", category: "Cavernas" },
+  { src: imgPolignano, title: "Polignano a Mare", category: "Puglia" },
+  { src: imgAlberobello, title: "Alberobello Trulli", category: "UNESCO" },
+  { src: imgCosta, title: "Costa Amalfitana", category: "Amalfi" },
+  { src: imgPositano, title: "Positano", category: "Costa Amalfitana" },
+  { src: imgPositano, title: "Capri", category: "Ilha" },
+  { src: imgMatera, title: "Matera", category: "Cavernas" },
 ];
 
 export const PhotoGalleryPA = () => {

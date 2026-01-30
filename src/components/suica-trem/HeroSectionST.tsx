@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import image01 from "@/assets/suica-trem/photo-1530122037265-a5f1f91d3b99.jpg";
+import image02 from "@/assets/suica-trem/photo-1527668752968-14dc70a27c95.jpg";
+import image03 from "@/assets/suica-trem/photo-1506905925346-21bda4d32df4.jpg";
+import image04 from "@/assets/suica-trem/photo-1551632811-561732d1e306.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&q=80&w=1920", alt: "Matterhorn" },
-  { src: "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&q=80&w=1920", alt: "Trem nos Alpes" },
-  { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=80&w=1920", alt: "Alpes Suíços" },
-  { src: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=1920", alt: "Lucerna" }
+  { src: image01, alt: "Matterhorn" },
+  { src: image02, alt: "Trem nos Alpes" },
+  { src: image03, alt: "Alpes Suíços" },
+  { src: image04, alt: "Lucerna" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionST = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO VIAJAR NOS TRENS MAIS LINDOS

@@ -1,116 +1,194 @@
 import { motion } from "framer-motion";
-import { Train, Mountain, Award, Hotel } from "lucide-react";
+import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
+import donoImage from "@/assets/dono.webp";
 
 const credentials = [
   {
-    icon: Train,
-    text: "Trem panorâmico Monte Pilatus — Ponte da Capela vista de cima",
+    icon: Award,
+    text: "Guia local há 14 anos na Suíça — conhece cada trem, cada montanha, cada vilarejo",
   },
   {
-    icon: Mountain,
-    text: "Jungfraujoch — Topo da Europa (3.454m) de trem",
+    icon: MapPin,
+    text: "Roteiros testados pessoalmente — Cada detalhe foi vivenciado antes de ser oferecido",
   },
   {
-    icon: Train,
-    text: "Glacier Express — O trem mais lendário do mundo",
+    icon: Users,
+    text: "Acompanhamento pessoal do embarque ao retorno — não delega, não terceiriza",
   },
   {
-    icon: Mountain,
-    text: "Matterhorn — Zermatt com a montanha mais icônica dos Alpes",
+    icon: Shield,
+    text: "Histórico de grupos bem-sucedidos — viajantes satisfeitos e transformados",
+  },
+];
+
+const certifications = [
+  {
+    icon: Award,
+    name: "Aussie Travel Specialist",
+    issuer: "Governo Australiano",
+    description: "Certificação oficial para especialistas em turismo australiano",
+  },
+  {
+    icon: BadgeCheck,
+    name: "Cadastur",
+    issuer: "Ministério do Turismo (Brasil)",
+    description: "Cadastro oficial de profissionais de turismo",
+  },
+  {
+    icon: Globe,
+    name: "14 Anos na Suíça",
+    issuer: "Guia Local",
+    description: "Conhecimento profundo da cultura e destinos suíços",
+  },
+  {
+    icon: Briefcase,
+    name: "CEO, WE Travel UK",
+    issuer: "Empresa Premium",
+    description: "Especialista em viagens premium para brasileiros",
   },
 ];
 
 export const ConnectionSectionST = () => {
   return (
-    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-primary/10 via-background to-primary/10" id="solution">
-      <div className="w-full px-4 md:px-8 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Apresento: Suíça de Trem - Jornada Dos Trens Mais Lindos Do Mundo
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Criei um roteiro que não é turístico. É um roteiro que EU PESSOALMENTE criei.
-          </p>
-        </motion.div>
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-ocean-medium to-ocean-deep relative overflow-hidden">
+      {/* Decorative ocean elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-turquoise/10 to-transparent" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto space-y-6 text-lg text-center mb-12"
-        >
-          <p>Eu pesquisei, testei e selecionei cada detalhe.</p>
-          <p>E para isso, contei com uma guia local que vive há <span className="font-bold text-primary">14 ANOS</span> na Suíça.</p>
-          <p>Ela explorou cada trem, cada montanha, cada vilagem.</p>
-          <p>Ela criou experiências que você <span className="font-bold">NÃO VAI ENCONTRAR</span> em outro roteiro.</p>
-          <p className="text-xl font-semibold text-primary pt-4">
-            Experiências autênticas. Experiências mágicas. Experiências que transformam.
-          </p>
-        </motion.div>
+      {/* Floating compass */}
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        className="absolute top-40 right-20 text-turquoise/10 hidden lg:block"
+      >
+        <Compass className="w-24 h-24" />
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-5xl mx-auto"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            Experiências Exclusivas Que Você Vai Viver:
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {credentials.map((credential, index) => {
-              const Icon = credential.icon;
-              return (
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative">
+              {/* Main avatar image */}
+              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-glow">
+                <img 
+                  src={donoImage} 
+                  alt="Evandro Mendes" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Floating badges */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -top-4 -right-4 md:top-4 md:right-0 glass-card px-4 py-2 rounded-full border border-primary/30"
+              >
+                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="absolute -bottom-4 -left-4 md:bottom-4 md:left-0 glass-card px-4 py-2 rounded-full border border-primary/30"
+              >
+                <span className="text-xs font-semibold text-primary">Cadastur</span>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute top-1/2 -right-8 md:right-[-60px] glass-card px-4 py-2 rounded-full border border-turquoise/30 hidden md:block"
+              >
+                <span className="text-xs font-semibold text-turquoise">CEO WE Travel UK</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-turquoise font-semibold text-sm tracking-widest uppercase mb-4 block">
+              Quem Guia Sua Jornada
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <span className="text-foreground">Sua jornada é </span>
+              <span className="text-gradient-gold">orquestrada</span>
+            </h2>
+
+            <div className="space-y-4 mb-8 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                <strong className="text-foreground">Evandro Mendes</strong> não é um guia de turismo. 
+                É o CEO da WE Travel UK e um <strong className="text-primary">especialista em viagens premium</strong>.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Para este roteiro, ele conta com uma guia brasileira que <strong className="text-foreground">vive há 14 anos na Suíça</strong>.
+                Ela explorou cada trem, cada montanha, cada vilarejo alpino.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Ele acompanha <strong className="text-primary">pessoalmente</strong> cada grupo.
+                Ele não delega. Ele não terceiriza. Ele está com você.
+              </p>
+            </div>
+
+            {/* Credentials List */}
+            <div className="space-y-3">
+              {credentials.map((credential, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  key={credential.text}
+                  initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex gap-4 p-6 bg-card rounded-lg border border-primary/20 hover:border-primary/40 transition-colors"
+                  className="flex items-start gap-3"
                 >
-                  <Icon className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-foreground">{credential.text}</p>
+                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <credential.icon className="w-4 h-4 text-turquoise" />
+                  </div>
+                  <span className="text-foreground text-sm leading-relaxed">{credential.text}</span>
                 </motion.div>
-              );
-            })}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 text-center space-y-4"
-          >
-            <div className="flex flex-wrap justify-center gap-3">
-              {[
-                "🚂 Gornergrat — Vista para o Matterhorn",
-                "🏨 Hotéis 4-5 estrelas",
-                "🌄 Vilarejos alpinos autênticos",
-                "🍽️ Gastronomia suíça",
-                "🇨🇭 Guia brasileira há 14 anos"
-              ].map((highlight, index) => (
-                <span
-                  key={index}
-                  className="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
-                >
-                  {highlight}
-                </span>
               ))}
             </div>
-            <p className="text-lg text-muted-foreground pt-6">
-              Eu pessoalmente testei cada detalhe. Eu pessoalmente acredito que vai transformar você.
-            </p>
           </motion.div>
+        </div>
+
+        {/* Certifications Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto"
+        >
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <cert.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
+              <p className="text-xs text-primary mb-1">{cert.issuer}</p>
+              <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

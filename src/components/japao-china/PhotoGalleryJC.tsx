@@ -2,13 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import photo1493976040374 from "@/assets/japao-china/photo-1493976040374-85c8e12f0c0e.jpg";
+import photo1490806843957 from "@/assets/japao-china/photo-1490806843957-31f4c9a91c65.jpg";
+import photo1540959733332 from "@/assets/japao-china/photo-1540959733332-eab4deabeeaf.jpg";
+import photo1508804185872 from "@/assets/japao-china/photo-1508804185872-d7badad00f7d.jpg";
+import photo1537519646099 from "@/assets/japao-china/photo-1537519646099-335112f03225.jpg";
+import photo1474181487882 from "@/assets/japao-china/photo-1474181487882-5abf3f0ba6c2.jpg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80", title: "Templos de Kyoto", category: "Kyoto" },
-  { src: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80", title: "Monte Fuji", category: "Fujikawaguchiko" },
-  { src: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80", title: "Tóquio", category: "Tóquio" },
-  { src: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80", title: "Grande Muralha", category: "Beijing" },
-  { src: "https://images.unsplash.com/photo-1537519646099-335112f03225?w=800&q=80", title: "Cidade Proibida", category: "Beijing" },
-  { src: "https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=800&q=80", title: "Shanghai", category: "Xangai" },
+  { src: photo1493976040374, title: "Templos de Kyoto", category: "Kyoto" },
+  { src: photo1490806843957, title: "Monte Fuji", category: "Fujikawaguchiko" },
+  { src: photo1540959733332, title: "Tóquio", category: "Tóquio" },
+  { src: photo1508804185872, title: "Grande Muralha", category: "Beijing" },
+  { src: photo1537519646099, title: "Cidade Proibida", category: "Beijing" },
+  { src: photo1474181487882, title: "Shanghai", category: "Xangai" },
 ];
 
 export const PhotoGalleryJC = () => {

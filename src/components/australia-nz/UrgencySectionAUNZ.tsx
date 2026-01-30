@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Anchor, Waves, AlertCircle, Users } from "lucide-react";
-import { CountdownTimer } from "@/components/landing/CountdownTimer";
+import { CountdownTimer } from "@/components/common/CountdownTimer";
 
 const stats = [
   { number: "18", label: "Dias" },
@@ -197,7 +197,7 @@ export const UrgencySectionAUNZ = () => {
             onClick={() => scrollToSection("#formulario")}
             className="btn-luxury inline-block rounded-md animate-pulse-gold text-lg px-12 py-5"
           >
-            QUERO ME REDESCOBRIR - AGENDAR CONSULTA
+            AGENDAR CONSULTA PRIVADA AGORA
           </button>
         </motion.div>
       </div>

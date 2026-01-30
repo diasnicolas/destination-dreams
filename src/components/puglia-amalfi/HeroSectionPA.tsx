@@ -2,11 +2,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import imgAlberobello from "@/assets/puglia-amalfi/photo-1534308983496-4fabb1a015ee.jpg";
+import imgCosta from "@/assets/puglia-amalfi/photo-1516483638261-f4dbaf036963.jpg";
+import imgPolignano from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&q=80&w=1920", alt: "Costa Amalfitana" },
-  { src: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&q=80&w=1920", alt: "Positano" },
-  { src: "https://images.unsplash.com/photo-1598738090394-c35146d08bdd?auto=format&fit=crop&q=80&w=1920", alt: "Alberobello Trulli" },
-  { src: "https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?auto=format&fit=crop&q=80&w=1920", alt: "Polignano a Mare" }
+  { src: imgAlberobello, alt: "Costa Amalfitana" },
+  { src: imgCosta, alt: "Positano" },
+  { src: imgAlberobello, alt: "Alberobello Trulli" },
+  { src: imgPolignano, alt: "Polignano a Mare" }
 ];
 
 const highlights = [
@@ -163,7 +167,7 @@ export const HeroSectionPA = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO VIAJAR PARA PUGLIA & COSTA AMALFITANA

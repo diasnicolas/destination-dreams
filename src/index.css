@@ -744,91 +744,91 @@
 }
 
 /* ========================================
-   Reino Unido Theme - British Royal Green & Gold
+   Reino Unido Theme - Union Jack (Navy Blue & Red)
    ======================================== */
 .theme-uk {
-  --background: 150 30% 5%;
-  --foreground: 45 20% 95%;
+  --background: 215 80% 6%;
+  --foreground: 0 0% 98%;
 
-  --card: 150 25% 9%;
-  --card-foreground: 45 20% 95%;
+  --card: 215 70% 10%;
+  --card-foreground: 0 0% 98%;
 
-  --popover: 150 25% 9%;
-  --popover-foreground: 45 20% 95%;
+  --popover: 215 70% 10%;
+  --popover-foreground: 0 0% 98%;
 
-  --primary: 150 50% 40%;
-  --primary-foreground: 45 20% 95%;
+  --primary: 350 85% 42%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 45 70% 50%;
-  --secondary-foreground: 150 30% 8%;
+  --secondary: 215 100% 21%;
+  --secondary-foreground: 0 0% 98%;
 
-  --muted: 150 20% 14%;
-  --muted-foreground: 150 12% 50%;
+  --muted: 215 50% 16%;
+  --muted-foreground: 215 20% 60%;
 
-  --accent: 45 65% 55%;
-  --accent-foreground: 150 30% 8%;
+  --accent: 350 75% 50%;
+  --accent-foreground: 0 0% 100%;
 
-  --border: 150 18% 18%;
-  --input: 150 18% 18%;
-  --ring: 150 50% 40%;
+  --border: 215 40% 20%;
+  --input: 215 40% 20%;
+  --ring: 350 85% 42%;
 
-  --ocean-deep: 150 35% 12%;
-  --ocean-medium: 150 30% 22%;
-  --turquoise: 150 45% 45%;
-  --gold-champagne: 150 50% 40%;
-  --gold-light: 150 45% 50%;
-  --gold-dark: 150 45% 30%;
-  --navy: 150 32% 13%;
-  --navy-light: 150 26% 20%;
+  --ocean-deep: 215 80% 10%;
+  --ocean-medium: 215 70% 18%;
+  --turquoise: 215 90% 35%;
+  --gold-champagne: 350 85% 42%;
+  --gold-light: 350 75% 52%;
+  --gold-dark: 350 90% 32%;
+  --navy: 215 100% 13%;
+  --navy-light: 215 80% 22%;
 
-  --gradient-ocean: linear-gradient(135deg, hsl(150 35% 12%) 0%, hsl(150 30% 22%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(150 50% 40%) 0%, hsl(150 45% 50%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsla(150, 30%, 7%, 0.9) 0%, hsla(150, 30%, 18%, 0.7) 100%);
-  --gradient-dark: linear-gradient(180deg, hsl(150 30% 5%) 0%, hsl(150 35% 12%) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(150, 25%, 14%, 0.6) 0%, hsla(150, 30%, 7%, 0.8) 100%);
+  --gradient-ocean: linear-gradient(135deg, hsl(215 80% 10%) 0%, hsl(215 70% 18%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(350 85% 42%) 0%, hsl(350 75% 52%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(215, 80%, 8%, 0.9) 0%, hsla(215, 70%, 15%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(215 80% 6%) 0%, hsl(215 80% 10%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(215, 60%, 14%, 0.6) 0%, hsla(215, 70%, 8%, 0.8) 100%);
   
-  --shadow-gold: 0 10px 40px hsla(150, 50%, 40%, 0.25);
-  --shadow-ocean: 0 20px 60px hsla(150, 35%, 12%, 0.5);
-  --shadow-card: 0 15px 50px hsla(150, 30%, 5%, 0.4);
-  --shadow-glow: 0 0 60px hsla(150, 50%, 40%, 0.15);
+  --shadow-gold: 0 10px 40px hsla(350, 85%, 42%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(215, 80%, 10%, 0.5);
+  --shadow-card: 0 15px 50px hsla(215, 80%, 6%, 0.4);
+  --shadow-glow: 0 0 60px hsla(350, 85%, 42%, 0.15);
 }
 
 .theme-uk .hero-overlay {
-  background: linear-gradient(180deg, hsla(150, 30%, 7%, 0.85) 0%, hsla(150, 30%, 7%, 0.6) 50%, hsla(150, 30%, 18%, 0.75) 100%);
+  background: linear-gradient(180deg, hsla(215, 80%, 8%, 0.85) 0%, hsla(215, 70%, 8%, 0.6) 50%, hsla(215, 70%, 15%, 0.75) 100%);
 }
 
 .theme-uk .glass-card {
-  background: linear-gradient(145deg, hsla(150, 25%, 14%, 0.6) 0%, hsla(150, 30%, 7%, 0.8) 100%);
+  background: linear-gradient(145deg, hsla(215, 60%, 14%, 0.6) 0%, hsla(215, 70%, 8%, 0.8) 100%);
 }
 
 .theme-uk .text-gradient-gold {
-  background-image: linear-gradient(135deg, hsl(150 50% 40%) 0%, hsl(45 70% 55%) 100%);
+  background-image: linear-gradient(135deg, hsl(350 85% 42%) 0%, hsl(350 75% 55%) 100%);
 }
 
 .theme-uk .btn-luxury {
-  background: hsl(150 50% 40%);
-  box-shadow: 0 10px 40px hsla(150, 50%, 40%, 0.25);
+  background: hsl(350 85% 42%);
+  box-shadow: 0 10px 40px hsla(350, 85%, 42%, 0.25);
 }
 
 .theme-uk .btn-luxury:hover {
-  background: hsl(150 45% 50%);
-  box-shadow: 0 15px 50px hsla(150, 50%, 40%, 0.35);
+  background: hsl(350 75% 50%);
+  box-shadow: 0 15px 50px hsla(350, 85%, 42%, 0.35);
 }
 
 .theme-uk .gold-border-left {
-  border-color: hsl(150 50% 40%);
+  border-color: hsl(350 85% 42%);
 }
 
 .theme-uk .animated-underline::after {
-  background: hsl(150 50% 40%);
+  background: hsl(350 85% 42%);
 }
 
 .theme-uk .stat-number {
-  color: hsl(150 50% 40%);
+  color: hsl(350 85% 42%);
 }
 
 .theme-uk ::-webkit-scrollbar-thumb:hover {
-  background: hsla(150, 50%, 40%, 0.5);
+  background: hsla(350, 85%, 42%, 0.5);
 }
 
 /* ========================================
@@ -1005,5 +1005,445 @@
 
 .theme-tailandia ::-webkit-scrollbar-thumb:hover {
   background: hsla(45, 85%, 55%, 0.5);
+}
+
+/* ========================================
+   Cruzeiro Norte Europeu Theme - Nordic Aurora
+   ======================================== */
+.theme-cruzeiro {
+  --background: 220 40% 6%;
+  --foreground: 210 15% 95%;
+
+  --card: 220 35% 10%;
+  --card-foreground: 210 15% 95%;
+
+  --popover: 220 35% 10%;
+  --popover-foreground: 210 15% 95%;
+
+  --primary: 200 70% 50%;
+  --primary-foreground: 210 15% 95%;
+
+  --secondary: 170 60% 45%;
+  --secondary-foreground: 220 40% 8%;
+
+  --muted: 220 25% 15%;
+  --muted-foreground: 220 12% 55%;
+
+  --accent: 170 55% 50%;
+  --accent-foreground: 220 40% 8%;
+
+  --border: 220 20% 20%;
+  --input: 220 20% 20%;
+  --ring: 200 70% 50%;
+
+  --ocean-deep: 220 45% 14%;
+  --ocean-medium: 220 40% 25%;
+  --turquoise: 170 55% 50%;
+  --gold-champagne: 200 70% 50%;
+  --gold-light: 200 65% 60%;
+  --gold-dark: 200 60% 40%;
+  --navy: 220 38% 14%;
+  --navy-light: 220 32% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(220 45% 14%) 0%, hsl(220 40% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(170 60% 50%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(220, 40%, 8%, 0.9) 0%, hsla(220, 40%, 20%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(220 40% 6%) 0%, hsl(220 45% 14%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(220, 35%, 15%, 0.6) 0%, hsla(220, 40%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(200, 70%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(220, 45%, 14%, 0.5);
+  --shadow-card: 0 15px 50px hsla(220, 40%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(200, 70%, 50%, 0.15);
+}
+
+.theme-cruzeiro .hero-overlay {
+  background: linear-gradient(180deg, hsla(220, 40%, 8%, 0.85) 0%, hsla(220, 40%, 8%, 0.6) 50%, hsla(220, 40%, 20%, 0.75) 100%);
+}
+
+.theme-cruzeiro .glass-card {
+  background: linear-gradient(145deg, hsla(220, 35%, 15%, 0.6) 0%, hsla(220, 40%, 8%, 0.8) 100%);
+}
+
+.theme-cruzeiro .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(170 60% 55%) 100%);
+}
+
+.theme-cruzeiro .btn-luxury {
+  background: hsl(200 70% 50%);
+  box-shadow: 0 10px 40px hsla(200, 70%, 50%, 0.25);
+}
+
+.theme-cruzeiro .btn-luxury:hover {
+  background: hsl(200 65% 60%);
+  box-shadow: 0 15px 50px hsla(200, 70%, 50%, 0.35);
+}
+
+.theme-cruzeiro .gold-border-left {
+  border-color: hsl(200 70% 50%);
+}
+
+.theme-cruzeiro .animated-underline::after {
+  background: hsl(200 70% 50%);
+}
+
+.theme-cruzeiro .stat-number {
+  color: hsl(200 70% 50%);
+}
+
+.theme-cruzeiro ::-webkit-scrollbar-thumb:hover {
+  background: hsla(200, 70%, 50%, 0.5);
+}
+
+/* ========================================
+   Patagônia Theme - Glacial Blue & Ice
+   ======================================== */
+.theme-patagonia {
+  --background: 200 35% 6%;
+  --foreground: 200 15% 95%;
+
+  --card: 200 30% 10%;
+  --card-foreground: 200 15% 95%;
+
+  --popover: 200 30% 10%;
+  --popover-foreground: 200 15% 95%;
+
+  --primary: 195 75% 55%;
+  --primary-foreground: 200 35% 8%;
+
+  --secondary: 180 60% 40%;
+  --secondary-foreground: 200 15% 95%;
+
+  --muted: 200 25% 15%;
+  --muted-foreground: 200 12% 55%;
+
+  --accent: 180 55% 45%;
+  --accent-foreground: 200 35% 8%;
+
+  --border: 200 20% 20%;
+  --input: 200 20% 20%;
+  --ring: 195 75% 55%;
+
+  --ocean-deep: 200 40% 14%;
+  --ocean-medium: 195 35% 25%;
+  --turquoise: 180 60% 45%;
+  --gold-champagne: 195 75% 55%;
+  --gold-light: 195 70% 65%;
+  --gold-dark: 195 65% 42%;
+  --navy: 200 35% 14%;
+  --navy-light: 200 30% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(200 40% 14%) 0%, hsl(195 35% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(195 75% 55%) 0%, hsl(180 60% 50%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(200, 35%, 8%, 0.9) 0%, hsla(195, 35%, 20%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(200 35% 6%) 0%, hsl(200 40% 14%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(195, 75%, 55%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(200, 40%, 14%, 0.5);
+  --shadow-card: 0 15px 50px hsla(200, 35%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(195, 75%, 55%, 0.15);
+}
+
+.theme-patagonia .hero-overlay {
+  background: linear-gradient(180deg, hsla(200, 35%, 8%, 0.85) 0%, hsla(200, 35%, 8%, 0.6) 50%, hsla(195, 35%, 20%, 0.75) 100%);
+}
+
+.theme-patagonia .glass-card {
+  background: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+}
+
+.theme-patagonia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(195 75% 55%) 0%, hsl(180 60% 55%) 100%);
+}
+
+.theme-patagonia .btn-luxury {
+  background: hsl(195 75% 55%);
+  box-shadow: 0 10px 40px hsla(195, 75%, 55%, 0.25);
+}
+
+.theme-patagonia .btn-luxury:hover {
+  background: hsl(195 70% 65%);
+  box-shadow: 0 15px 50px hsla(195, 75%, 55%, 0.35);
+}
+
+.theme-patagonia .gold-border-left {
+  border-color: hsl(195 75% 55%);
+}
+
+.theme-patagonia .animated-underline::after {
+  background: hsl(195 75% 55%);
+}
+
+.theme-patagonia .stat-number {
+  color: hsl(195 75% 55%);
+}
+
+.theme-patagonia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(195, 75%, 55%, 0.5);
+}
+
+/* ========================================
+   Mercados de Natal Theme - Christmas Red & Green
+   ======================================== */
+.theme-natal {
+  --background: 350 30% 6%;
+  --foreground: 45 20% 95%;
+
+  --card: 350 25% 10%;
+  --card-foreground: 45 20% 95%;
+
+  --popover: 350 25% 10%;
+  --popover-foreground: 45 20% 95%;
+
+  --primary: 0 70% 50%;
+  --primary-foreground: 45 20% 95%;
+
+  --secondary: 145 50% 40%;
+  --secondary-foreground: 45 20% 95%;
+
+  --muted: 350 20% 15%;
+  --muted-foreground: 350 12% 55%;
+
+  --accent: 145 45% 45%;
+  --accent-foreground: 350 30% 8%;
+
+  --border: 350 18% 20%;
+  --input: 350 18% 20%;
+  --ring: 0 70% 50%;
+
+  --ocean-deep: 350 35% 12%;
+  --ocean-medium: 350 30% 22%;
+  --turquoise: 145 50% 45%;
+  --gold-champagne: 0 70% 50%;
+  --gold-light: 0 65% 60%;
+  --gold-dark: 0 60% 40%;
+  --navy: 350 32% 14%;
+  --navy-light: 350 26% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(350 35% 12%) 0%, hsl(350 30% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(0 70% 50%) 0%, hsl(145 50% 45%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(350, 30%, 8%, 0.9) 0%, hsla(350, 30%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(350 30% 6%) 0%, hsl(350 35% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(350, 25%, 15%, 0.6) 0%, hsla(350, 30%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(0, 70%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(350, 35%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(350, 30%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(0, 70%, 50%, 0.15);
+}
+
+.theme-natal .hero-overlay {
+  background: linear-gradient(180deg, hsla(350, 30%, 8%, 0.85) 0%, hsla(350, 30%, 8%, 0.6) 50%, hsla(350, 30%, 18%, 0.75) 100%);
+}
+
+.theme-natal .glass-card {
+  background: linear-gradient(145deg, hsla(350, 25%, 15%, 0.6) 0%, hsla(350, 30%, 8%, 0.8) 100%);
+}
+
+.theme-natal .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(0 70% 50%) 0%, hsl(45 80% 55%) 100%);
+}
+
+.theme-natal .btn-luxury {
+  background: hsl(0 70% 50%);
+  box-shadow: 0 10px 40px hsla(0, 70%, 50%, 0.25);
+}
+
+.theme-natal .btn-luxury:hover {
+  background: hsl(0 65% 60%);
+  box-shadow: 0 15px 50px hsla(0, 70%, 50%, 0.35);
+}
+
+.theme-natal .gold-border-left {
+  border-color: hsl(0 70% 50%);
+}
+
+.theme-natal .animated-underline::after {
+  background: hsl(0 70% 50%);
+}
+
+.theme-natal .stat-number {
+  color: hsl(0 70% 50%);
+}
+
+.theme-natal ::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 70%, 50%, 0.5);
+}
+
+/* ========================================
+   Lapônia Theme - Aurora Green & Arctic
+   ======================================== */
+.theme-laponia {
+  --background: 180 35% 5%;
+  --foreground: 180 15% 95%;
+
+  --card: 180 30% 9%;
+  --card-foreground: 180 15% 95%;
+
+  --popover: 180 30% 9%;
+  --popover-foreground: 180 15% 95%;
+
+  --primary: 140 70% 50%;
+  --primary-foreground: 180 35% 8%;
+
+  --secondary: 270 50% 55%;
+  --secondary-foreground: 180 15% 95%;
+
+  --muted: 180 25% 14%;
+  --muted-foreground: 180 12% 55%;
+
+  --accent: 270 45% 60%;
+  --accent-foreground: 180 35% 8%;
+
+  --border: 180 18% 18%;
+  --input: 180 18% 18%;
+  --ring: 140 70% 50%;
+
+  --ocean-deep: 180 40% 12%;
+  --ocean-medium: 180 35% 22%;
+  --turquoise: 140 65% 50%;
+  --gold-champagne: 140 70% 50%;
+  --gold-light: 140 65% 60%;
+  --gold-dark: 140 60% 40%;
+  --navy: 180 32% 13%;
+  --navy-light: 180 26% 20%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(180 40% 12%) 0%, hsl(140 35% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(140 70% 50%) 0%, hsl(270 50% 55%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(180, 35%, 7%, 0.9) 0%, hsla(140, 35%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(180 35% 5%) 0%, hsl(180 40% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(180, 30%, 14%, 0.6) 0%, hsla(180, 35%, 7%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(140, 70%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(180, 40%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(180, 35%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(140, 70%, 50%, 0.15);
+}
+
+.theme-laponia .hero-overlay {
+  background: linear-gradient(180deg, hsla(180, 35%, 7%, 0.85) 0%, hsla(180, 35%, 7%, 0.6) 50%, hsla(140, 35%, 18%, 0.75) 100%);
+}
+
+.theme-laponia .glass-card {
+  background: linear-gradient(145deg, hsla(180, 30%, 14%, 0.6) 0%, hsla(180, 35%, 7%, 0.8) 100%);
+}
+
+.theme-laponia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(140 70% 50%) 0%, hsl(270 50% 60%) 100%);
+}
+
+.theme-laponia .btn-luxury {
+  background: hsl(140 70% 50%);
+  box-shadow: 0 10px 40px hsla(140, 70%, 50%, 0.25);
+}
+
+.theme-laponia .btn-luxury:hover {
+  background: hsl(140 65% 60%);
+  box-shadow: 0 15px 50px hsla(140, 70%, 50%, 0.35);
+}
+
+.theme-laponia .gold-border-left {
+  border-color: hsl(140 70% 50%);
+}
+
+.theme-laponia .animated-underline::after {
+  background: hsl(140 70% 50%);
+}
+
+.theme-laponia .stat-number {
+  color: hsl(140 70% 50%);
+}
+
+.theme-laponia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(140, 70%, 50%, 0.5);
+}
+
+/* ========================================
+   Grécia Theme - Mediterranean Blue & White
+   ======================================== */
+.theme-grecia {
+  --background: 210 40% 6%;
+  --foreground: 45 20% 95%;
+
+  --card: 210 35% 10%;
+  --card-foreground: 45 20% 95%;
+
+  --popover: 210 35% 10%;
+  --popover-foreground: 45 20% 95%;
+
+  --primary: 210 85% 55%;
+  --primary-foreground: 45 20% 95%;
+
+  --secondary: 45 75% 55%;
+  --secondary-foreground: 210 40% 8%;
+
+  --muted: 210 25% 15%;
+  --muted-foreground: 210 12% 55%;
+
+  --accent: 45 70% 60%;
+  --accent-foreground: 210 40% 8%;
+
+  --border: 210 20% 20%;
+  --input: 210 20% 20%;
+  --ring: 210 85% 55%;
+
+  --ocean-deep: 210 45% 14%;
+  --ocean-medium: 210 40% 25%;
+  --turquoise: 210 80% 55%;
+  --gold-champagne: 210 85% 55%;
+  --gold-light: 210 80% 65%;
+  --gold-dark: 210 75% 42%;
+  --navy: 210 38% 14%;
+  --navy-light: 210 32% 22%;
+
+  --gradient-ocean: linear-gradient(135deg, hsl(210 45% 14%) 0%, hsl(210 40% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(45 75% 60%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(210, 40%, 8%, 0.9) 0%, hsla(210, 40%, 20%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(210 40% 6%) 0%, hsl(210 45% 14%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(210, 35%, 15%, 0.6) 0%, hsla(210, 40%, 8%, 0.8) 100%);
+  
+  --shadow-gold: 0 10px 40px hsla(210, 85%, 55%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(210, 45%, 14%, 0.5);
+  --shadow-card: 0 15px 50px hsla(210, 40%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(210, 85%, 55%, 0.15);
+}
+
+.theme-grecia .hero-overlay {
+  background: linear-gradient(180deg, hsla(210, 40%, 8%, 0.85) 0%, hsla(210, 40%, 8%, 0.6) 50%, hsla(210, 40%, 20%, 0.75) 100%);
+}
+
+.theme-grecia .glass-card {
+  background: linear-gradient(145deg, hsla(210, 35%, 15%, 0.6) 0%, hsla(210, 40%, 8%, 0.8) 100%);
+}
+
+.theme-grecia .text-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(210 85% 55%) 0%, hsl(45 75% 65%) 100%);
+}
+
+.theme-grecia .btn-luxury {
+  background: hsl(210 85% 55%);
+  box-shadow: 0 10px 40px hsla(210, 85%, 55%, 0.25);
+}
+
+.theme-grecia .btn-luxury:hover {
+  background: hsl(210 80% 65%);
+  box-shadow: 0 15px 50px hsla(210, 85%, 55%, 0.35);
+}
+
+.theme-grecia .gold-border-left {
+  border-color: hsl(210 85% 55%);
+}
+
+.theme-grecia .animated-underline::after {
+  background: hsl(210 85% 55%);
+}
+
+.theme-grecia .stat-number {
+  color: hsl(210 85% 55%);
+}
+
+.theme-grecia ::-webkit-scrollbar-thumb:hover {
+  background: hsla(210, 85%, 55%, 0.5);
 }
 

@@ -2,12 +2,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
+import hotel01 from "@/assets/africa-mauricio/hotel-01.jpeg";
+import hotel02 from "@/assets/africa-mauricio/hotel-02.jpeg";
+import hotel03 from "@/assets/africa-mauricio/hotel-03.jpeg";
+import hotel04 from "@/assets/africa-mauricio/hotel-04.jpeg";
+import hotel05 from "@/assets/africa-mauricio/hotel-05.jpeg";
+
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80", title: "Johannesburg", category: "Radisson Blu Gautrain" },
-  { src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80", title: "Kruger", category: "Phelwana Game Lodge" },
-  { src: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80", title: "Cape Town", category: "The Table Bay Hotel" },
-  { src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80", title: "Stellenbosch", category: "Lanzerac Hotel" },
-  { src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=80", title: "Ilhas Maurício", category: "Resort All Inclusive" },
+  { src: hotel01, title: "Johannesburg", category: "Radisson Blu Gautrain" },
+  { src: hotel02, title: "Kruger", category: "Phelwana Game Lodge" },
+  { src: hotel03, title: "Cape Town", category: "The Table Bay Hotel" },
+  { src: hotel04, title: "Stellenbosch", category: "Lanzerac Hotel" },
+  { src: hotel05, title: "Ilhas Maurício", category: "Resort All Inclusive" },
 ];
 
 export const HotelsPhotoGalleryAM = () => {

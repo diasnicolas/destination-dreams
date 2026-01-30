@@ -6,29 +6,33 @@ import { ExperiencesSectionST } from "@/components/suica-trem/ExperiencesSection
 import { FAQSectionST } from "@/components/suica-trem/FAQSectionST";
 import { UrgencySectionST } from "@/components/suica-trem/UrgencySectionST";
 import { InclusionsSectionST } from "@/components/suica-trem/InclusionsSectionST";
-import { ContactSectionST } from "@/components/suica-trem/ContactSectionST";
+import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionST } from "@/components/suica-trem/ConnectionSectionST";
 import { PhotoGalleryST } from "@/components/suica-trem/PhotoGalleryST";
 import { HotelsPhotoGalleryST } from "@/components/suica-trem/HotelsPhotoGalleryST";
 import { FooterSectionST } from "@/components/suica-trem/FooterSectionST";
-import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { TestimonialsSection } from "@/components/common/TestimonialsSection";
+import { SEO } from "@/components/SEO";
+import { seoData } from "@/lib/seoData";
+import { testimonialsData } from "@/lib/testimonialsData";
 
 const SuicaTrem = () => {
   return (
     <main className="theme-suica min-h-screen bg-background overflow-x-hidden">
+      <SEO {...seoData.suicaTrem} />
       <HeroSectionST />
-      <ProblemSectionST />
       <ConnectionSectionST />
+      <ProblemSectionST />
       <JourneySectionST />
       <DetailedItineraryST />
       <ExperiencesSectionST />
       <PhotoGalleryST />
       <HotelsPhotoGalleryST />
-      <TestimonialsSection />
+      <TestimonialsSection testimonials={testimonialsData.suicaTrem} />
       <FAQSectionST />
       <UrgencySectionST />
       <InclusionsSectionST />
-      <ContactSectionST />
+      <ContactSection destino="Suíça de Trem" />
       <FooterSectionST />
     </main>
   );

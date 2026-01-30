@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import imgBigBen from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.jpg";
+import imgTowerBridge from "@/assets/reino-unido/photo-1486299267070-83823f5448dd.jpg";
+import imgHotel from "@/assets/reino-unido/photo-1566073771259-6a8506099945.jpg";
+import imgHighlands from "@/assets/reino-unido/photo-1587974928442-77dc3e0dba72.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1920", alt: "Big Ben Londres" },
-  { src: "https://images.unsplash.com/photo-1486299267070-83823f5448dd?auto=format&fit=crop&q=80&w=1920", alt: "Tower Bridge" },
-  { src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1920", alt: "Castelo de Edinburgh" },
-  { src: "https://images.unsplash.com/photo-1506377585622-bedcbb5f7cdb?auto=format&fit=crop&q=80&w=1920", alt: "Highlands Escócia" }
+  { src: imgBigBen, alt: "Big Ben Londres" },
+  { src: imgTowerBridge, alt: "Tower Bridge" },
+  { src: imgHotel, alt: "Castelo de Edinburgh" },
+  { src: imgHighlands, alt: "Highlands Escócia" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionRU = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO DESCOBRIR OS SEGREDOS REAIS

@@ -2,11 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import photo1516426122078 from "@/assets/africa-mauricio/photo-1516426122078-c23e76319801.jpg";
+import photo1547471080 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
+import photo1580060839134 from "@/assets/africa-mauricio/photo-1580060839134-75a5edca2e99.jpg";
+import photo1589197331516 from "@/assets/africa-mauricio/photo-1589197331516-4d84b72ebde3.jpg";
+
 const heroImages = [
-  { src: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80&w=1920", alt: "Leão no Safári" },
-  { src: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=1920", alt: "Elefantes na África" },
-  { src: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?auto=format&fit=crop&q=80&w=1920", alt: "Cape Town Table Mountain" },
-  { src: "https://images.unsplash.com/photo-1589197331516-4d84b72ebde3?auto=format&fit=crop&q=80&w=1920", alt: "Ilhas Maurício" }
+  { src: photo1516426122078, alt: "Leão no Safári" },
+  { src: photo1547471080, alt: "Elefantes na África" },
+  { src: photo1580060839134, alt: "Cape Town Table Mountain" },
+  { src: photo1589197331516, alt: "Ilhas Maurício" }
 ];
 
 const highlights = [
@@ -163,7 +168,7 @@ export const HeroSectionAM = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={() => scrollToSection("#formulario")}
               className="btn-luxury inline-block rounded-md text-sm md:text-base animate-pulse-gold"
             >
               QUERO VIVER A EMOÇÃO DO SAFÁRI AFRICANO

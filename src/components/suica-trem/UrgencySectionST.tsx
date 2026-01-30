@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { CountdownTimer } from "@/components/landing/CountdownTimer";
+import { CountdownTimer } from "@/components/common/CountdownTimer";
 
 export const UrgencySectionST = () => {
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
+    const contactSection = document.getElementById("formulario");
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -73,7 +73,7 @@ export const UrgencySectionST = () => {
             onClick={scrollToContact}
             className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
           >
-            QUERO VIAJAR NOS TRENS MAIS LINDOS - AGENDAR CONSULTA
+            AGENDAR MINHA CONSULTA PRIVADA AGORA
           </Button>
 
           <div className="text-sm text-muted-foreground space-y-2 pt-8">
