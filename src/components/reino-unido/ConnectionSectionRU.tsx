@@ -26,10 +26,9 @@ const credentials = [
 const certifications = [
   {
     icon: Award,
-    name: "Aussie Travel Specialist",
-    issuer: "Governo Australiano",
-    description: "Certificação oficial para especialistas em turismo australiano",
-    href: certificadoAussie,
+    name: "Especialista em Europa",
+    issuer: "",
+    description: "",
   },
   {
     icon: BadgeCheck,
@@ -86,7 +85,7 @@ export const ConnectionSectionRU = () => {
                 <img 
                   src={sobreImageRU} 
                   alt="Evandro Mendes" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_15%]"
                 />
               </div>
               

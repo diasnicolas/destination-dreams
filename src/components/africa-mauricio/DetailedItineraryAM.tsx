@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -15,7 +15,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Johannesburg",
     color: "primary",
     days: [
@@ -36,7 +36,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Johannesburg — Porta de Entrada",
+    title: "Johannesburg — Porta de Entrada",
     subtitle: "2 Noites de Imersão",
     color: "turquoise",
     days: [
@@ -86,7 +86,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Kruger — Safári Africano",
+    title: "Kruger — Safári Africano",
     subtitle: "3 Noites com os Big Five",
     color: "primary",
     days: [
@@ -144,7 +144,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Cape Town — Elegância Africana",
+    title: "Cape Town — Elegância Africana",
     subtitle: "4 Noites de Descobertas",
     color: "turquoise",
     days: [
@@ -208,7 +208,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Stellenbosch — Vinícolas",
+    title: "Stellenbosch — Vinícolas",
     subtitle: "1 Noite de Charme",
     color: "primary",
     days: [
@@ -245,7 +245,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Ilhas Maurício — Paraíso All Inclusive",
+    title: "Ilhas Maurício — Paraíso All Inclusive",
     subtitle: "4 Noites no Paraíso",
     color: "turquoise",
     days: [
@@ -312,7 +312,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "primary",
     days: [

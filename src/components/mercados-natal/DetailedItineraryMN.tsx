@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -35,7 +35,7 @@ interface Phase {
 const phases: Phase[] = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Estrasburgo",
     color: "primary",
     days: [
@@ -72,7 +72,7 @@ const phases: Phase[] = [
   },
   {
     id: 2,
-    title: "FASE 2: A Capital do Natal",
+    title: "A Capital do Natal",
     subtitle: "3 Noites em Estrasburgo",
     color: "primary",
     days: [
@@ -128,7 +128,7 @@ const phases: Phase[] = [
   },
   {
     id: 3,
-    title: "FASE 3: Vilas de Conto de Fadas",
+    title: "Vilas de Conto de Fadas",
     subtitle: "3 Noites em Colmar + Baden-Baden",
     color: "primary",
     days: [
@@ -201,7 +201,7 @@ const phases: Phase[] = [
   },
   {
     id: 4,
-    title: "FASE 4: Alpes Suíços",
+    title: "Alpes Suíços",
     subtitle: "2 Noites em Montreux",
     color: "primary",
     days: [
@@ -241,7 +241,7 @@ const phases: Phase[] = [
   },
   {
     id: 5,
-    title: "FASE 5: Montanhas Mágicas",
+    title: "Montanhas Mágicas",
     subtitle: "2 Noites em Sils Maria",
     color: "primary",
     days: [

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -24,7 +24,7 @@ const iconMap = {
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Sydney — A Porta de Entrada",
+    title: "Sydney — A Porta de Entrada",
     subtitle: "4 Noites de Imersão na Austrália",
     color: "primary",
     days: [
@@ -93,7 +93,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Cairns — A Grande Barreira",
+    title: "Cairns — A Grande Barreira",
     subtitle: "3 Noites de Magia Natural",
     color: "turquoise",
     days: [
@@ -151,7 +151,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Melbourne — Great Ocean Road",
+    title: "Melbourne — Great Ocean Road",
     subtitle: "3 Noites de Arte e Natureza",
     color: "primary",
     days: [
@@ -207,7 +207,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Queenstown & Hobbiton",
+    title: "Queenstown & Hobbiton",
     subtitle: "3 Noites — Ficção Vira Realidade",
     color: "turquoise",
     days: [
@@ -264,7 +264,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Rotorua — Geotermia",
+    title: "Rotorua — Geotermia",
     subtitle: "2 Noites — A Terra Viva",
     color: "primary",
     days: [
@@ -305,7 +305,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Auckland — Redescoberta",
+    title: "Auckland — Redescoberta",
     subtitle: "3 Noites — Transformação Completa",
     color: "turquoise",
     days: [

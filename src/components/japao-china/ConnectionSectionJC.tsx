@@ -26,10 +26,9 @@ const credentials = [
 const certifications = [
   {
     icon: Award,
-    name: "Aussie Travel Specialist",
-    issuer: "Governo Australiano",
-    description: "Certificação oficial para especialistas em turismo australiano",
-    href: certificadoAussie,
+    name: "Especialista em Ásia",
+    issuer: "",
+    description: "",
   },
   {
     icon: BadgeCheck,
@@ -96,7 +95,7 @@ export const ConnectionSectionJC = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute -top-4 -right-4 md:top-4 md:right-0 glass-card px-4 py-2 rounded-full border border-primary/30"
               >
-                <span className="text-xs font-semibold text-primary">Aussie Travel Specialist</span>
+                <span className="text-xs font-semibold text-primary">Especialista em Ásia</span>
               </motion.div>
               
               <motion.div

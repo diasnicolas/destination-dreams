@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -34,7 +34,7 @@ interface Phase {
 const phases: Phase[] = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Helsinque",
     color: "primary",
     days: [
@@ -70,7 +70,7 @@ const phases: Phase[] = [
   },
   {
     id: 2,
-    title: "FASE 2: Helsinque & Tallinn",
+    title: "Helsinque & Tallinn",
     subtitle: "3 Noites em Helsinque + Bate-volta Estônia",
     color: "primary",
     days: [
@@ -126,7 +126,7 @@ const phases: Phase[] = [
   },
   {
     id: 3,
-    title: "FASE 3: A Lapônia Mágica",
+    title: "A Lapônia Mágica",
     subtitle: "5 Noites em Rovaniemi + 1 Noite no Hotel Iglu",
     color: "primary",
     days: [
@@ -228,7 +228,7 @@ const phases: Phase[] = [
   },
   {
     id: 4,
-    title: "FASE 4: Tromsø - Capital da Aurora",
+    title: "Tromsø - Capital da Aurora",
     subtitle: "3 Noites em Tromsø, Noruega",
     color: "primary",
     days: [
@@ -284,7 +284,7 @@ const phases: Phase[] = [
   },
   {
     id: 5,
-    title: "FASE 5: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Tromsø → São Paulo",
     color: "primary",
     days: [

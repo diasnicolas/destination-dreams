@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -17,7 +17,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Doha → Japão",
     color: "primary",
     days: [
@@ -52,7 +52,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Kyoto — Templos Milenares",
+    title: "Kyoto — Templos Milenares",
     subtitle: "3 Noites de Espiritualidade",
     color: "turquoise",
     days: [
@@ -115,7 +115,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Nagoya — Modernidade",
+    title: "Nagoya — Modernidade",
     subtitle: "1 Noite de Transição",
     color: "primary",
     days: [
@@ -149,7 +149,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Toyama — Montanhas",
+    title: "Toyama — Montanhas",
     subtitle: "3 Noites na Natureza Selvagem",
     color: "turquoise",
     days: [
@@ -197,7 +197,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Fujikawaguchiko — Monte Fuji",
+    title: "Fujikawaguchiko — Monte Fuji",
     subtitle: "1 Noite Sagrada",
     color: "primary",
     days: [
@@ -233,7 +233,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Tóquio — Energia Vibrante",
+    title: "Tóquio — Energia Vibrante",
     subtitle: "3 Noites na Metrópole",
     color: "turquoise",
     days: [
@@ -282,7 +282,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Hangzhou — História e Jardins",
+    title: "Hangzhou — História e Jardins",
     subtitle: "3 Noites de Tradição Chinesa",
     color: "primary",
     days: [
@@ -331,7 +331,7 @@ const phases = [
   },
   {
     id: 8,
-    title: "FASE 8: Xangai — Modernidade",
+    title: "Xangai — Modernidade",
     subtitle: "3 Noites no Futuro",
     color: "turquoise",
     days: [
@@ -380,7 +380,7 @@ const phases = [
   },
   {
     id: 9,
-    title: "FASE 9: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "primary",
     days: [

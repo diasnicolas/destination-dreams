@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -15,7 +15,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque e Ushuaia",
+    title: "Embarque e Ushuaia",
     subtitle: "Brasil → Ushuaia (Fim do Mundo)",
     color: "primary",
     days: [
@@ -93,7 +93,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: El Calafate e as Geleiras",
+    title: "El Calafate e as Geleiras",
     subtitle: "O Espetáculo do Perito Moreno",
     color: "turquoise",
     days: [
@@ -157,7 +157,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Buenos Aires e Retorno",
+    title: "Buenos Aires e Retorno",
     subtitle: "A Elegância Portenha",
     color: "primary",
     days: [

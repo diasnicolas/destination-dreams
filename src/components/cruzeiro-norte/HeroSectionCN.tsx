@@ -2,16 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Ship } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import photo1531366936337 from "@/assets/cruzeiro-norte/photo-1531366936337-7c912a4589a7.jpg";
-import photo1520483601560 from "@/assets/cruzeiro-norte/photo-1520483601560-389dff434fdf.jpg";
-import photo1476514525535 from "@/assets/cruzeiro-norte/photo-1476514525535-07fb3b4ae5f1.jpg";
-import photo1506377585622 from "@/assets/cruzeiro-norte/photo-1506377585622-bedcbb027afc.jpg";
+import photo1531366936337 from "@/assets/cruzeiro-norte/vertical-aerial-view-beautiful-town-lofoten-norway-captured-fog_11zon.jpg";
+import photo1520483601560 from "@/assets/cruzeiro-norte/beautiful-view-crowland-abbey-from-snowden-field-cloudy-day_11zon.jpg";
+import photo1476514525535 from "@/assets/cruzeiro-norte/geiranger-fjord-waterfall-seven-sisters-beautiful-nature-norway-natural-landscape_11zon.jpg";
 
 const heroImages = [
   { src: photo1531366936337, alt: "Aurora Boreal na Islândia" },
   { src: photo1520483601560, alt: "Fjords Noruegueses" },
-  { src: photo1476514525535, alt: "Cruzeiro pelo Atlântico" },
-  { src: photo1506377585622, alt: "Castelo de Edimburgo" }
+  { src: photo1476514525535, alt: "Cruzeiro pelo Atlântico" }
 ];
 
 const highlights = [

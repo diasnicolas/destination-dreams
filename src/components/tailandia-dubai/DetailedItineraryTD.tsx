@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -18,7 +18,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Bangkok",
     color: "primary",
     days: [
@@ -39,7 +39,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Bangkok — Caos Sagrado",
+    title: "Bangkok — Caos Sagrado",
     subtitle: "3 Noites no Coração da Tailândia",
     color: "turquoise",
     days: [
@@ -89,7 +89,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Chiang Mai — Festival das Lanternas",
+    title: "Chiang Mai — Festival das Lanternas (VIP)",
     subtitle: "3 Noites de Pura Magia",
     color: "primary",
     days: [
@@ -124,7 +124,7 @@ const phases = [
       {
         day: 7,
         date: "1 de Novembro",
-        title: "YI PENG — Festival das Lanternas",
+        title: "YI PENG — Festival das Lanternas (VIP)",
         location: "Chiang Mai, Tailândia",
         highlights: [
           "YI PENG — o céu se enche de lanternas",
@@ -140,7 +140,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Krabi — Paraíso Tropical",
+    title: "Krabi — Paraíso Tropical",
     subtitle: "3 Noites de Praias Cristalinas",
     color: "turquoise",
     days: [
@@ -190,7 +190,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Koh Phi Phi — Ilha Paradisíaca",
+    title: "Koh Phi Phi — Ilha Paradisíaca",
     subtitle: "2 Noites no Paraíso",
     color: "primary",
     days: [
@@ -226,7 +226,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Phuket — A Pérola do Andaman",
+    title: "Phuket — A Pérola do Andaman",
     subtitle: "2 Noites de Luxo",
     color: "turquoise",
     days: [
@@ -262,7 +262,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Dubai — Futuro no Deserto",
+    title: "Dubai — Futuro no Deserto",
     subtitle: "4 Noites de Luxo Extremo",
     color: "primary",
     days: [
@@ -326,7 +326,7 @@ const phases = [
   },
   {
     id: 8,
-    title: "FASE 8: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "turquoise",
     days: [

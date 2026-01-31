@@ -187,11 +187,20 @@ const NotFound = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {[
-                { name: "Cruzeiro Norte Europeu", path: "/cruzeiro-norte-europeu" },
-                { name: "Japão & China", path: "/japao-china" },
-                { name: "Austrália & Nova Zelândia", path: "/australia-nz" },
-                { name: "Grécia", path: "/grecia-alem-do-obvio" },
-                { name: "Lapônia", path: "/laponia-tromso" },
+                { name: "Cruzeiro Transpacífico", path: "/cruzeiro-transpacifico-2027" },
+                { name: "Austrália & Nova Zelândia", path: "/australia-novazelandia-2027" },
+                { name: "Reino Unido", path: "/reino-unido-2026" },
+                { name: "Suíça de Trem", path: "/suica-trem-2026" },
+                { name: "África do Sul & Ilhas Maurício", path: "/africa-mauricio-2026" },
+                { name: "China: Maravilhas Culturais", path: "/china-maravilhas-2027" },
+                { name: "Japão & China", path: "/japao-china-2026" },
+                { name: "Puglia & Costa Amalfitana", path: "/puglia-amalfi-2026" },
+                { name: "Tailândia & Dubai", path: "/tailandia-dubai-2026" },
+                { name: "Cruzeiro Norte Europeu", path: "/cruzeiro-norte-europeu-2026" },
+                { name: "Ushuaia, El Calafate & Buenos Aires", path: "/ushuaia-calafate-2026" },
+                { name: "Mercados de Natal", path: "/mercados-natal-2026" },
+                { name: "Lapônia & Tromsø", path: "/laponia-tromso-2027" },
+                { name: "Grécia Além do Óbvio", path: "/grecia-alem-do-obvio-2026" },
               ].map((dest, i) => (
                 <motion.div
                   key={dest.path}

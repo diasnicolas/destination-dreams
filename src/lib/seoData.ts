@@ -71,8 +71,8 @@ export const seoData = {
     ogDescription: "16 dias pela Puglia e Costa Amalfitana. Trulli, vilarejos e as praias mais bonitas da Itália.",
   },
   tailandiaDubai: {
-    title: "Tailândia & Dubai 2026 | Festival das Lanternas & Modernidade | WE Travel UK",
-    description: "19 dias de contrastes. Bangkok, Chiang Mai, Festival das Lanternas, praias de Krabi e a modernidade de Dubai. Oriente em sua essência.",
+    title: "Tailândia & Dubai 2026 | Festival das Lanternas (VIP) & Modernidade | WE Travel UK",
+    description: "19 dias de contrastes. Bangkok, Chiang Mai, Festival das Lanternas (VIP), praias de Krabi e a modernidade de Dubai. Oriente em sua essência.",
     keywords: "viagem tailândia, viagem dubai, bangkok, chiang mai, krabi, festival lanternas, burj khalifa, templos tailândia",
     ogTitle: "Tailândia & Dubai | Do Tradicional ao Moderno",
     ogDescription: "19 dias de transformação. Templos, Festival das Lanternas, praias e a grandiosidade de Dubai.",

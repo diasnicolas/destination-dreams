@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -17,7 +17,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Londres",
     color: "primary",
     days: [
@@ -38,7 +38,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: London — Coração do Reino",
+    title: "London — Coração do Reino",
     subtitle: "6 Noites ao Lado do Big Ben",
     color: "turquoise",
     days: [
@@ -130,7 +130,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Durham — História Medieval",
+    title: "Durham — História Medieval",
     subtitle: "1 Noite na Catedral",
     color: "primary",
     days: [
@@ -153,7 +153,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Edinburgh — Magia Escocesa",
+    title: "Edinburgh — Magia Escocesa",
     subtitle: "3 Noites com a Historiadora Susana",
     color: "turquoise",
     days: [
@@ -203,7 +203,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Inverness — Highlands",
+    title: "Inverness — Highlands",
     subtitle: "2 Noites na Paisagem Selvagem",
     color: "primary",
     days: [
@@ -239,7 +239,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Liverpool — Cidade da Música",
+    title: "Liverpool — Cidade da Música",
     subtitle: "1 Noite de História",
     color: "turquoise",
     days: [
@@ -262,7 +262,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Bath — Cidade Romana",
+    title: "Bath — Cidade Romana",
     subtitle: "2 Noites de Elegância",
     color: "primary",
     days: [
@@ -298,7 +298,7 @@ const phases = [
   },
   {
     id: 8,
-    title: "FASE 8: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "turquoise",
     days: [

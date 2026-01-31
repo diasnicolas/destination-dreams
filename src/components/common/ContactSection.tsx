@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Send, Waves } from "lucide-react";
 
@@ -29,6 +30,7 @@ const cleanObject = (obj: Record<string, unknown>) => {
 };
 
 export const ContactSection = ({ destino = "Cruzeiro Transpacífico 2027" }: ContactSectionProps) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -105,8 +107,9 @@ export const ContactSection = ({ destino = "Cruzeiro Transpacífico 2027" }: Con
       
       // Verificar se a resposta foi bem sucedida
       if (data.success || response.ok) {
-        toast.success("Sua solicitação foi enviada! Em breve entraremos em contato.");
         setFormData({ name: "", email: "", phone: "", travelers: "" });
+        // Redirecionar para página de agradecimento
+        navigate("/obrigado");
       } else {
         toast.error("Houve um problema ao enviar sua solicitação. Tente novamente.");
       }

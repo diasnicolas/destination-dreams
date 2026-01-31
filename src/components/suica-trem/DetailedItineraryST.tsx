@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -17,7 +17,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Zurique",
     color: "primary",
     days: [
@@ -38,7 +38,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Lucerna — A Suíça de Conto",
+    title: "Lucerna — A Suíça de Conto",
     subtitle: "3 Noites às Margens do Lago",
     color: "turquoise",
     days: [
@@ -88,7 +88,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Interlaken — Coração dos Alpes",
+    title: "Interlaken — Coração dos Alpes",
     subtitle: "3 Noites Entre Dois Lagos",
     color: "primary",
     days: [
@@ -138,7 +138,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Zermatt — O Matterhorn",
+    title: "Zermatt — O Matterhorn",
     subtitle: "2 Noites Frente ao Ícone",
     color: "turquoise",
     days: [
@@ -174,7 +174,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Glacier Express",
+    title: "Glacier Express",
     subtitle: "O Trem Mais Lento do Mundo",
     color: "primary",
     days: [
@@ -196,7 +196,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: St. Moritz — Elegância Alpina",
+    title: "St. Moritz — Elegância Alpina",
     subtitle: "1 Noite no Resort dos Famosos",
     color: "turquoise",
     days: [
@@ -218,7 +218,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Zurique — Metrópole Suíça",
+    title: "Zurique — Metrópole Suíça",
     subtitle: "2 Noites de Despedida",
     color: "primary",
     days: [
@@ -254,7 +254,7 @@ const phases = [
   },
   {
     id: 8,
-    title: "FASE 8: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "turquoise",
     days: [

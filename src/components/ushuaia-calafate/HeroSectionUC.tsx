@@ -2,15 +2,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import imgGlaciar from "@/assets/ushuaia-calafate/photo-1478827536114-da961b7f86d2.jpg";
-import imgUshuaia from "@/assets/ushuaia-calafate/photo-1589909202802-8f4aadce1849.jpg";
+import ushuaiaPhoto1 from "@/assets/ushuaia-calafate/beautiful-shot-moreno-glacier-santa-cruz-argentina_11zon.jpg";
+import ushuaiaPhoto2 from "@/assets/ushuaia-calafate/caminito_11zon.jpg";
+import ushuaiaPhoto3 from "@/assets/ushuaia-calafate/magical-winter-landscape (1)_11zon.jpg";
 
 // Usando imagens disponíveis como fallback para as que deram 404
 const heroImages = [
-  { src: imgGlaciar, alt: "Glaciar Perito Moreno" },
-  { src: imgGlaciar, alt: "Paisagem Patagônia" },
-  { src: imgUshuaia, alt: "Pinguins na Patagônia" },
-  { src: imgUshuaia, alt: "Ushuaia Fim do Mundo" }
+  { src: ushuaiaPhoto1, alt: "Glaciar Perito Moreno" },
+  { src: ushuaiaPhoto2, alt: "Paisagem Patagônia" },
+  { src: ushuaiaPhoto3, alt: "Pinguins na Patagônia" },
 ];
 
 const highlights = [

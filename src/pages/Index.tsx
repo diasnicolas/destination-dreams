@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Plane, MapPin, Phone, Mail, Globe, Anchor, Instagram, Send, Waves, Award, Users, Shield, BadgeCheck, Briefcase, Compass, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import cadasturImage from "@/assets/logoCadastur.png";
 import { SEO } from "@/components/SEO";
 import { seoData } from "@/lib/seoData";
+import { contactData } from "@/lib/contactData";
+import { GoogleIcon } from "@/components/common/GoogleIcon";
 
 import logoAgencia from "@/assets/logotipo-agencia-index.png";
 import sobreImage from "@/assets/reino-unido/sobre.jpeg";
@@ -25,16 +27,16 @@ import japaoPhoto3 from "@/assets/japao-china/photo-1508804185872-d7badad00f7d.j
 import japaoPhoto4 from "@/assets/japao-china/photo-1474181487882-5abf3f0ba6c2.jpg";
 
 // Imagens Puglia-Amalfi
-import pugliaPhoto1 from "@/assets/puglia-amalfi/photo-1534308983496-4fabb1a015ee.jpg";
-import pugliaPhoto2 from "@/assets/puglia-amalfi/photo-1516483638261-f4dbaf036963.jpg";
-import pugliaPhoto3 from "@/assets/puglia-amalfi/alberobello-trulli.jpg";
-import pugliaPhoto4 from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
+import pugliaPhoto1 from "@/assets/puglia-amalfi/amalfitana_2.jpeg";
+import pugliaPhoto2 from "@/assets/puglia-amalfi/amalfitana_1.jpeg";
+import pugliaPhoto3 from "@/assets/puglia-amalfi/vila_costeira_1.jpeg";
+import pugliaPhoto4 from "@/assets/puglia-amalfi/photo-1515859005217-8a1f08870f59.jpg";
 
 // Imagens Suíça-Trem
 import suicaPhoto1 from "@/assets/suica-trem/shutterstock_476862469_11zon.webp";
-import suicaPhoto2 from "@/assets/suica-trem/shutterstock_1730808289_11zon.webp";
-import suicaPhoto3 from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
-import suicaPhoto4 from "@/assets/suica-trem/shutterstock_2393185093_11zon.webp";
+import suicaPhoto2 from "@/assets/suica-trem/suica_hero_1.jpeg";
+import suicaPhoto4 from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
+import suicaPhoto3 from "@/assets/suica-trem/suica_hero_2.webp";
 // Imagens Reino Unido
 import reinoPhoto1 from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.jpg";
 import reinoPhoto2 from "@/assets/reino-unido/photo-1486299267070-83823f5448dd.jpg";
@@ -42,58 +44,55 @@ import reinoPhoto3 from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.j
 import reinoPhoto4 from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.jpg";
 
 // Imagens Cruzeiro Norte
-import cruzeiroNortePhoto1 from "@/assets/cruzeiro-norte/photo-1531366936337-7c912a4589a7.jpg";
-import cruzeiroNortePhoto2 from "@/assets/cruzeiro-norte/photo-1520483601560-389dff434fdf.jpg";
-import cruzeiroNortePhoto3 from "@/assets/cruzeiro-norte/photo-1476514525535-07fb3b4ae5f1.jpg";
-import cruzeiroNortePhoto4 from "@/assets/cruzeiro-norte/photo-1506377585622-bedcbb027afc.jpg";
+import cruzeiroNortePhoto1 from "@/assets/cruzeiro-norte/beautiful-view-crowland-abbey-from-snowden-field-cloudy-day_11zon.jpg";
+import cruzeiroNortePhoto2 from "@/assets/cruzeiro-norte/geiranger-fjord-waterfall-seven-sisters-beautiful-nature-norway-natural-landscape_11zon.jpg";
+import cruzeiroNortePhoto3 from "@/assets/cruzeiro-norte/vertical-aerial-view-beautiful-town-lofoten-norway-captured-fog_11zon.jpg";
 
 // Imagens Ushuaia-Calafate
-import ushuaiaPhoto1 from "@/assets/ushuaia-calafate/photo-1478827536114-da961b7f86d2.jpg";
-import ushuaiaPhoto2 from "@/assets/ushuaia-calafate/photo-1478827536114-da961b7f86d2.jpg";
-import ushuaiaPhoto3 from "@/assets/ushuaia-calafate/photo-1478827536114-da961b7f86d2.jpg";
-import ushuaiaPhoto4 from "@/assets/ushuaia-calafate/photo-1589909202802-8f4aadce1849.jpg";
+import ushuaiaPhoto1 from "@/assets/ushuaia-calafate/beautiful-shot-moreno-glacier-santa-cruz-argentina_11zon.jpg";
+import ushuaiaPhoto2 from "@/assets/ushuaia-calafate/caminito_11zon.jpg";
+import ushuaiaPhoto3 from "@/assets/ushuaia-calafate/magical-winter-landscape (1)_11zon.jpg";
 
 // Imagens Grécia
-import greciaPhoto1 from "@/assets/grecia/photo-1533105079780-92b9be482077.jpg";
-import greciaPhoto2 from "@/assets/grecia/photo-1570077188670-e3a8d69ac5ff.jpg";
-import greciaPhoto3 from "@/assets/grecia/photo-1555993539-1732b0258235.jpg";
-import greciaPhoto4 from "@/assets/grecia/photo-1613395877344-13d4a8e0d49e.jpg";
+import greciaPhoto1 from "@/assets/grecia/aerial-drone-view-famous-shipwreck-navagio-beach-zakynthos-island-greece-greece-iconic-vacation-picture_11zon.jpg";
+import greciaPhoto2 from "@/assets/grecia/breathtaking-view-natural-beach-landscape_11zon.jpg";
+import greciaPhoto3 from "@/assets/grecia/oia-town-cityscape-santorini-island-greece-sunset-aegean-sea_11zon.jpg";
 
 // Imagens África-Maurício
 import africaPhoto1 from "@/assets/africa-mauricio/photo-1516426122078-c23e76319801.jpg";
 import africaPhoto2 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
 import africaPhoto3 from "@/assets/africa-mauricio/photo-1580060839134-75a5edca2e99.jpg";
 import africaPhoto4 from "@/assets/africa-mauricio/photo-1589197331516-4d84b72ebde3.jpg";
+import africaPhoto5 from "@/assets/africa-mauricio/grupo_safari_11zon.jpg";
 
 // Imagens Tailândia-Dubai
 import tailandiaPhoto1 from "@/assets/tailandia-dubai/photo-1528181304800-259b08848526.jpg";
 import tailandiaPhoto2 from "@/assets/tailandia-dubai/photo-1552465011-b4e21bf6e79a.jpg";
 import tailandiaPhoto3 from "@/assets/tailandia-dubai/photo-1537956965359-7573183d1f57.jpg";
 import tailandiaPhoto4 from "@/assets/tailandia-dubai/photo-1512453979798-5ea266f8880c.jpg";
+import tailandiaPhoto5 from "@/assets/tailandia-dubai/grupo_hero_7.jpeg";
 
 // Imagens Mercados Natal
-import mercadosPhoto1 from "@/assets/mercados-natal/colmar.jpg";
-import mercadosPhoto2 from "@/assets/mercados-natal/photo-1545622783-b3e021430fee.jpg";
-import mercadosPhoto3 from "@/assets/mercados-natal/photo-1482517967863-00e15c9b44be.jpg";
-import mercadosPhoto4 from "@/assets/mercados-natal/photo-1543589077-47d81606c1bf.jpg";
+import mercadosPhoto1 from "@/assets/mercados-natal/IMG_9685_11zon.jpg";
+import mercadosPhoto2 from "@/assets/mercados-natal/IMG_9689_11zon.jpg";
+import mercadosPhoto3 from "@/assets/mercados-natal/IMG_9691_11zon.jpg";
 
 // Imagens Austrália-NZ
-import australiaPhoto1 from "@/assets/australia-nz-02/photo-1624138784614-87fd1b6528f8.jpg";
-import australiaPhoto2 from "@/assets/australia-nz-02/photo-1462275646964-a0e3386b89fa.jpg";
-import australiaPhoto3 from "@/assets/australia-nz-02/photo-1507699622108-4be3abd695ad.jpg";
+import australiaPhoto1 from "@/assets/australia-nz-02/stunning-aerial-view-turquoise-waters-great-barrier-reef-vibrant-corals-beneath-cryst_11zon.jpg";
+import australiaPhoto2 from "@/assets/australia-nz-02/sydney-harbour-bridge_11zon.jpg";
+import australiaPhoto3 from "@/assets/australia-nz-02/sydney-australia-march-4-2023-sydney-cbd-surrounding-harbour-including-circular-quay-rocks-clear-autumn-day-sydney-australia_11zon.jpg";
 import australiaPhoto4 from "@/assets/australia-nz-02/photo-1568430462989-44163eb1752f.jpg";
 
 // Imagens Lapônia-Tromsø
-import laponiaPhoto1 from "@/assets/laponia-tromso/photo-1531366936337-7c912a4589a7.jpg";
-import laponiaPhoto2 from "@/assets/laponia-tromso/photo-1517483000871-1dbf64a6e1c6.jpg";
-import laponiaPhoto3 from "@/assets/laponia-tromso/huskies.jpg";
-import laponiaPhoto4 from "@/assets/laponia-tromso/photo-1507272931001-fc06c17e4f43.jpg";
+import laponiaPhoto1 from "@/assets/laponia-tromso/sunset-winter-tromso-norway_11zon.jpg";
+import laponiaPhoto2 from "@/assets/laponia-tromso/people-riding-sledge-with-horses_11zon.jpg";
+import laponiaPhoto3 from "@/assets/laponia-tromso/rovaniemi-finland-march-5-2017-santa-claus-office-santa-claus-village-rovaniemi-lapland-finland (1)_11zon.jpg";
 
 // Imagens China
 import chinaPhoto1 from "@/assets/china/photo-1508804185872-d7badad00f7d.jpg";
 import chinaPhoto2 from "@/assets/china/photo-1547981609-4b6bfe67ca0b.jpg";
-import chinaPhoto3 from "@/assets/china/photo-1545893835-abaa50cbe628.jpg";
-import chinaPhoto4 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
+import chinaPhoto3 from "@/assets/china/selective-shot-warrior-sculptures-terracotta-army_11zon.jpg";
+import chinaPhoto4 from "@/assets/china/view-rock-formations-with-nature-landscape_11zon.jpg";
 
 // Imagens Galeria de Viagens
 import galeriaImg1 from "@/assets/galeria_viagens/12286D72-6DE5-453E-A706-3AF3737490D2_15_11zon.webp";
@@ -107,7 +106,13 @@ import galeriaImg8 from "@/assets/galeria_viagens/7A3FD5B3-2D5D-48FA-B75C-E5403C
 import galeriaImg9 from "@/assets/galeria_viagens/7D5CC16A-6D95-4F69-A0FB-AAA648DF9B65_4_5005_c_12_11zon.webp";
 import galeriaImg10 from "@/assets/galeria_viagens/86EA9F8B-8FE2-4D2C-819C-1CE03D013778_1_105_c_13_11zon.webp";
 import galeriaImg11 from "@/assets/galeria_viagens/D96A91AD-967C-4B55-A63A-F50AE56CD486_4_5005_c_16_11zon.webp";
-import galeriaImg12 from "@/assets/galeria_viagens/F338DDA5-246F-4393-A13C-C4241B8E27DB_4_5005_c_17_11zon.webp";
+import galeriaImg12 from "@/assets/galeria_viagens/3e404e6c-0f36-452e-ae3e-770d7c94291d_4_11zon.jpg";
+import galeriaImg13 from "@/assets/galeria_viagens/29dcba6b-baff-4416-81f0-7a5a10031e33_5_11zon.jpg";
+import galeriaImg15 from "@/assets/galeria_viagens/0119d511-cf17-4c6a-8cb8-0e310a2f9c77 2_10_11zon.jpg";
+import galeriaImg16 from "@/assets/galeria_viagens/P1800766 2_8_11zon.jpeg";
+import galeriaImg17 from "@/assets/galeria_viagens/IMG_6478_6_11zon.jpg";
+import galeriaImg18 from "@/assets/galeria_viagens/IMG_6429_7_11zon.jpg";
+import galeriaImg19 from "@/assets/galeria_viagens/IMG_1859_3_11zon.jpg";
 
 // Array de imagens da galeria
 const galeriaViagens = [
@@ -123,6 +128,12 @@ const galeriaViagens = [
   { src: galeriaImg10, alt: "Experiência de viagem 10" },
   { src: galeriaImg11, alt: "Experiência de viagem 11" },
   { src: galeriaImg12, alt: "Experiência de viagem 12" },
+  { src: galeriaImg13, alt: "Experiência de viagem 13" },
+  { src: galeriaImg15, alt: "Experiência de viagem 15" },
+  { src: galeriaImg16, alt: "Experiência de viagem 16" },
+  { src: galeriaImg17, alt: "Experiência de viagem 17" },
+  { src: galeriaImg18, alt: "Experiência de viagem 18" },
+  { src: galeriaImg19, alt: "Experiência de viagem 19" }
 ];
 
 // Dados dos destinos
@@ -196,8 +207,7 @@ const destinations = [
     images: [
       { src: cruzeiroNortePhoto1, alt: "Aurora Boreal na Islândia" },
       { src: cruzeiroNortePhoto2, alt: "Fjords Noruegueses" },
-      { src: cruzeiroNortePhoto3, alt: "Cruzeiro pelo Atlântico" },
-      { src: cruzeiroNortePhoto4, alt: "Castelo de Edimburgo" }
+      { src: cruzeiroNortePhoto3, alt: "Cruzeiro pelo Atlântico" }
     ]
   },
   {
@@ -210,8 +220,7 @@ const destinations = [
     images: [
       { src: ushuaiaPhoto1, alt: "Glaciar Perito Moreno" },
       { src: ushuaiaPhoto2, alt: "Paisagem Patagônia" },
-      { src: ushuaiaPhoto3, alt: "Pinguins na Patagônia" },
-      { src: ushuaiaPhoto4, alt: "Ushuaia Fim do Mundo" }
+      { src: ushuaiaPhoto3, alt: "Pinguins na Patagônia" }
     ]
   },
   {
@@ -224,8 +233,7 @@ const destinations = [
     images: [
       { src: greciaPhoto1, alt: "Santorini ao pôr do sol" },
       { src: greciaPhoto2, alt: "Navagio Beach em Zakynthos" },
-      { src: greciaPhoto3, alt: "Moinhos de Mykonos" },
-      { src: greciaPhoto4, alt: "Acrópole de Atenas" }
+      { src: greciaPhoto3, alt: "Moinhos de Mykonos" }
     ]
   },
   // Outubro de 2026
@@ -240,7 +248,8 @@ const destinations = [
       { src: africaPhoto1, alt: "Leão no Safári" },
       { src: africaPhoto2, alt: "Elefantes na África" },
       { src: africaPhoto3, alt: "Cape Town Table Mountain" },
-      { src: africaPhoto4, alt: "Ilhas Maurício" }
+      { src: africaPhoto4, alt: "Ilhas Maurício" },
+      { src: africaPhoto5, alt: "Grupo Viagem 2025" },
     ]
   },
   // Novembro de 2026
@@ -252,10 +261,11 @@ const destinations = [
     path: "/tailandia-dubai-2026",
     //path: "/",
     images: [
-      { src: tailandiaPhoto1, alt: "Festival das Lanternas" },
+      { src: tailandiaPhoto1, alt: "Festival das Lanternas (VIP)" },
       { src: tailandiaPhoto2, alt: "Templos Bangkok" },
       { src: tailandiaPhoto3, alt: "Praias Tailândia" },
-      { src: tailandiaPhoto4, alt: "Dubai Skyline" }
+      { src: tailandiaPhoto4, alt: "Dubai Skyline" },
+      { src: tailandiaPhoto5, alt: "Grupo na Tailândia" }
     ]
   },
   // Dezembro de 2026
@@ -269,8 +279,7 @@ const destinations = [
     images: [
       { src: mercadosPhoto1, alt: "Mercado de Natal em Estrasburgo" },
       { src: mercadosPhoto2, alt: "Colmar no Natal" },
-      { src: mercadosPhoto3, alt: "Alpes Suíços Nevados" },
-      { src: mercadosPhoto4, alt: "Decorações de Natal" }
+      { src: mercadosPhoto3, alt: "Alpes Suíços Nevados" }
     ]
   },
   // Fevereiro de 2027
@@ -311,8 +320,7 @@ const destinations = [
     images: [
       { src: laponiaPhoto1, alt: "Aurora Boreal na Lapônia" },
       { src: laponiaPhoto2, alt: "Huskies Siberianos no Ártico" },
-      { src: laponiaPhoto3, alt: "Hotel de Gelo na Lapônia" },
-      { src: laponiaPhoto4, alt: "Paisagem Ártica Nevada" }
+      { src: laponiaPhoto3, alt: "Hotel de Gelo na Lapônia" }
     ]
   },
   // Outubro de 2027
@@ -460,7 +468,7 @@ const ConnectionSection = () => {
             </span>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-foreground">Sua jornada é </span>
-              <span className="bg-gradient-to-r from-turquoise to-coral bg-clip-text text-transparent">orquestrada</span>
+              <span className="bg-gradient-to-r from-turquoise to-cyan-300 bg-clip-text text-transparent">orquestrada</span>
             </h2>
 
             <div className="space-y-4 mb-8 text-muted-foreground">
@@ -587,7 +595,7 @@ const PhotoGallerySection = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            <span className="bg-gradient-to-r from-turquoise to-coral bg-clip-text text-transparent">Galeria</span>
+            <span className="bg-gradient-to-r from-turquoise to-cyan-300 bg-clip-text text-transparent">Galeria</span>
             <span className="text-foreground"> de Experiências</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
@@ -820,6 +828,7 @@ const cleanObject = (obj: Record<string, unknown>) => {
 
 // Contact Form Section Component
 const ContactFormSection = ({ destinations }: { destinations: Array<{ id: string; title: string; subtitle: string; path: string; images: { src: string; alt: string; }[] }> }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -884,8 +893,8 @@ const ContactFormSection = ({ destinations }: { destinations: Array<{ id: string
       const data = await response.json();
       
       if (data.success || response.ok) {
-        toast.success("Sua solicitação foi enviada! Em breve entraremos em contato.");
         setFormData({ name: "", email: "", phone: "", travelers: "", interest: "" });
+        navigate("/obrigado");
       } else {
         toast.error("Houve um problema ao enviar sua solicitação. Tente novamente.");
       }
@@ -931,7 +940,7 @@ const ContactFormSection = ({ destinations }: { destinations: Array<{ id: string
             </div>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
               <span className="text-foreground">Não sabe qual destino </span>
-              <span className="bg-gradient-to-r from-turquoise via-coral to-turquoise bg-clip-text text-transparent">escolher?</span>
+              <span className="bg-gradient-to-r from-turquoise to-cyan-300 bg-clip-text text-transparent">escolher?</span>
             </h2>
             <p className="text-turquoise text-lg">
               Preencha o formulário abaixo e um de nossos consultores entrará em contato em até 24 horas
@@ -1088,8 +1097,29 @@ const Index = () => {
       <SEO {...seoData.index} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source 
+              src="/praia_hero_index.mp4" 
+              type="video/mp4" 
+            />
+            Seu navegador não suporta vídeos.
+          </video>
+          {/* Dark overlay over video */}
+          <div className="absolute inset-0 bg-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/80" />
+        </div>
+
         {/* Background Elements */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-[1]">
           {/* Stars */}
           {[...Array(30)].map((_, i) => (
             <motion.div
@@ -1165,14 +1195,14 @@ const Index = () => {
 
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6">
               Transforme seus{" "}
-              <span className="bg-gradient-to-r from-turquoise via-coral to-turquoise bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-turquoise to-cyan-300 bg-clip-text text-transparent">
                 sonhos
               </span>
               <br />
               em destinos
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto mb-8">
               Viagens exclusivas em grupo com acompanhamento pessoal.
               <br />
               <span className="text-turquoise">Escolha seu próximo destino.</span>
@@ -1187,15 +1217,15 @@ const Index = () => {
             >
               <div>
                 <p className="text-3xl font-display font-bold text-turquoise">{destinations.length}</p>
-                <p className="text-sm text-muted-foreground">Destinos</p>
+                <p className="text-sm text-foreground">Destinos</p>
               </div>
               <div>
                 <p className="text-3xl font-display font-bold text-coral">5+</p>
-                <p className="text-sm text-muted-foreground">Continentes</p>
+                <p className="text-sm text-foreground">Continentes</p>
               </div>
               <div>
                 <p className="text-3xl font-display font-bold text-turquoise">100%</p>
-                <p className="text-sm text-muted-foreground">Personalizado</p>
+                <p className="text-sm text-foreground">Personalizado</p>
               </div>
             </motion.div>
           </motion.div>
@@ -1310,36 +1340,47 @@ const Index = () => {
             {/* Contact Info */}
             <div className="flex flex-wrap justify-center gap-6 pt-8 text-muted-foreground">
               <a
-                href="tel:+5513982263757"
+                href={contactData.phone.link}
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>(13) 98226-3757</span>
+                <span>{contactData.phone.display}</span>
               </a>
               <a
-                href="mailto:contato@wetraveluk.com.br"
+                href={contactData.email.link}
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span>contato@wetraveluk.com.br</span>
+                <span>{contactData.email.display}</span>
               </a>
               <a
-                href="https://instagram.com/wetravel_uk"
+                href={contactData.social.instagram.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Instagram className="w-4 h-4" />
-                <span>@wetravel_uk</span>
+                <span>{contactData.social.instagram.display}</span>
               </a>
+              {contactData.social.google.link && (
+                <a
+                  href={contactData.social.google.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <GoogleIcon className="w-4 h-4" />
+                  <span>Google</span>
+                </a>
+              )}
               <a
-                href="https://wetraveluk.com.br"
+                href={contactData.website.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Globe className="w-4 h-4" />
-                <span>wetraveluk.com.br</span>
+                <span>{contactData.website.display}</span>
               </a>
             </div>
 

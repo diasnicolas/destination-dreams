@@ -3,10 +3,10 @@ import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import image01 from "@/assets/suica-trem/shutterstock_476862469_11zon.webp";
-import image02 from "@/assets/suica-trem/shutterstock_1730808289_11zon.webp";
+import image02 from "@/assets/suica-trem/suica_hero_1.jpeg";
 import image03 from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
-import image04 from "@/assets/suica-trem/shutterstock_2393185093_11zon.webp";
-import image05 from "@/assets/suica-trem/shutterstock_2470409041_11zon.webp";
+import image05 from "@/assets/suica-trem/suica_hero_2.webp";
+import image04 from "@/assets/suica-trem/suica_hero_3.webp";
 
 const heroImages = [
   { src: image01, alt: "Trem nos Alpes" },

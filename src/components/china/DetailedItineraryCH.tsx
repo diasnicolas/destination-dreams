@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -16,7 +16,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Dubai → Beijing",
     color: "primary",
     days: [
@@ -66,7 +66,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Beijing — História Imperial",
+    title: "Beijing — História Imperial",
     subtitle: "3 Noites na Capital Milenar",
     color: "turquoise",
     days: [
@@ -121,7 +121,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Xian — Guerreiros de Terracota",
+    title: "Xian — Guerreiros de Terracota",
     subtitle: "2 Noites na Cidade Antiga",
     color: "primary",
     days: [
@@ -160,7 +160,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Chengdu — Pandas Gigantes",
+    title: "Chengdu — Pandas Gigantes",
     subtitle: "3 Noites com os Pandas",
     color: "turquoise",
     days: [
@@ -214,7 +214,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Chongqing — Cidade dos Dois Rios",
+    title: "Chongqing — Cidade dos Dois Rios",
     subtitle: "2 Noites de Imersão",
     color: "primary",
     days: [
@@ -253,7 +253,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Zhangjiajie — O Parque Avatar",
+    title: "Zhangjiajie — O Parque Avatar",
     subtitle: "2 Noites em Outro Planeta",
     color: "turquoise",
     days: [
@@ -293,7 +293,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Shanghai — O Futuro",
+    title: "Shanghai — O Futuro",
     subtitle: "3 Noites na Metrópole",
     color: "primary",
     days: [
@@ -346,7 +346,7 @@ const phases = [
   },
   {
     id: 8,
-    title: "FASE 8: Retorno ao Brasil",
+    title: "Retorno ao Brasil",
     subtitle: "Transformado para sempre",
     color: "turquoise",
     days: [

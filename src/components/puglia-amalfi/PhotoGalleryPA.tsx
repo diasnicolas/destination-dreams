@@ -2,20 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import imgAlberobello from "@/assets/puglia-amalfi/photo-1534308983496-4fabb1a015ee.jpg";
+import imgAlberobello from "@/assets/puglia-amalfi/vila_costeira_1.jpeg";
 import imgCosta from "@/assets/puglia-amalfi/photo-1516483638261-f4dbaf036963.jpg";
 import imgPositano from "@/assets/puglia-amalfi/photo-1515859005217-8a1f08870f59.jpg";
-import imgMatera from "@/assets/puglia-amalfi/photo-1498307833015-e7b400441eb8.jpg";
-import imgPolignano from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
+import imgMatera from "@/assets/puglia-amalfi/amalfitana_2.jpeg";
+import imgPolignano from "@/assets/puglia-amalfi/amalfitana_1.jpeg";
 import imgCapri from "@/assets/puglia-amalfi/shutterstock_2716578937_11zon.webp";
 
 const galleryImages = [
-  { src: imgPolignano, title: "Polignano a Mare", category: "Puglia" },
-  { src: imgAlberobello, title: "Alberobello Trulli", category: "UNESCO" },
+  { src: imgPolignano, title: "Costa Malfitana", category: "Amalfi" },
+  { src: imgAlberobello, title: "vila costeira de Positano", category: "Costa Amalfitana" },
   { src: imgCosta, title: "Costa Amalfitana", category: "Amalfi" },
   { src: imgPositano, title: "Positano", category: "Costa Amalfitana" },
   { src: imgCapri, title: "Capri", category: "Ilha" },
-  { src: imgMatera, title: "Matera", category: "Cavernas" },
+  { src: imgMatera, title: "Amalfitana", category: "Costa Amalfitana" },
 ];
 
 export const PhotoGalleryPA = () => {

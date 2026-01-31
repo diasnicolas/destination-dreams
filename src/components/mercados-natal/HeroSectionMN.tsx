@@ -2,15 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import imgColmar from "@/assets/mercados-natal/photo-1545622783-b3e021430fee.jpg";
-import imgAlpes from "@/assets/mercados-natal/photo-1482517967863-00e15c9b44be.jpg";
-import imgDecoracoes from "@/assets/mercados-natal/photo-1543589077-47d81606c1bf.jpg";
+import mercadosPhoto1 from "@/assets/mercados-natal/IMG_9685_11zon.jpg";
+import mercadosPhoto2 from "@/assets/mercados-natal/IMG_9689_11zon.jpg";
+import mercadosPhoto3 from "@/assets/mercados-natal/IMG_9691_11zon.jpg";
 
 const heroImages = [
-  { src: imgColmar, alt: "Mercado de Natal em Estrasburgo" },
-  { src: imgColmar, alt: "Colmar no Natal" },
-  { src: imgAlpes, alt: "Alpes Suíços Nevados" },
-  { src: imgDecoracoes, alt: "Decorações de Natal" }
+  { src: mercadosPhoto1, alt: "Mercado de Natal em Estrasburgo" },
+  { src: mercadosPhoto2, alt: "Colmar no Natal" },
+  { src: mercadosPhoto3, alt: "Alpes Suíços Nevados" }
 ];
 
 const highlights = [

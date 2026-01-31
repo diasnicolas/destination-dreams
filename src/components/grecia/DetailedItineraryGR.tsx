@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -26,7 +26,7 @@ const iconMap = {
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Partida & Atenas",
+    title: "Partida & Atenas",
     subtitle: "A Jornada Começa na Capital da Civilização",
     color: "primary",
     days: [
@@ -62,7 +62,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Atenas — Berço da Civilização",
+    title: "Atenas — Berço da Civilização",
     subtitle: "2 Noites de Imersão Histórica",
     color: "turquoise",
     days: [
@@ -102,7 +102,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Zakynthos — Paraíso Escondido",
+    title: "Zakynthos — Paraíso Escondido",
     subtitle: "3 Noites na Ilha das Águas Cristalinas",
     color: "primary",
     days: [
@@ -159,7 +159,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Cefalônia — A Ilha Secreta",
+    title: "Cefalônia — A Ilha Secreta",
     subtitle: "3 Noites de Natureza Intocada",
     color: "turquoise",
     days: [
@@ -216,7 +216,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Mykonos — Glamour & Tradição",
+    title: "Mykonos — Glamour & Tradição",
     subtitle: "3 Noites na Ilha dos Ventos",
     color: "primary",
     days: [
@@ -273,7 +273,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Santorini — O Grande Final",
+    title: "Santorini — O Grande Final",
     subtitle: "3 Noites no Paraíso Vulcânico",
     color: "turquoise",
     days: [

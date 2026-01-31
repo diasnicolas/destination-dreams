@@ -2,16 +2,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Map, Compass, User } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import photo1533105079780 from "@/assets/grecia/photo-1533105079780-92b9be482077.jpg";
-import photo1570077188670 from "@/assets/grecia/photo-1570077188670-e3a8d69ac5ff.jpg";
-import photo1555993539 from "@/assets/grecia/photo-1555993539-1732b0258235.jpg";
-import photo1613395877344 from "@/assets/grecia/photo-1613395877344-13d4a8e0d49e.jpg";
+import greciaPhoto1 from "@/assets/grecia/aerial-drone-view-famous-shipwreck-navagio-beach-zakynthos-island-greece-greece-iconic-vacation-picture_11zon.jpg";
+import greciaPhoto2 from "@/assets/grecia/breathtaking-view-natural-beach-landscape_11zon.jpg";
+import greciaPhoto3 from "@/assets/grecia/oia-town-cityscape-santorini-island-greece-sunset-aegean-sea_11zon.jpg";
+
 
 const heroImages = [
-  { src: photo1533105079780, alt: "Santorini ao pôr do sol" },
-  { src: photo1570077188670, alt: "Navagio Beach em Zakynthos" },
-  { src: photo1555993539, alt: "Moinhos de Mykonos" },
-  { src: photo1613395877344, alt: "Acrópole de Atenas" }
+  { src: greciaPhoto1, alt: "Santorini ao pôr do sol" },
+  { src: greciaPhoto2, alt: "Navagio Beach em Zakynthos" },
+  { src: greciaPhoto3, alt: "Moinhos de Mykonos" }
 ];
 
 const highlights = [

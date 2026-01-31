@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -26,7 +26,7 @@ interface ItineraryDay {
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Embarque Internacional",
+    title: "Embarque Internacional",
     subtitle: "São Paulo → Santiago → Sydney",
     color: "primary",
     days: [
@@ -63,7 +63,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: Sydney — A Austrália Autêntica",
+    title: "Sydney — A Austrália Autêntica",
     subtitle: "4 Noites de Imersão",
     color: "turquoise",
     days: [
@@ -132,7 +132,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Cruzeiro Transpacífico",
+    title: "Cruzeiro Transpacífico",
     subtitle: "16 Noites no Anthem of the Seas",
     color: "primary",
     days: [
@@ -237,7 +237,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Honolulu — O Glamour Havaiano",
+    title: "Honolulu — O Glamour Havaiano",
     subtitle: "3 Noites de Experiências Exclusivas",
     color: "turquoise",
     days: [
@@ -288,7 +288,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Los Angeles — O Brilho de Hollywood",
+    title: "Los Angeles — O Brilho de Hollywood",
     subtitle: "3 Noites de Glamour",
     color: "primary",
     days: [

@@ -920,92 +920,92 @@
 }
 
 /* ========================================
-   Tailândia & Dubai Theme - Royal Purple & Gold
+   Tailândia & Dubai Theme - Beach Paradise
    ======================================== */
 .theme-tailandia {
-  /* Bandeira da Tailândia: Vermelho, Branco e Azul Marinho */
-  --background: 220 45% 6%;
+  /* Cores de praia tropical: Turquesa, Areia e Azul do Mar */
+  --background: 195 45% 6%;
   --foreground: 0 0% 98%;
 
-  --card: 220 40% 10%;
+  --card: 195 40% 10%;
   --card-foreground: 0 0% 98%;
 
-  --popover: 220 40% 10%;
+  --popover: 195 40% 10%;
   --popover-foreground: 0 0% 98%;
 
-  --primary: 0 75% 50%;
-  --primary-foreground: 0 0% 100%;
+  --primary: 175 70% 45%;
+  --primary-foreground: 195 50% 10%;
 
-  --secondary: 220 70% 40%;
+  --secondary: 195 60% 40%;
   --secondary-foreground: 0 0% 98%;
 
-  --muted: 220 25% 15%;
-  --muted-foreground: 220 15% 55%;
+  --muted: 195 25% 15%;
+  --muted-foreground: 195 15% 55%;
 
-  --accent: 0 70% 55%;
-  --accent-foreground: 0 0% 100%;
+  --accent: 35 80% 55%;
+  --accent-foreground: 195 50% 10%;
 
-  --border: 220 20% 20%;
-  --input: 220 20% 20%;
-  --ring: 0 75% 50%;
+  --border: 195 20% 20%;
+  --input: 195 20% 20%;
+  --ring: 175 70% 45%;
 
-  --ocean-deep: 220 50% 12%;
-  --ocean-medium: 220 45% 22%;
-  --turquoise: 220 70% 45%;
-  --gold-champagne: 0 75% 50%;
-  --gold-light: 0 70% 60%;
-  --gold-dark: 0 80% 40%;
-  --navy: 220 55% 14%;
-  --navy-light: 220 45% 22%;
+  --ocean-deep: 195 50% 12%;
+  --ocean-medium: 195 45% 22%;
+  --turquoise: 175 70% 45%;
+  --gold-champagne: 35 80% 55%;
+  --gold-light: 35 70% 65%;
+  --gold-dark: 35 85% 45%;
+  --navy: 195 55% 14%;
+  --navy-light: 195 45% 22%;
 
-  --gradient-ocean: linear-gradient(135deg, hsl(220 50% 12%) 0%, hsl(220 45% 22%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(0 75% 50%) 0%, hsl(0 70% 60%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsla(220, 45%, 8%, 0.9) 0%, hsla(220, 45%, 18%, 0.7) 100%);
-  --gradient-dark: linear-gradient(180deg, hsl(220 45% 6%) 0%, hsl(220 50% 12%) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(220, 40%, 15%, 0.6) 0%, hsla(220, 45%, 8%, 0.8) 100%);
+  --gradient-ocean: linear-gradient(135deg, hsl(195 50% 12%) 0%, hsl(195 45% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(175 70% 45%) 0%, hsl(175 60% 55%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(195, 45%, 8%, 0.9) 0%, hsla(195, 45%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(195 45% 6%) 0%, hsl(195 50% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(195, 40%, 15%, 0.6) 0%, hsla(195, 45%, 8%, 0.8) 100%);
   
-  --shadow-gold: 0 10px 40px hsla(0, 75%, 50%, 0.25);
-  --shadow-ocean: 0 20px 60px hsla(220, 50%, 12%, 0.5);
-  --shadow-card: 0 15px 50px hsla(220, 45%, 5%, 0.4);
-  --shadow-glow: 0 0 60px hsla(0, 75%, 50%, 0.15);
+  --shadow-gold: 0 10px 40px hsla(175, 70%, 45%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(195, 50%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(195, 45%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(175, 70%, 45%, 0.15);
 }
 
 .theme-tailandia .hero-overlay {
-  background: linear-gradient(180deg, hsla(220, 45%, 8%, 0.85) 0%, hsla(220, 45%, 8%, 0.6) 50%, hsla(220, 45%, 18%, 0.75) 100%);
+  background: linear-gradient(180deg, hsla(195, 45%, 8%, 0.85) 0%, hsla(195, 45%, 8%, 0.6) 50%, hsla(195, 45%, 18%, 0.75) 100%);
 }
 
 .theme-tailandia .glass-card {
-  background: linear-gradient(145deg, hsla(220, 40%, 15%, 0.6) 0%, hsla(220, 45%, 8%, 0.8) 100%);
+  background: linear-gradient(145deg, hsla(195, 40%, 15%, 0.6) 0%, hsla(195, 45%, 8%, 0.8) 100%);
 }
 
 .theme-tailandia .text-gradient-gold {
-  background-image: linear-gradient(135deg, hsl(0 75% 55%) 0%, hsl(0 70% 65%) 100%);
+  background-image: linear-gradient(135deg, hsl(175 70% 50%) 0%, hsl(175 60% 60%) 100%);
 }
 
 .theme-tailandia .btn-luxury {
-  background: hsl(0 75% 50%);
-  box-shadow: 0 10px 40px hsla(0, 75%, 50%, 0.25);
+  background: hsl(175 70% 45%);
+  box-shadow: 0 10px 40px hsla(175, 70%, 45%, 0.25);
 }
 
 .theme-tailandia .btn-luxury:hover {
-  background: hsl(0 70% 55%);
-  box-shadow: 0 15px 50px hsla(0, 75%, 50%, 0.35);
+  background: hsl(175 60% 50%);
+  box-shadow: 0 15px 50px hsla(175, 70%, 45%, 0.35);
 }
 
 .theme-tailandia .gold-border-left {
-  border-color: hsl(0 75% 50%);
+  border-color: hsl(175 70% 45%);
 }
 
 .theme-tailandia .animated-underline::after {
-  background: hsl(0 75% 50%);
+  background: hsl(175 70% 45%);
 }
 
 .theme-tailandia .stat-number {
-  color: hsl(0 75% 50%);
+  color: hsl(175 70% 45%);
 }
 
 .theme-tailandia ::-webkit-scrollbar-thumb:hover {
-  background: hsla(0, 75%, 50%, 0.5);
+  background: hsla(175, 70%, 45%, 0.5);
 }
 
 /* ========================================

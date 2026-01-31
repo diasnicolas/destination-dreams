@@ -6,12 +6,14 @@ import imgBangkok from "@/assets/tailandia-dubai/photo-1528181304800-259b0884852
 import imgTemplos from "@/assets/tailandia-dubai/photo-1552465011-b4e21bf6e79a.jpg";
 import imgPraias from "@/assets/tailandia-dubai/photo-1537956965359-7573183d1f57.jpg";
 import imgDubai from "@/assets/tailandia-dubai/photo-1512453979798-5ea266f8880c.jpg";
+import imgGrupo from "@/assets/tailandia-dubai/grupo_hero_7.jpeg";
 
 const heroImages = [
   { src: imgBangkok, alt: "Festival das Lanternas" },
   { src: imgTemplos, alt: "Templos Bangkok" },
   { src: imgPraias, alt: "Praias Tailândia" },
-  { src: imgDubai, alt: "Dubai Skyline" }
+  { src: imgDubai, alt: "Dubai Skyline" },
+  { src: imgGrupo, alt: "Grupo na Tailândia" }
 ];
 
 const highlights = [
@@ -118,7 +120,7 @@ export const HeroSectionTD = () => {
           >
             <span className="text-foreground">Você Está Pronto Para Viver</span>
             <br />
-            <span className="text-gradient-gold">A Magia Do Festival Das Lanternas?</span>
+            <span className="text-gradient-gold">A Magia Do Festival Das Lanternas (VIP)?</span>
           </motion.h1>
 
           {/* Subtitle */}

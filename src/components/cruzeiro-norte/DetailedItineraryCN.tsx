@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { 
   Plane, 
   Hotel, 
@@ -16,7 +16,7 @@ import { useState } from "react";
 const phases = [
   {
     id: 1,
-    title: "FASE 1: Londres — Imersão Britânica",
+    title: "Londres — Imersão Britânica",
     subtitle: "Park Plaza Westminster Bridge | 3 Noites",
     color: "primary",
     days: [
@@ -69,7 +69,7 @@ const phases = [
   },
   {
     id: 2,
-    title: "FASE 2: No Mar — Atlântico Norte",
+    title: "No Mar — Atlântico Norte",
     subtitle: "Norwegian Star | Navegação",
     color: "turquoise",
     days: [
@@ -92,7 +92,7 @@ const phases = [
   },
   {
     id: 3,
-    title: "FASE 3: Islândia — Terra de Gelo e Fogo",
+    title: "Islândia — Terra de Gelo e Fogo",
     subtitle: "Reykjavik | 1-2 Dias",
     color: "primary",
     days: [
@@ -116,7 +116,7 @@ const phases = [
   },
   {
     id: 4,
-    title: "FASE 4: Noruega — Os Fjords",
+    title: "Noruega — Os Fjords",
     subtitle: "Navegação pelos Fjords | 7 Dias",
     color: "turquoise",
     days: [
@@ -167,7 +167,7 @@ const phases = [
   },
   {
     id: 5,
-    title: "FASE 5: Escócia — Terra dos Castelos",
+    title: "Escócia — Terra dos Castelos",
     subtitle: "Edimburgo e Costa Escocesa | 3 Dias",
     color: "primary",
     days: [
@@ -191,7 +191,7 @@ const phases = [
   },
   {
     id: 6,
-    title: "FASE 6: Retorno pelo Atlântico",
+    title: "Retorno pelo Atlântico",
     subtitle: "Navegação Final | 3 Dias",
     color: "turquoise",
     days: [
@@ -215,7 +215,7 @@ const phases = [
   },
   {
     id: 7,
-    title: "FASE 7: Edimburgo — Última Noite",
+    title: "Edimburgo — Última Noite",
     subtitle: "Pernoite em Terra | 1 Noite",
     color: "primary",
     days: [

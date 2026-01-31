@@ -8,6 +8,11 @@ import photo1585849834908 from "@/assets/africa-mauricio/shutterstock_2392677053
 import photo1590523741831 from "@/assets/africa-mauricio/photo-1590523741831-ab7e8b8f9c7f.jpg";
 import photo1547471080 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
 import photo1596005554384 from "@/assets/africa-mauricio/photo-1596005554384-d293674c91d7.jpg";
+import grupoSafariImg from "@/assets/africa-mauricio/galeria_safari.jpeg";
+import grupo1Img from "@/assets/africa-mauricio/grupo_1.jpeg";
+import grupo2Img from "@/assets/africa-mauricio/grupo_2.jpeg";
+import grupo3Img from "@/assets/africa-mauricio/grupo_3.jpeg";
+import grupo4Img from "@/assets/africa-mauricio/grupo_4.jpeg";
 
 const galleryImages = [
   { src: photo1516426122078, title: "Safári no Kruger", category: "Big Five" },
@@ -16,6 +21,11 @@ const galleryImages = [
   { src: photo1590523741831, title: "Praias de Maurício", category: "Ilhas Maurício" },
   { src: photo1547471080, title: "Elefantes Africanos", category: "Safári" },
   { src: photo1596005554384, title: "Johannesburg", category: "Cidade" },
+  { src: grupoSafariImg, title: "Grupo", category: "Viagem 2025" },
+  { src: grupo1Img, title: "Grupo", category: "Viagem 2025" },
+  { src: grupo2Img, title: "Grupo", category: "Viagem 2025" },
+  { src: grupo3Img, title: "Grupo", category: "Viagem 2025" },
+  { src: grupo4Img, title: "Grupo", category: "Viagem 2025" },
 ];
 
 export const PhotoGalleryAM = () => {
@@ -70,7 +80,7 @@ export const PhotoGalleryAM = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}

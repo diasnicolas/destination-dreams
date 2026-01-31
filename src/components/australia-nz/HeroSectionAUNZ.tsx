@@ -3,9 +3,9 @@ import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import image01 from "@/assets/australia-nz-02/photo-1624138784614-87fd1b6528f8.jpg";
-import image02 from "@/assets/australia-nz-02/photo-1462275646964-a0e3386b89fa.jpg";
-import image03 from "@/assets/australia-nz-02/photo-1507699622108-4be3abd695ad.jpg";
-import image04 from "@/assets/australia-nz-02/photo-1568430462989-44163eb1752f.jpg";
+import image02 from "@/assets/australia-nz-02/stunning-aerial-view-turquoise-waters-great-barrier-reef-vibrant-corals-beneath-cryst_11zon.jpg";
+import image03 from "@/assets/australia-nz-02/sydney-harbour-bridge_11zon.jpg";
+import image04 from "@/assets/australia-nz-02/sydney-australia-march-4-2023-sydney-cbd-surrounding-harbour-including-circular-quay-rocks-clear-autumn-day-sydney-australia_11zon.jpg";
 
 // Imagens do Unsplash
 const heroImages = [

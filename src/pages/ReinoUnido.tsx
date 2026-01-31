@@ -8,6 +8,7 @@ import { UrgencySectionRU } from "@/components/reino-unido/UrgencySectionRU";
 import { InclusionsSectionRU } from "@/components/reino-unido/InclusionsSectionRU";
 import { ContactSection } from "@/components/common/ContactSection";
 import { ConnectionSectionRU } from "@/components/reino-unido/ConnectionSectionRU";
+import { GuidesSectionRU } from "@/components/reino-unido/GuidesSectionRU";
 import { PhotoGalleryRU } from "@/components/reino-unido/PhotoGalleryRU";
 import { HotelsPhotoGalleryRU } from "@/components/reino-unido/HotelsPhotoGalleryRU";
 import { FooterSectionRU } from "@/components/reino-unido/FooterSectionRU";
@@ -22,6 +23,7 @@ const ReinoUnido = () => {
       <SEO {...seoData.reinoUnido} />
       <HeroSectionRU />
       <ConnectionSectionRU />
+      <GuidesSectionRU />
       <ProblemSectionRU />
       <JourneySectionRU />
       <DetailedItineraryRU />

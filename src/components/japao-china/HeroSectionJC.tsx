@@ -23,7 +23,7 @@ const highlights = [
   {
     icon: User,
     title: "Acompanhamento pessoal",
-    description: "Evandro Mendes (CEO, Aussie Travel Specialist)",
+    description: "Evandro Mendes (CEO, Especialista em Ásia)",
   },
   {
     icon: Globe,

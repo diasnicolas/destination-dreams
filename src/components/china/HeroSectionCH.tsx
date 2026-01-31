@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import photo1508804185872 from "@/assets/china/photo-1508804185872-d7badad00f7d.jpg";
 import photo1547981609 from "@/assets/china/photo-1547981609-4b6bfe67ca0b.jpg";
-import photo1545893835 from "@/assets/china/photo-1545893835-abaa50cbe628.jpg";
+import photo1545893835 from "@/assets/china/selective-shot-warrior-sculptures-terracotta-army_11zon.jpg";
 import photo1474181487882 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
 
 const heroImages = [

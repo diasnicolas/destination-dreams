@@ -6,12 +6,14 @@ import photo1516426122078 from "@/assets/africa-mauricio/photo-1516426122078-c23
 import photo1547471080 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
 import photo1580060839134 from "@/assets/africa-mauricio/photo-1580060839134-75a5edca2e99.jpg";
 import photo1589197331516 from "@/assets/africa-mauricio/photo-1589197331516-4d84b72ebde3.jpg";
+import grupoImg from "@/assets/africa-mauricio/grupo_safari_11zon.jpg";
 
 const heroImages = [
   { src: photo1516426122078, alt: "Leão no Safári" },
   { src: photo1547471080, alt: "Elefantes na África" },
   { src: photo1580060839134, alt: "Cape Town Table Mountain" },
-  { src: photo1589197331516, alt: "Ilhas Maurício" }
+  { src: photo1589197331516, alt: "Ilhas Maurício" },
+  { src: grupoImg, alt: "Grupo viagem 2025" },
 ];
 
 const highlights = [
@@ -23,7 +25,7 @@ const highlights = [
   {
     icon: User,
     title: "Acompanhamento pessoal",
-    description: "Evandro Mendes (CEO, Aussie Travel Specialist)",
+    description: "Evandro Mendes (CEO, Especialista em África)",
   },
   {
     icon: Globe,

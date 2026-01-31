@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Globe, Anchor, Instagram } from "lucide-react";
 import cadasturImage from "@/assets/logoCadastur.png";
+import { contactData } from "@/lib/contactData";
+import { GoogleIcon } from "@/components/common/GoogleIcon";
 
 export const FooterSectionST = () => {
   const currentYear = new Date().getFullYear();
@@ -95,36 +97,47 @@ export const FooterSectionST = () => {
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 pt-8 text-muted-foreground">
             <a
-              href="tel:+5513982263757"
+              href={contactData.phone.link}
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Phone className="w-4 h-4" />
-              <span>(13) 98226-3757</span>
+              <span>{contactData.phone.display}</span>
             </a>
             <a
-              href="mailto:contato@wetraveluk.com"
+              href={contactData.email.link}
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Mail className="w-4 h-4" />
-              <span>contato@wetraveluk.com.br</span>
+              <span>{contactData.email.display}</span>
             </a>
             <a
-              href="https://instagram.com/wetravel_uk"
+              href={contactData.social.instagram.link}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Instagram className="w-4 h-4" />
-              <span>@wetravel_uk</span>
+              <span>{contactData.social.instagram.display}</span>
             </a>
+            {contactData.social.google.link && (
+              <a
+                href={contactData.social.google.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
+              >
+                <GoogleIcon className="w-4 h-4" />
+                <span>Google</span>
+              </a>
+            )}
             <a
-              href="https://wetraveluk.com.br"
+              href={contactData.website.link}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-primary transition-colors animated-underline"
             >
               <Globe className="w-4 h-4" />
-              <span>wetraveluk.com.br</span>
+              <span>{contactData.website.display}</span>
             </a>
           </div>
 

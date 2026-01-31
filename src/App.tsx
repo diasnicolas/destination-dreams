@@ -4,7 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { ScrollToTop } from "@/components/common/ScrollToTop";
 import Index from "./pages/Index";
+import ThankYou from "./pages/ThankYou";
 import CruzeiroTranspacifico from "./pages/CruzeiroTranspacifico";
 import AustraliaNZ from "./pages/AustraliaNZ";
 import ReinoUnido from "./pages/ReinoUnido";
@@ -29,8 +31,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/obrigado" element={<ThankYou />} />
           <Route path="/cruzeiro-transpacifico-2027" element={<CruzeiroTranspacifico />} />
           <Route path="/australia-novazelandia-2027" element={<AustraliaNZ />} />
           <Route path="/reino-unido-2026" element={<ReinoUnido />} />

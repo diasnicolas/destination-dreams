@@ -3,14 +3,16 @@ import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import imgAurora from "@/assets/laponia-tromso/photo-1531366936337-7c912a4589a7.jpg";
-import imgHuskies from "@/assets/laponia-tromso/photo-1517483000871-1dbf64a6e1c6.jpg";
-import imgPaisagem from "@/assets/laponia-tromso/photo-1507272931001-fc06c17e4f43.jpg";
+import laponiaPhoto1 from "@/assets/laponia-tromso/sunset-winter-tromso-norway_11zon.jpg";
+import laponiaPhoto2 from "@/assets/laponia-tromso/people-riding-sledge-with-horses_11zon.jpg";
+import laponiaPhoto3 from "@/assets/laponia-tromso/rovaniemi-finland-march-5-2017-santa-claus-office-santa-claus-village-rovaniemi-lapland-finland (1)_11zon.jpg";
+
 
 const heroImages = [
   { src: imgAurora, alt: "Aurora Boreal na Lapônia" },
-  { src: imgHuskies, alt: "Huskies Siberianos no Ártico" },
-  { src: imgAurora, alt: "Hotel de Gelo na Lapônia" },
-  { src: imgPaisagem, alt: "Paisagem Ártica Nevada" }
+  { src: laponiaPhoto1, alt: "Huskies Siberianos no Ártico" },
+  { src: laponiaPhoto2, alt: "Hotel de Gelo na Lapônia" },
+  { src: laponiaPhoto3, alt: "Paisagem Ártica Nevada" }
 ];
 
 const highlights = [

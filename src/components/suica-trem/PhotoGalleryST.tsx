@@ -7,7 +7,7 @@ import imgJungfraujoch from "@/assets/suica-trem/photo-1530122037265-a5f1f91d3b9
 import imgAlpes from "@/assets/suica-trem/photo-1506905925346-21bda4d32df4.jpg";
 import imgLucerna from "@/assets/suica-trem/photo-1504218727796-db522606b16f.jpg";
 import imgGlacierExpress from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
-import imgStMoritz from "@/assets/suica-trem/photo-1516483638261-f4dbaf036963.jpg";
+import imgStMoritz from "@/assets/suica-trem/shutterstock_733695364_11zon.webp";
 
 const galleryImages = [
   { src: imgMatterhorn, title: "Matterhorn", category: "Zermatt" },

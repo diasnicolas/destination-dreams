@@ -8,6 +8,17 @@ import imgKrabi from "@/assets/tailandia-dubai/photo-1504214208698-ea1916a2195a.
 import imgPhiPhi from "@/assets/tailandia-dubai/photo-1519451241324-20b4ea2c4220.jpg";
 import imgBurj from "@/assets/tailandia-dubai/photo-1512453979798-5ea266f8880c.jpg";
 import imgDubaiMarina from "@/assets/tailandia-dubai/photo-1518684079-3c830dcef090.jpg";
+import imgGrupo01 from "@/assets/tailandia-dubai/grupo_1.jpeg";
+import imgGrupo02 from "@/assets/tailandia-dubai/grupo_2.jpeg";
+import imgGrupo03 from "@/assets/tailandia-dubai/grupo_3.jpeg";
+import imgGrupo04 from "@/assets/tailandia-dubai/grupo_4.jpeg";
+import imgGrupo05 from "@/assets/tailandia-dubai/grupo_5.jpeg";
+import imgGrupo06 from "@/assets/tailandia-dubai/grupo_6.jpeg";
+import imgGrupo07 from "@/assets/tailandia-dubai/grupo_hero_7.jpeg";
+import imgGrupo08 from "@/assets/tailandia-dubai/grupo_8.jpeg";
+import imgGrupo10 from "@/assets/tailandia-dubai/grupo_10.jpeg";
+import imgGrupo11 from "@/assets/tailandia-dubai/grupo_11.jpeg";
+import imgGrupo12 from "@/assets/tailandia-dubai/grupo_12.jpeg";
 
 const galleryImages = [
   { src: imgBangkok, title: "Templos de Bangkok", category: "Bangkok" },
@@ -16,6 +27,17 @@ const galleryImages = [
   { src: imgPhiPhi, title: "Phi Phi Islands", category: "Phuket" },
   { src: imgBurj, title: "Burj Khalifa", category: "Dubai" },
   { src: imgDubaiMarina, title: "Dubai Marina", category: "Dubai" },
+  { src: imgGrupo01, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo02, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo03, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo04, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo05, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo06, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo07, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo08, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo10, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo11, title: "Grupo", category: "Viagem 2025" },
+  { src: imgGrupo12, title: "Grupo", category: "Viagem 2025" },
 ];
 
 export const PhotoGalleryTD = () => {
