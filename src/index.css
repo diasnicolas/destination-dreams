@@ -656,91 +656,91 @@
 }
 
 /* ========================================
-   Puglia & Costa Amalfitana Theme - Mediterranean
+   Puglia & Costa Amalfitana Theme - Italian Flag (Green, White, Red)
    ======================================== */
 .theme-italia {
-  --background: 200 35% 6%;
-  --foreground: 45 25% 95%;
+  --background: 140 30% 8%;
+  --foreground: 0 0% 98%;
 
-  --card: 200 30% 10%;
-  --card-foreground: 45 25% 95%;
+  --card: 140 25% 12%;
+  --card-foreground: 0 0% 98%;
 
-  --popover: 200 30% 10%;
-  --popover-foreground: 45 25% 95%;
+  --popover: 140 25% 12%;
+  --popover-foreground: 0 0% 98%;
 
-  --primary: 200 70% 50%;
-  --primary-foreground: 45 25% 95%;
+  --primary: 140 70% 35%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 25 75% 55%;
-  --secondary-foreground: 200 35% 8%;
+  --secondary: 0 75% 45%;
+  --secondary-foreground: 0 0% 100%;
 
-  --muted: 200 25% 15%;
-  --muted-foreground: 200 15% 55%;
+  --muted: 140 15% 18%;
+  --muted-foreground: 0 0% 65%;
 
-  --accent: 45 80% 55%;
-  --accent-foreground: 200 35% 8%;
+  --accent: 0 70% 50%;
+  --accent-foreground: 0 0% 100%;
 
-  --border: 200 20% 20%;
-  --input: 200 20% 20%;
-  --ring: 200 70% 50%;
+  --border: 140 15% 22%;
+  --input: 140 15% 22%;
+  --ring: 140 70% 35%;
 
-  --ocean-deep: 200 45% 15%;
-  --ocean-medium: 200 40% 28%;
-  --turquoise: 200 65% 50%;
-  --gold-champagne: 200 70% 50%;
-  --gold-light: 200 65% 60%;
-  --gold-dark: 200 60% 40%;
-  --navy: 200 38% 16%;
-  --navy-light: 200 32% 24%;
+  --ocean-deep: 140 35% 12%;
+  --ocean-medium: 140 30% 22%;
+  --turquoise: 140 60% 40%;
+  --gold-champagne: 140 70% 35%;
+  --gold-light: 140 65% 45%;
+  --gold-dark: 140 60% 28%;
+  --navy: 140 28% 14%;
+  --navy-light: 140 22% 22%;
 
-  --gradient-ocean: linear-gradient(135deg, hsl(200 45% 15%) 0%, hsl(200 40% 28%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(200 65% 60%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsla(200, 35%, 8%, 0.9) 0%, hsla(200, 40%, 25%, 0.7) 100%);
-  --gradient-dark: linear-gradient(180deg, hsl(200 35% 6%) 0%, hsl(200 45% 15%) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+  --gradient-ocean: linear-gradient(135deg, hsl(140 35% 12%) 0%, hsl(140 30% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(140 70% 35%) 0%, hsl(0 75% 45%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(140, 30%, 10%, 0.9) 0%, hsla(140, 30%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(140 30% 8%) 0%, hsl(140 35% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(140, 25%, 18%, 0.6) 0%, hsla(140, 30%, 10%, 0.8) 100%);
   
-  --shadow-gold: 0 10px 40px hsla(200, 70%, 50%, 0.25);
-  --shadow-ocean: 0 20px 60px hsla(200, 45%, 15%, 0.5);
-  --shadow-card: 0 15px 50px hsla(200, 35%, 5%, 0.4);
-  --shadow-glow: 0 0 60px hsla(200, 70%, 50%, 0.15);
+  --shadow-gold: 0 10px 40px hsla(140, 70%, 35%, 0.3);
+  --shadow-ocean: 0 20px 60px hsla(140, 35%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(140, 30%, 8%, 0.4);
+  --shadow-glow: 0 0 60px hsla(140, 70%, 35%, 0.2);
 }
 
 .theme-italia .hero-overlay {
-  background: linear-gradient(180deg, hsla(200, 35%, 8%, 0.85) 0%, hsla(200, 35%, 8%, 0.6) 50%, hsla(200, 40%, 25%, 0.75) 100%);
+  background: linear-gradient(180deg, hsla(140, 30%, 10%, 0.85) 0%, hsla(140, 30%, 10%, 0.6) 50%, hsla(140, 30%, 18%, 0.75) 100%);
 }
 
 .theme-italia .glass-card {
-  background: linear-gradient(145deg, hsla(200, 30%, 15%, 0.6) 0%, hsla(200, 35%, 8%, 0.8) 100%);
+  background: linear-gradient(145deg, hsla(140, 25%, 18%, 0.6) 0%, hsla(140, 30%, 10%, 0.8) 100%);
 }
 
 .theme-italia .text-gradient-gold {
-  background-image: linear-gradient(135deg, hsl(200 70% 50%) 0%, hsl(45 80% 60%) 100%);
+  background-image: linear-gradient(135deg, hsl(140 70% 35%) 0%, hsl(0 75% 50%) 100%);
 }
 
 .theme-italia .btn-luxury {
-  background: hsl(200 70% 50%);
-  box-shadow: 0 10px 40px hsla(200, 70%, 50%, 0.25);
+  background: hsl(0 75% 45%);
+  box-shadow: 0 10px 40px hsla(0, 75%, 45%, 0.3);
 }
 
 .theme-italia .btn-luxury:hover {
-  background: hsl(200 65% 60%);
-  box-shadow: 0 15px 50px hsla(200, 70%, 50%, 0.35);
+  background: hsl(0 70% 55%);
+  box-shadow: 0 15px 50px hsla(0, 75%, 45%, 0.4);
 }
 
 .theme-italia .gold-border-left {
-  border-color: hsl(200 70% 50%);
+  border-color: hsl(140 70% 35%);
 }
 
 .theme-italia .animated-underline::after {
-  background: hsl(200 70% 50%);
+  background: hsl(0 75% 45%);
 }
 
 .theme-italia .stat-number {
-  color: hsl(200 70% 50%);
+  color: hsl(140 70% 35%);
 }
 
 .theme-italia ::-webkit-scrollbar-thumb:hover {
-  background: hsla(200, 70%, 50%, 0.5);
+  background: hsla(140, 70%, 35%, 0.5);
 }
 
 /* ========================================
@@ -832,179 +832,180 @@
 }
 
 /* ========================================
-   Suíça Theme - Alpine Blue & Snow
+   Suíça Theme - Swiss Flag Red & White
    ======================================== */
 .theme-suica {
-  --background: 210 35% 6%;
-  --foreground: 210 15% 95%;
+  --background: 0 30% 8%;
+  --foreground: 0 0% 98%;
 
-  --card: 210 30% 10%;
-  --card-foreground: 210 15% 95%;
+  --card: 0 25% 12%;
+  --card-foreground: 0 0% 98%;
 
-  --popover: 210 30% 10%;
-  --popover-foreground: 210 15% 95%;
+  --popover: 0 25% 12%;
+  --popover-foreground: 0 0% 98%;
 
-  --primary: 210 80% 55%;
-  --primary-foreground: 210 15% 95%;
+  --primary: 0 85% 45%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 70% 50%;
-  --secondary-foreground: 210 15% 95%;
+  --secondary: 0 0% 98%;
+  --secondary-foreground: 0 85% 45%;
 
-  --muted: 210 20% 15%;
-  --muted-foreground: 210 12% 55%;
+  --muted: 0 15% 18%;
+  --muted-foreground: 0 5% 65%;
 
-  --accent: 0 65% 55%;
-  --accent-foreground: 210 15% 95%;
+  --accent: 0 80% 50%;
+  --accent-foreground: 0 0% 100%;
 
-  --border: 210 18% 20%;
-  --input: 210 18% 20%;
-  --ring: 210 80% 55%;
+  --border: 0 20% 22%;
+  --input: 0 20% 22%;
+  --ring: 0 85% 45%;
 
-  --ocean-deep: 210 40% 14%;
-  --ocean-medium: 210 35% 25%;
-  --turquoise: 210 70% 55%;
-  --gold-champagne: 210 80% 55%;
-  --gold-light: 210 75% 65%;
-  --gold-dark: 210 70% 42%;
-  --navy: 210 35% 14%;
-  --navy-light: 210 30% 22%;
+  --ocean-deep: 0 35% 15%;
+  --ocean-medium: 0 30% 25%;
+  --turquoise: 0 75% 50%;
+  --gold-champagne: 0 85% 45%;
+  --gold-light: 0 80% 55%;
+  --gold-dark: 0 75% 35%;
+  --navy: 0 30% 15%;
+  --navy-light: 0 25% 22%;
 
-  --gradient-ocean: linear-gradient(135deg, hsl(210 40% 14%) 0%, hsl(210 35% 25%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(210 80% 55%) 0%, hsl(210 75% 65%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsla(210, 35%, 8%, 0.9) 0%, hsla(210, 35%, 20%, 0.7) 100%);
-  --gradient-dark: linear-gradient(180deg, hsl(210 35% 6%) 0%, hsl(210 40% 14%) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(210, 30%, 15%, 0.6) 0%, hsla(210, 35%, 8%, 0.8) 100%);
+  --gradient-ocean: linear-gradient(135deg, hsl(0 35% 15%) 0%, hsl(0 30% 25%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(0 85% 45%) 0%, hsl(0 80% 55%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(0, 30%, 10%, 0.9) 0%, hsla(0, 30%, 20%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(0 30% 8%) 0%, hsl(0 35% 15%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(0, 25%, 18%, 0.6) 0%, hsla(0, 30%, 10%, 0.8) 100%);
   
-  --shadow-gold: 0 10px 40px hsla(210, 80%, 55%, 0.25);
-  --shadow-ocean: 0 20px 60px hsla(210, 40%, 14%, 0.5);
-  --shadow-card: 0 15px 50px hsla(210, 35%, 5%, 0.4);
-  --shadow-glow: 0 0 60px hsla(210, 80%, 55%, 0.15);
+  --shadow-gold: 0 10px 40px hsla(0, 85%, 45%, 0.3);
+  --shadow-ocean: 0 20px 60px hsla(0, 35%, 15%, 0.5);
+  --shadow-card: 0 15px 50px hsla(0, 30%, 8%, 0.4);
+  --shadow-glow: 0 0 60px hsla(0, 85%, 45%, 0.2);
 }
 
 .theme-suica .hero-overlay {
-  background: linear-gradient(180deg, hsla(210, 35%, 8%, 0.85) 0%, hsla(210, 35%, 8%, 0.6) 50%, hsla(210, 35%, 20%, 0.75) 100%);
+  background: linear-gradient(180deg, hsla(0, 30%, 10%, 0.85) 0%, hsla(0, 30%, 10%, 0.6) 50%, hsla(0, 30%, 20%, 0.75) 100%);
 }
 
 .theme-suica .glass-card {
-  background: linear-gradient(145deg, hsla(210, 30%, 15%, 0.6) 0%, hsla(210, 35%, 8%, 0.8) 100%);
+  background: linear-gradient(145deg, hsla(0, 25%, 18%, 0.6) 0%, hsla(0, 30%, 10%, 0.8) 100%);
 }
 
 .theme-suica .text-gradient-gold {
-  background-image: linear-gradient(135deg, hsl(210 80% 55%) 0%, hsl(210 75% 70%) 100%);
+  background-image: linear-gradient(135deg, hsl(0 85% 45%) 0%, hsl(0 80% 60%) 100%);
 }
 
 .theme-suica .btn-luxury {
-  background: hsl(210 80% 55%);
-  box-shadow: 0 10px 40px hsla(210, 80%, 55%, 0.25);
+  background: hsl(0 85% 45%);
+  box-shadow: 0 10px 40px hsla(0, 85%, 45%, 0.3);
 }
 
 .theme-suica .btn-luxury:hover {
-  background: hsl(210 75% 65%);
-  box-shadow: 0 15px 50px hsla(210, 80%, 55%, 0.35);
+  background: hsl(0 80% 55%);
+  box-shadow: 0 15px 50px hsla(0, 85%, 45%, 0.4);
 }
 
 .theme-suica .gold-border-left {
-  border-color: hsl(210 80% 55%);
+  border-color: hsl(0 85% 45%);
 }
 
 .theme-suica .animated-underline::after {
-  background: hsl(210 80% 55%);
+  background: hsl(0 85% 45%);
 }
 
 .theme-suica .stat-number {
-  color: hsl(210 80% 55%);
+  color: hsl(0 85% 45%);
 }
 
 .theme-suica ::-webkit-scrollbar-thumb:hover {
-  background: hsla(210, 80%, 55%, 0.5);
+  background: hsla(0, 85%, 45%, 0.5);
 }
 
 /* ========================================
    Tailândia & Dubai Theme - Royal Purple & Gold
    ======================================== */
 .theme-tailandia {
-  --background: 270 30% 6%;
-  --foreground: 45 20% 95%;
+  /* Bandeira da Tailândia: Vermelho, Branco e Azul Marinho */
+  --background: 220 45% 6%;
+  --foreground: 0 0% 98%;
 
-  --card: 270 25% 10%;
-  --card-foreground: 45 20% 95%;
+  --card: 220 40% 10%;
+  --card-foreground: 0 0% 98%;
 
-  --popover: 270 25% 10%;
-  --popover-foreground: 45 20% 95%;
+  --popover: 220 40% 10%;
+  --popover-foreground: 0 0% 98%;
 
-  --primary: 45 85% 55%;
-  --primary-foreground: 270 30% 8%;
+  --primary: 0 75% 50%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 270 50% 55%;
-  --secondary-foreground: 45 20% 95%;
+  --secondary: 220 70% 40%;
+  --secondary-foreground: 0 0% 98%;
 
-  --muted: 270 20% 15%;
-  --muted-foreground: 270 12% 55%;
+  --muted: 220 25% 15%;
+  --muted-foreground: 220 15% 55%;
 
-  --accent: 270 45% 60%;
-  --accent-foreground: 45 20% 95%;
+  --accent: 0 70% 55%;
+  --accent-foreground: 0 0% 100%;
 
-  --border: 270 18% 20%;
-  --input: 270 18% 20%;
-  --ring: 45 85% 55%;
+  --border: 220 20% 20%;
+  --input: 220 20% 20%;
+  --ring: 0 75% 50%;
 
-  --ocean-deep: 270 35% 12%;
-  --ocean-medium: 270 30% 22%;
-  --turquoise: 270 45% 55%;
-  --gold-champagne: 45 85% 55%;
-  --gold-light: 45 80% 65%;
-  --gold-dark: 45 75% 42%;
-  --navy: 270 32% 14%;
-  --navy-light: 270 26% 22%;
+  --ocean-deep: 220 50% 12%;
+  --ocean-medium: 220 45% 22%;
+  --turquoise: 220 70% 45%;
+  --gold-champagne: 0 75% 50%;
+  --gold-light: 0 70% 60%;
+  --gold-dark: 0 80% 40%;
+  --navy: 220 55% 14%;
+  --navy-light: 220 45% 22%;
 
-  --gradient-ocean: linear-gradient(135deg, hsl(270 35% 12%) 0%, hsl(270 30% 22%) 100%);
-  --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 80% 65%) 100%);
-  --gradient-hero: linear-gradient(180deg, hsla(270, 30%, 8%, 0.9) 0%, hsla(270, 30%, 18%, 0.7) 100%);
-  --gradient-dark: linear-gradient(180deg, hsl(270 30% 6%) 0%, hsl(270 35% 12%) 100%);
-  --gradient-card: linear-gradient(145deg, hsla(270, 25%, 15%, 0.6) 0%, hsla(270, 30%, 8%, 0.8) 100%);
+  --gradient-ocean: linear-gradient(135deg, hsl(220 50% 12%) 0%, hsl(220 45% 22%) 100%);
+  --gradient-gold: linear-gradient(135deg, hsl(0 75% 50%) 0%, hsl(0 70% 60%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsla(220, 45%, 8%, 0.9) 0%, hsla(220, 45%, 18%, 0.7) 100%);
+  --gradient-dark: linear-gradient(180deg, hsl(220 45% 6%) 0%, hsl(220 50% 12%) 100%);
+  --gradient-card: linear-gradient(145deg, hsla(220, 40%, 15%, 0.6) 0%, hsla(220, 45%, 8%, 0.8) 100%);
   
-  --shadow-gold: 0 10px 40px hsla(45, 85%, 55%, 0.25);
-  --shadow-ocean: 0 20px 60px hsla(270, 35%, 12%, 0.5);
-  --shadow-card: 0 15px 50px hsla(270, 30%, 5%, 0.4);
-  --shadow-glow: 0 0 60px hsla(45, 85%, 55%, 0.15);
+  --shadow-gold: 0 10px 40px hsla(0, 75%, 50%, 0.25);
+  --shadow-ocean: 0 20px 60px hsla(220, 50%, 12%, 0.5);
+  --shadow-card: 0 15px 50px hsla(220, 45%, 5%, 0.4);
+  --shadow-glow: 0 0 60px hsla(0, 75%, 50%, 0.15);
 }
 
 .theme-tailandia .hero-overlay {
-  background: linear-gradient(180deg, hsla(270, 30%, 8%, 0.85) 0%, hsla(270, 30%, 8%, 0.6) 50%, hsla(270, 30%, 18%, 0.75) 100%);
+  background: linear-gradient(180deg, hsla(220, 45%, 8%, 0.85) 0%, hsla(220, 45%, 8%, 0.6) 50%, hsla(220, 45%, 18%, 0.75) 100%);
 }
 
 .theme-tailandia .glass-card {
-  background: linear-gradient(145deg, hsla(270, 25%, 15%, 0.6) 0%, hsla(270, 30%, 8%, 0.8) 100%);
+  background: linear-gradient(145deg, hsla(220, 40%, 15%, 0.6) 0%, hsla(220, 45%, 8%, 0.8) 100%);
 }
 
 .theme-tailandia .text-gradient-gold {
-  background-image: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(45 80% 70%) 100%);
+  background-image: linear-gradient(135deg, hsl(0 75% 55%) 0%, hsl(0 70% 65%) 100%);
 }
 
 .theme-tailandia .btn-luxury {
-  background: hsl(45 85% 55%);
-  box-shadow: 0 10px 40px hsla(45, 85%, 55%, 0.25);
+  background: hsl(0 75% 50%);
+  box-shadow: 0 10px 40px hsla(0, 75%, 50%, 0.25);
 }
 
 .theme-tailandia .btn-luxury:hover {
-  background: hsl(45 80% 65%);
-  box-shadow: 0 15px 50px hsla(45, 85%, 55%, 0.35);
+  background: hsl(0 70% 55%);
+  box-shadow: 0 15px 50px hsla(0, 75%, 50%, 0.35);
 }
 
 .theme-tailandia .gold-border-left {
-  border-color: hsl(45 85% 55%);
+  border-color: hsl(0 75% 50%);
 }
 
 .theme-tailandia .animated-underline::after {
-  background: hsl(45 85% 55%);
+  background: hsl(0 75% 50%);
 }
 
 .theme-tailandia .stat-number {
-  color: hsl(45 85% 55%);
+  color: hsl(0 75% 50%);
 }
 
 .theme-tailandia ::-webkit-scrollbar-thumb:hover {
-  background: hsla(45, 85%, 55%, 0.5);
+  background: hsla(0, 75%, 50%, 0.5);
 }
 
 /* ========================================

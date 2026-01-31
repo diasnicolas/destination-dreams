@@ -2,18 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import hotel01 from "@/assets/africa-mauricio/hotel-01.jpeg";
-import hotel02 from "@/assets/africa-mauricio/hotel-02.jpeg";
-import hotel03 from "@/assets/africa-mauricio/hotel-03.jpeg";
-import hotel04 from "@/assets/africa-mauricio/hotel-04.jpeg";
-import hotel05 from "@/assets/africa-mauricio/hotel-05.jpeg";
+import hotel01 from "@/assets/africa-mauricio/Ambre_Mauritius.jpeg";
+import hotel02 from "@/assets/africa-mauricio/Radisson_Blu_Hotel_Joanesburgo.jpeg";
+import hotel03 from "@/assets/africa-mauricio/Val_de_Vine_Guesthouse_Stellenbosch.jpeg";
+import hotel04 from "@/assets/africa-mauricio/Phelwana_Game_Lodge_Hoedspruit.jpeg";
 
 const galleryImages = [
-  { src: hotel01, title: "Johannesburg", category: "Radisson Blu Gautrain" },
-  { src: hotel02, title: "Kruger", category: "Phelwana Game Lodge" },
-  { src: hotel03, title: "Cape Town", category: "The Table Bay Hotel" },
-  { src: hotel04, title: "Stellenbosch", category: "Lanzerac Hotel" },
-  { src: hotel05, title: "Ilhas Maurício", category: "Resort All Inclusive" },
+  { src: hotel01, title: "Maurício", category: "Ambre Mauritius" },
+  { src: hotel02, title: "Joanesburgo", category: "Radisson Blu Hotel" },
+  { src: hotel03, title: "Stellenbosch", category: "Val de Vine Guesthouse" },
+  { src: hotel04, title: "Hoedspruit", category: "Phelwana Game Lodge" }
 ];
 
 export const HotelsPhotoGalleryAM = () => {

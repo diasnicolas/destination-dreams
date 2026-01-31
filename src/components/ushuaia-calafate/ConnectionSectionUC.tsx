@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
+import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck, ExternalLink } from "lucide-react";
 import donoImage from "@/assets/dono.webp";
+import certificadoCadastur from "@/assets/docs/certificado_cadastur.pdf";
+import certificadoAussie from "@/assets/docs/certificado_aussie_specialist.pdf";
 
 const credentials = [
   {
@@ -27,12 +29,14 @@ const certifications = [
     name: "Aussie Travel Specialist",
     issuer: "Governo Australiano",
     description: "Certificação oficial para especialistas em turismo australiano",
+    href: certificadoAussie,
   },
   {
     icon: BadgeCheck,
     name: "Cadastur",
     issuer: "Ministério do Turismo (Brasil)",
     description: "Cadastro oficial de profissionais de turismo",
+    href: certificadoCadastur,
   },
   {
     icon: Globe,
@@ -145,20 +149,45 @@ export const ConnectionSectionUC = () => {
 
             {/* Certifications Grid */}
             <div className="grid grid-cols-2 gap-4 pt-6">
-              {certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className="glass-card p-4 rounded-lg text-center"
-                >
-                  <cert.icon className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <h4 className="font-semibold text-sm text-foreground">{cert.name}</h4>
-                  <p className="text-xs text-muted-foreground">{cert.issuer}</p>
-                </motion.div>
-              ))}
+              {certifications.map((cert, index) => {
+                const CardContent = (
+                  <>
+                    <cert.icon className="w-8 h-8 text-primary mx-auto mb-2" />
+                    <h4 className="font-semibold text-sm text-foreground flex items-center justify-center gap-1">
+                      {cert.name}
+                      {cert.href && <ExternalLink className="w-3 h-3 text-primary" />}
+                    </h4>
+                    <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                  </>
+                );
+
+                return cert.href ? (
+                  <motion.a
+                    key={index}
+                    href={cert.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                    className="glass-card p-4 rounded-lg text-center cursor-pointer hover:scale-105 transition-transform"
+                  >
+                    {CardContent}
+                  </motion.a>
+                ) : (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                    className="glass-card p-4 rounded-lg text-center"
+                  >
+                    {CardContent}
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>

@@ -2,20 +2,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import hotel01 from "@/assets/japao-china/hotel-01.jpeg";
-import hotel02 from "@/assets/japao-china/hotel-02.jpeg";
-import hotel03 from "@/assets/japao-china/hotel-03.jpeg";
-import hotel04 from "@/assets/japao-china/hotel-04.jpeg";
-import hotel05 from "@/assets/japao-china/hotel-05.jpeg";
-import hotel06 from "@/assets/japao-china/hotel-06.webp";
+import hotel01 from "@/assets/japao-china/hyatt_regency_oryx_doha.webp";
+import hotel02 from "@/assets/japao-china/hotel_anterom_kyoto.jpg";
+import hotel03 from "@/assets/japao-china/nikko_nagoya.webp";
+import hotel04 from "@/assets/japao-china/plaza_ana_toyama.jpeg";
+import hotel05 from "@/assets/japao-china/la_vista_fuji_kawaguchilo.jpg";
+import hotel06 from "@/assets/japao-china/Hotel_Metropolitan_Tokyo_Ikebukuro.avif";
+import hotel07 from "@/assets/japao-china/Xinqiao_Hotel.jpg";
+import hotel08 from "@/assets/japao-china/hotel_metropark.jpg";
 
 const galleryImages = [
   { src: hotel01, title: "Doha", category: "Hyatt Regency Oryx" },
   { src: hotel02, title: "Kyoto", category: "Hotel Anteroom" },
   { src: hotel03, title: "Nagoya", category: "Nikko Style" },
-  { src: hotel04, title: "Toyama", category: "Hotel Toyama" },
-  { src: hotel05, title: "Beijing", category: "Hotel Beijing" },
-  { src: hotel06, title: "Shanghai", category: "Hotel Shanghai" },
+  { src: hotel04, title: "Toyama", category: "Crowne Plaza ANA" },
+  { src: hotel05, title: "Fujikawaguchiko", category: "La Vista Fuji Kawaguchik" },
+  { src: hotel06, title: "Tóquio", category: "Hotel Metropolitan Tokyo Ikebukuro" },
+  { src: hotel07, title: "Hangzhou", category: "Xinqiao Hotel" },
+  { src: hotel08, title: "Xangai", category: "Metropark Jichen Hotel Shanghai" },
 ];
 
 export const HotelsPhotoGalleryJC = () => {

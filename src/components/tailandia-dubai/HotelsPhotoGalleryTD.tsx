@@ -2,18 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import hotelBangkok from "@/assets/tailandia-dubai/photo-1566073771259-6a8506099945.jpg";
-import hotelChiangMai from "@/assets/tailandia-dubai/photo-1582719508461-905c673771fd.jpg";
-import hotelKrabi from "@/assets/tailandia-dubai/photo-1551882547-ff40c63fe5fa.jpg";
-import hotelPhuket from "@/assets/tailandia-dubai/photo-1520250497591-112f2f40a3f4.jpg";
-import hotelDubai from "@/assets/tailandia-dubai/photo-1578683010236-d716f9a3f461.jpg";
+import hotelBangkok from "@/assets/tailandia-dubai/EASTIN_GRAND_SATHORN.jpeg";
+import hotelChiangMai from "@/assets/tailandia-dubai/EURANA_BOUTIQUE.jpeg";
+import hotelKrabi from "@/assets/tailandia-dubai/CENTARA_ADA.jpeg";
+import hotelPhuket from "@/assets/tailandia-dubai/THE_NATURE_PHUKET.jpeg";
+import hotelDubai from "@/assets/tailandia-dubai/THE_FIRST_COLLECTION.jpeg";
+import hotelIlhasPhi from "@/assets/tailandia-dubai/PP_PRINCESS.jpeg";
 
 const galleryImages = [
   { src: hotelBangkok, title: "Bangkok", category: "Eastin Grand Sathorn" },
   { src: hotelChiangMai, title: "Chiang Mai", category: "Eurana Boutique" },
-  { src: hotelKrabi, title: "Krabi", category: "Resort Krabi" },
-  { src: hotelPhuket, title: "Phuket", category: "Resort Phuket" },
-  { src: hotelDubai, title: "Dubai", category: "Hotel Dubai" },
+  { src: hotelKrabi, title: "Krabi", category: "Centara Anda Dhevi Resort & Spa Krabi" },
+  { src: hotelPhuket, title: "Phuket", category: "The Nature Phuket" },
+  { src: hotelDubai, title: "Dubai", category: "The First Collection Hotel" },
+  { src: hotelIlhasPhi, title: "Ilhas Phi Phi", category: "PP Princess Resort" },
 ];
 
 export const HotelsPhotoGalleryTD = () => {
@@ -68,7 +70,7 @@ export const HotelsPhotoGalleryTD = () => {
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}

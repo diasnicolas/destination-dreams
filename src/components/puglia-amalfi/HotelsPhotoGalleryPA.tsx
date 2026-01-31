@@ -2,20 +2,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import hotelBari from "@/assets/puglia-amalfi/photo-1566073771259-6a8506099945.jpg";
-import hotelPolignano from "@/assets/puglia-amalfi/photo-1582719508461-905c673771fd.jpg";
-import hotelLecce from "@/assets/puglia-amalfi/photo-1551882547-ff40c63fe5fa.jpg";
-import hotelSorrento from "@/assets/puglia-amalfi/photo-1520250497591-112f2f40a3f4.jpg";
-import hotelPositano from "@/assets/puglia-amalfi/photo-1578683010236-d716f9a3f461.jpg";
-import hotelAmalfi from "@/assets/puglia-amalfi/photo-1564501049412-61c2a3083791.jpg";
+import hotelBari from "@/assets/puglia-amalfi/Jr_Hotels_Oriente_Bari.webp";
+import hotelPolignano from "@/assets/puglia-amalfi/Hotel_Covo_dei_Saraceni.webp";
+import hotelLecce from "@/assets/puglia-amalfi/Patria_Palace_Hotel.webp";
+import hotelSorrento from "@/assets/puglia-amalfi/Grand_Hotel_Europa_Palace.webp";
 
 const galleryImages = [
   { src: hotelBari, title: "Bari", category: "Jr Hotels Oriente" },
-  { src: hotelPolignano, title: "Polignano a Mare", category: "Covo dei Saraceni" },
+  { src: hotelPolignano, title: "Polignano a Mare", category: "Hotel Covo dei Saraceni" },
   { src: hotelLecce, title: "Lecce", category: "Patria Palace Hotel" },
-  { src: hotelSorrento, title: "Sorrento", category: "Grand Hotel" },
-  { src: hotelPositano, title: "Positano", category: "Hotel Costa" },
-  { src: hotelAmalfi, title: "Amalfi", category: "Hotel Amalfi" },
+  { src: hotelSorrento, title: "Sorrento", category: "Grand Hotel Europa Palace" }
 ];
 
 export const HotelsPhotoGalleryPA = () => {

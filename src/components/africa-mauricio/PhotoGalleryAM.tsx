@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
 import photo1516426122078 from "@/assets/africa-mauricio/photo-1516426122078-c23e76319801.jpg";
 import photo1580060839134 from "@/assets/africa-mauricio/photo-1580060839134-75a5edca2e99.jpg";
-import photo1585849834908 from "@/assets/africa-mauricio/photo-1585849834908-3481231155e8.jpg";
+import photo1585849834908 from "@/assets/africa-mauricio/shutterstock_2392677053_11zon.webp";
 import photo1590523741831 from "@/assets/africa-mauricio/photo-1590523741831-ab7e8b8f9c7f.jpg";
 import photo1547471080 from "@/assets/africa-mauricio/photo-1547471080-7cc2caa01a7e.jpg";
 import photo1596005554384 from "@/assets/africa-mauricio/photo-1596005554384-d293674c91d7.jpg";

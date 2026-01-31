@@ -1,13 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight, Plane, MapPin, Phone, Mail, Globe, Anchor, Instagram, Send, Waves } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plane, MapPin, Phone, Mail, Globe, Anchor, Instagram, Send, Waves, Award, Users, Shield, BadgeCheck, Briefcase, Compass, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 import cadasturImage from "@/assets/logoCadastur.png";
 import { SEO } from "@/components/SEO";
 import { seoData } from "@/lib/seoData";
 
 import logoAgencia from "@/assets/logotipo-agencia-index.png";
+import sobreImage from "@/assets/reino-unido/sobre.jpeg";
+import certificadoCadastur from "@/assets/docs/certificado_cadastur.pdf";
+import certificadoAussie from "@/assets/docs/certificado_aussie_specialist.pdf";
 
 // Imagens locais
 import heroCruise from "@/assets/cruzeiro-01/cruzeiro.webp";
@@ -28,11 +31,10 @@ import pugliaPhoto3 from "@/assets/puglia-amalfi/alberobello-trulli.jpg";
 import pugliaPhoto4 from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
 
 // Imagens Suíça-Trem
-import suicaPhoto1 from "@/assets/suica-trem/photo-1530122037265-a5f1f91d3b99.jpg";
-import suicaPhoto2 from "@/assets/suica-trem/photo-1527668752968-14dc70a27c95.jpg";
-import suicaPhoto3 from "@/assets/suica-trem/photo-1506905925346-21bda4d32df4.jpg";
-import suicaPhoto4 from "@/assets/suica-trem/photo-1551632811-561732d1e306.jpg";
-
+import suicaPhoto1 from "@/assets/suica-trem/shutterstock_476862469_11zon.webp";
+import suicaPhoto2 from "@/assets/suica-trem/shutterstock_1730808289_11zon.webp";
+import suicaPhoto3 from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
+import suicaPhoto4 from "@/assets/suica-trem/shutterstock_2393185093_11zon.webp";
 // Imagens Reino Unido
 import reinoPhoto1 from "@/assets/reino-unido/photo-1513635269975-59663e0ac1ad.jpg";
 import reinoPhoto2 from "@/assets/reino-unido/photo-1486299267070-83823f5448dd.jpg";
@@ -93,6 +95,36 @@ import chinaPhoto2 from "@/assets/china/photo-1547981609-4b6bfe67ca0b.jpg";
 import chinaPhoto3 from "@/assets/china/photo-1545893835-abaa50cbe628.jpg";
 import chinaPhoto4 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
 
+// Imagens Galeria de Viagens
+import galeriaImg1 from "@/assets/galeria_viagens/12286D72-6DE5-453E-A706-3AF3737490D2_15_11zon.webp";
+import galeriaImg2 from "@/assets/galeria_viagens/1609B1A4-9E18-4325-9084-542ACA9E538D_4_5005_c_7_11zon.webp";
+import galeriaImg3 from "@/assets/galeria_viagens/4F6889AB-3EC1-4AC7-97AF-9B0BAEB0B969_8_11zon.webp";
+import galeriaImg4 from "@/assets/galeria_viagens/56B38A97-407B-42DD-A85E-13446F17024F_9_11zon.webp";
+import galeriaImg5 from "@/assets/galeria_viagens/6AD7F31D-ADAA-44C5-A9D8-9A8AA4E0C704_1_102_o_10_11zon.webp";
+import galeriaImg6 from "@/assets/galeria_viagens/71F33D35-55D2-46F4-B9B1-B8F315336104_1_105_c_6_11zon.webp";
+import galeriaImg7 from "@/assets/galeria_viagens/740B6B32-B1A4-44A5-9042-983654340F64_4_5005_c_14_11zon.webp";
+import galeriaImg8 from "@/assets/galeria_viagens/7A3FD5B3-2D5D-48FA-B75C-E5403C2D095C_1_105_c_11_11zon.webp";
+import galeriaImg9 from "@/assets/galeria_viagens/7D5CC16A-6D95-4F69-A0FB-AAA648DF9B65_4_5005_c_12_11zon.webp";
+import galeriaImg10 from "@/assets/galeria_viagens/86EA9F8B-8FE2-4D2C-819C-1CE03D013778_1_105_c_13_11zon.webp";
+import galeriaImg11 from "@/assets/galeria_viagens/D96A91AD-967C-4B55-A63A-F50AE56CD486_4_5005_c_16_11zon.webp";
+import galeriaImg12 from "@/assets/galeria_viagens/F338DDA5-246F-4393-A13C-C4241B8E27DB_4_5005_c_17_11zon.webp";
+
+// Array de imagens da galeria
+const galeriaViagens = [
+  { src: galeriaImg1, alt: "Experiência de viagem 1" },
+  { src: galeriaImg2, alt: "Experiência de viagem 2" },
+  { src: galeriaImg3, alt: "Experiência de viagem 3" },
+  { src: galeriaImg4, alt: "Experiência de viagem 4" },
+  { src: galeriaImg5, alt: "Experiência de viagem 5" },
+  { src: galeriaImg6, alt: "Experiência de viagem 6" },
+  { src: galeriaImg7, alt: "Experiência de viagem 7" },
+  { src: galeriaImg8, alt: "Experiência de viagem 8" },
+  { src: galeriaImg9, alt: "Experiência de viagem 9" },
+  { src: galeriaImg10, alt: "Experiência de viagem 10" },
+  { src: galeriaImg11, alt: "Experiência de viagem 11" },
+  { src: galeriaImg12, alt: "Experiência de viagem 12" },
+];
+
 // Dados dos destinos
 const destinations = [
   // Abril de 2026
@@ -101,8 +133,8 @@ const destinations = [
     title: "Japão & China",
     subtitle: "Kyoto → Tóquio → Beijing → Xangai",
     period: "Abril de 2026",
-    //path: "/japao-china-2026",
-    path:"/",
+    path: "/japao-china-2026",
+    //path:"/",
     images: [
       { src: japaoPhoto1, alt: "Templo em Kyoto" },
       { src: japaoPhoto2, alt: "Monte Fuji" },
@@ -116,8 +148,8 @@ const destinations = [
     title: "Puglia & Costa Amalfitana",
     subtitle: "Alberobello → Polignano → Positano → Amalfi",
     period: "Junho de 2026",
-    //path: "/puglia-amalfi-2026",
-    path: "/",
+    path: "/puglia-amalfi-2026",
+    //path: "/",
     images: [
       { src: pugliaPhoto1, alt: "Costa Amalfitana" },
       { src: pugliaPhoto2, alt: "Positano" },
@@ -202,8 +234,8 @@ const destinations = [
     title: "África do Sul & Ilhas Maurício",
     subtitle: "Cape Town → Safári → Ilhas Maurício",
     period: "Outubro de 2026",
-    //path: "/africa-mauricio-2026",
-    path: "/",
+    path: "/africa-mauricio-2026",
+    //path: "/",
     images: [
       { src: africaPhoto1, alt: "Leão no Safári" },
       { src: africaPhoto2, alt: "Elefantes na África" },
@@ -217,8 +249,8 @@ const destinations = [
     title: "Tailândia & Dubai",
     subtitle: "Bangkok → Chiang Mai → Krabi → Dubai",
     period: "Novembro de 2026",
-    //path: "/tailandia-dubai-2026",
-    path: "/",
+    path: "/tailandia-dubai-2026",
+    //path: "/",
     images: [
       { src: tailandiaPhoto1, alt: "Festival das Lanternas" },
       { src: tailandiaPhoto2, alt: "Templos Bangkok" },
@@ -289,8 +321,8 @@ const destinations = [
     title: "China: Maravilhas Culturais",
     subtitle: "Beijing → Xi'an → Hangzhou → Xangai",
     period: "Outubro de 2027",
-    //path: "/china-maravilhas-2027",
-    path: "/",
+    path: "/china-maravilhas-2027",
+    //path: "/",
     images: [
       { src: chinaPhoto1, alt: "Grande Muralha da China" },
       { src: chinaPhoto2, alt: "Cidade Proibida" },
@@ -299,6 +331,340 @@ const destinations = [
     ]
   }
 ];
+
+// Credenciais do CEO
+const credentials = [
+  {
+    icon: Award,
+    text: "8 anos de vivência em Londres — conhece cada rua, cada história, cada segredo",
+  },
+  {
+    icon: MapPin,
+    text: "CEO da WE Travel UK — Empresa sediada no Reino Unido",
+  },
+  {
+    icon: Users,
+    text: "Acompanhamento pessoal do embarque ao retorno — não delega, não terceiriza",
+  },
+  {
+    icon: Shield,
+    text: "Histórico de grupos bem-sucedidos — viajantes satisfeitos e transformados",
+  },
+];
+
+// Certificações
+const certifications = [
+  {
+    icon: Award,
+    name: "Aussie Travel Specialist",
+    issuer: "Governo Australiano",
+    description: "Certificação oficial para especialistas em turismo australiano",
+    href: certificadoAussie,
+  },
+  {
+    icon: BadgeCheck,
+    name: "Cadastur",
+    issuer: "Ministério do Turismo (Brasil)",
+    description: "Cadastro oficial de profissionais de turismo",
+    href: certificadoCadastur,
+  },
+  {
+    icon: Globe,
+    name: "8 Anos em Londres",
+    issuer: "Vivência Autêntica",
+    description: "Conhecimento profundo da cultura e destinos europeus",
+  },
+  {
+    icon: Briefcase,
+    name: "CEO, WE Travel UK",
+    issuer: "Empresa Premium",
+    description: "Especialista em viagens premium para brasileiros",
+  },
+];
+
+// Connection Section Component
+const ConnectionSection = () => {
+  return (
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-ocean-deep via-ocean-medium to-ocean-deep relative overflow-hidden">
+      {/* Decorative ocean elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-turquoise/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-turquoise/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-turquoise/10 to-transparent" />
+
+      {/* Floating compass */}
+      <motion.div
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        className="absolute top-40 right-20 text-turquoise/10 hidden lg:block"
+      >
+        <Compass className="w-24 h-24" />
+      </motion.div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative">
+              {/* Main avatar image */}
+              <div className="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-turquoise/30 shadow-lg shadow-turquoise/20">
+                <img 
+                  src={sobreImage} 
+                  alt="Evandro Mendes" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Floating badges */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+                className="absolute -top-4 -right-4 md:top-4 md:right-0 bg-navy/80 backdrop-blur-sm px-4 py-2 rounded-full border border-turquoise/30"
+              >
+                <span className="text-xs font-semibold text-turquoise">8 Anos em Londres</span>
+              </motion.div>
+              
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+                className="absolute -bottom-4 -left-4 md:bottom-4 md:left-0 bg-navy/80 backdrop-blur-sm px-4 py-2 rounded-full border border-turquoise/30"
+              >
+                <span className="text-xs font-semibold text-turquoise">Cadastur</span>
+              </motion.div>
+
+              <motion.div
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 6, repeat: Infinity }}
+                className="absolute top-1/2 -right-8 md:right-[-60px] bg-navy/80 backdrop-blur-sm px-4 py-2 rounded-full border border-turquoise/30 hidden md:block"
+              >
+                <span className="text-xs font-semibold text-turquoise">CEO WE Travel UK</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Content Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-turquoise font-semibold text-sm tracking-widest uppercase mb-4 block">
+              Quem Guia Sua Jornada
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <span className="text-foreground">Sua jornada é </span>
+              <span className="bg-gradient-to-r from-turquoise to-coral bg-clip-text text-transparent">orquestrada</span>
+            </h2>
+
+            <div className="space-y-4 mb-8 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                <strong className="text-foreground">Evandro Mendes</strong> não é um guia de turismo. 
+                É o CEO da WE Travel UK e <strong className="text-turquoise">viveu 8 anos em Londres</strong>.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Ele explorou cada canto do mundo. Cada destino, cada experiência, cada detalhe.
+                Seus roteiros foram <strong className="text-foreground">pessoalmente criados por quem conhece o que há de melhor</strong>.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Ele acompanha <strong className="text-turquoise">pessoalmente</strong> cada grupo.
+                Ele não delega. Ele não terceiriza. Ele está com você.
+              </p>
+            </div>
+
+            {/* Credentials List */}
+            <div className="space-y-3">
+              {credentials.map((credential, index) => (
+                <motion.div
+                  key={credential.text}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <div className="w-8 h-8 rounded-full bg-turquoise/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <credential.icon className="w-4 h-4 text-turquoise" />
+                  </div>
+                  <span className="text-foreground text-sm leading-relaxed">{credential.text}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Certifications Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto"
+        >
+          {certifications.map((cert, index) => {
+            const CardContent = (
+              <>
+                <div className="w-12 h-12 rounded-full bg-turquoise/10 flex items-center justify-center mx-auto mb-3">
+                  <cert.icon className="w-6 h-6 text-turquoise" />
+                </div>
+                <h4 className="font-display font-bold text-foreground text-sm mb-1 flex items-center justify-center gap-1">
+                  {cert.name}
+                  {cert.href && <ExternalLink className="w-3 h-3 text-turquoise" />}
+                </h4>
+                <p className="text-xs text-turquoise mb-1">{cert.issuer}</p>
+                <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
+              </>
+            );
+
+            return cert.href ? (
+              <motion.a
+                key={cert.name}
+                href={cert.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                className="bg-navy/50 backdrop-blur-sm rounded-xl p-4 text-center border border-turquoise/20 hover:border-turquoise/40 transition-colors cursor-pointer hover:scale-105"
+              >
+                {CardContent}
+              </motion.a>
+            ) : (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                className="bg-navy/50 backdrop-blur-sm rounded-xl p-4 text-center border border-turquoise/20 hover:border-turquoise/40 transition-colors"
+              >
+                {CardContent}
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+// Type for destinations
+type Destination = {
+  id: string;
+  title: string;
+  subtitle: string;
+  period: string;
+  path: string;
+  images: { src: string; alt: string }[];
+};
+
+// Photo Gallery Section Component
+const PhotoGallerySection = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
+  return (
+    <section className="py-20 md:py-32 w-full bg-gradient-to-b from-navy via-ocean-deep to-navy relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-turquoise/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-coral/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="w-full px-4 md:px-8 lg:px-12 relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+            <span className="bg-gradient-to-r from-turquoise to-coral bg-clip-text text-transparent">Galeria</span>
+            <span className="text-foreground"> de Experiências</span>
+          </h2>
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
+            Momentos únicos capturados em nossos destinos ao redor do mundo
+          </p>
+        </motion.div>
+
+        {/* Masonry Grid */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galeriaViagens.map((image, index) => (
+              <motion.div
+                key={`gallery-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                onClick={() => setSelectedImage(image)}
+                className={`relative group overflow-hidden rounded-xl cursor-pointer ${
+                  index % 4 === 0 ? 'row-span-2' : ''
+                }`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+                    index % 4 === 0 ? 'h-[400px] md:h-[500px]' : 'h-[200px] md:h-[240px]'
+                  }`}
+                />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-colors border border-white/20"
+            >
+              <span className="text-white text-2xl font-light">×</span>
+            </button>
+
+            {/* Image container */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-5xl max-h-[90vh] w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[90vh] object-contain rounded-xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+};
 
 // Componente de Card de Destino com Slider
 const DestinationCard = ({ destination }: { destination: typeof destinations[0] }) => {
@@ -494,7 +860,7 @@ const ContactFormSection = ({ destinations }: { destinations: Array<{ id: string
         email: formData.email,
         phone: formData.phone,
         travelers: parseTravelersValue(formData.travelers),
-        destino: formData.interest || "A definir",
+        destiny: formData.interest || "A definir",
         utm_params: Object.keys(cleanedUtmParams).length > 0 ? cleanedUtmParams : undefined
       };
 
@@ -847,6 +1213,9 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* Connection Section - Sobre */}
+      <ConnectionSection />
+
       {/* Destinations Grid */}
       <section className="py-16 md:py-24 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
@@ -871,6 +1240,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Photo Gallery */}
+      <PhotoGallerySection />
 
       {/* Contact Form Section */}
       <ContactFormSection destinations={destinations} />

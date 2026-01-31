@@ -1,6 +1,7 @@
 import { HeroSectionCH } from "@/components/china/HeroSectionCH";
 import { ProblemSectionCH } from "@/components/china/ProblemSectionCH";
 import { JourneySectionCH } from "@/components/china/JourneySectionCH";
+import { FabulousExperienceSectionCH } from "@/components/china/FabulousExperienceSectionCH";
 import { DetailedItineraryCH } from "@/components/china/DetailedItineraryCH";
 import { ExperiencesSectionCH } from "@/components/china/ExperiencesSectionCH";
 import { FAQSectionCH } from "@/components/china/FAQSectionCH";
@@ -24,6 +25,7 @@ const ChinaMaravilhas = () => {
       <ConnectionSectionCH />
       <ProblemSectionCH />
       <JourneySectionCH />
+      <FabulousExperienceSectionCH />
       <DetailedItineraryCH />
       <ExperiencesSectionCH />
       <PhotoGalleryCH />

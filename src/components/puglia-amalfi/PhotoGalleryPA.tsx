@@ -7,13 +7,14 @@ import imgCosta from "@/assets/puglia-amalfi/photo-1516483638261-f4dbaf036963.jp
 import imgPositano from "@/assets/puglia-amalfi/photo-1515859005217-8a1f08870f59.jpg";
 import imgMatera from "@/assets/puglia-amalfi/photo-1498307833015-e7b400441eb8.jpg";
 import imgPolignano from "@/assets/puglia-amalfi/photo-1533587851505-d119e13fa0d7.jpg";
+import imgCapri from "@/assets/puglia-amalfi/shutterstock_2716578937_11zon.webp";
 
 const galleryImages = [
   { src: imgPolignano, title: "Polignano a Mare", category: "Puglia" },
   { src: imgAlberobello, title: "Alberobello Trulli", category: "UNESCO" },
   { src: imgCosta, title: "Costa Amalfitana", category: "Amalfi" },
   { src: imgPositano, title: "Positano", category: "Costa Amalfitana" },
-  { src: imgPositano, title: "Capri", category: "Ilha" },
+  { src: imgCapri, title: "Capri", category: "Ilha" },
   { src: imgMatera, title: "Matera", category: "Cavernas" },
 ];
 

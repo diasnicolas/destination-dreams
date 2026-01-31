@@ -6,7 +6,7 @@ import photo1493976040374 from "@/assets/japao-china/photo-1493976040374-85c8e12
 import photo1490806843957 from "@/assets/japao-china/photo-1490806843957-31f4c9a91c65.jpg";
 import photo1540959733332 from "@/assets/japao-china/photo-1540959733332-eab4deabeeaf.jpg";
 import photo1508804185872 from "@/assets/japao-china/photo-1508804185872-d7badad00f7d.jpg";
-import photo1537519646099 from "@/assets/japao-china/photo-1537519646099-335112f03225.jpg";
+import photo1537519646099 from "@/assets/japao-china/shutterstock_2712346939_11zon.webp";
 import photo1474181487882 from "@/assets/japao-china/photo-1474181487882-5abf3f0ba6c2.jpg";
 
 const galleryImages = [

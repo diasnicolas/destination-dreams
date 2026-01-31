@@ -2,16 +2,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Globe, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
-import image01 from "@/assets/suica-trem/photo-1530122037265-a5f1f91d3b99.jpg";
-import image02 from "@/assets/suica-trem/photo-1527668752968-14dc70a27c95.jpg";
-import image03 from "@/assets/suica-trem/photo-1506905925346-21bda4d32df4.jpg";
-import image04 from "@/assets/suica-trem/photo-1551632811-561732d1e306.jpg";
+import image01 from "@/assets/suica-trem/shutterstock_476862469_11zon.webp";
+import image02 from "@/assets/suica-trem/shutterstock_1730808289_11zon.webp";
+import image03 from "@/assets/suica-trem/shutterstock_2357173307_11zon.webp";
+import image04 from "@/assets/suica-trem/shutterstock_2393185093_11zon.webp";
+import image05 from "@/assets/suica-trem/shutterstock_2470409041_11zon.webp";
 
 const heroImages = [
-  { src: image01, alt: "Matterhorn" },
+  { src: image01, alt: "Trem nos Alpes" },
   { src: image02, alt: "Trem nos Alpes" },
-  { src: image03, alt: "Alpes Suíços" },
-  { src: image04, alt: "Lucerna" }
+  { src: image03, alt: "Trem nos Alpes" },
+  { src: image04, alt: "Trem nos Alpes" },
+  { src: image05, alt: "Trem nos Alpes" },
 ];
 
 const highlights = [

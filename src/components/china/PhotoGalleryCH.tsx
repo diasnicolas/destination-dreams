@@ -2,20 +2,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import photo1508804185872 from "@/assets/china/photo-1508804185872-d7badad00f7d.jpg";
-import photo1537519646099 from "@/assets/china/photo-1537519646099-335112f03225.jpg";
-import photo1591017403286 from "@/assets/china/photo-1591017403286-fd8493524e1e.jpg";
-import photo1524492412937 from "@/assets/china/photo-1524492412937-b28074a5d7da.jpg";
-import photo1513002749550 from "@/assets/china/photo-1513002749550-c59d786b8e6c.jpg";
-import photo1474181487882 from "@/assets/china/photo-1474181487882-5abf3f0ba6c2.jpg";
+import muralhaChinaImage from "@/assets/china/shutterstock_2615728833_11zon.webp";
+import cidadeProibidaImage from "@/assets/china/shutterstock_2712346939_11zon.webp";
+import guerreirosTerracotaImage from "@/assets/china/shutterstock_2316622135_11zon.webp";
+import parqueAvatarImage from "@/assets/china/shutterstock_2687434733_11zon.webp";
+import pandasGigantesImage from "@/assets/china/shutterstock_2539905366_11zon.webp";
+import shangaiSkylineImage from "@/assets/china/shutterstock_1488846827_11zon.webp";
 
 const galleryImages = [
-  { src: photo1508804185872, title: "Grande Muralha da China", category: "Beijing" },
-  { src: photo1537519646099, title: "Cidade Proibida", category: "Beijing" },
-  { src: photo1591017403286, title: "Guerreiros de Terracota", category: "Xian" },
-  { src: photo1524492412937, title: "Zhangjiajie", category: "Parque Avatar" },
-  { src: photo1513002749550, title: "Pandas Gigantes", category: "Chengdu" },
-  { src: photo1474181487882, title: "Shanghai Skyline", category: "Shanghai" },
+  { src: muralhaChinaImage, title: "Grande Muralha da China", category: "Beijing" },
+  { src: cidadeProibidaImage, title: "Cidade Proibida", category: "Beijing" },
+  { src: guerreirosTerracotaImage, title: "Guerreiros de Terracota", category: "Xian" },
+  { src: parqueAvatarImage, title: "Zhangjiajie", category: "Parque Avatar" },
+  { src: pandasGigantesImage, title: "Pandas Gigantes", category: "Chengdu" },
+  { src: shangaiSkylineImage, title: "Shanghai Skyline", category: "Shanghai" },
 ];
 
 export const PhotoGalleryCH = () => {

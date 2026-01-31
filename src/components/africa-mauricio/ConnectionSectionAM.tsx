@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck } from "lucide-react";
+import { Award, MapPin, Users, Shield, Compass, Globe, Briefcase, BadgeCheck, ExternalLink } from "lucide-react";
 import donoImage from "@/assets/dono.webp";
+import certificadoCadastur from "@/assets/docs/certificado_cadastur.pdf";
+import certificadoAussie from "@/assets/docs/certificado_aussie_specialist.pdf";
 
 const credentials = [
   {
@@ -27,12 +29,14 @@ const certifications = [
     name: "Aussie Travel Specialist",
     issuer: "Governo Australiano",
     description: "Certificação oficial para especialistas em turismo australiano",
+    href: certificadoAussie,
   },
   {
     icon: BadgeCheck,
     name: "Cadastur",
     issuer: "Ministério do Turismo (Brasil)",
     description: "Cadastro oficial de profissionais de turismo",
+    href: certificadoCadastur,
   },
   {
     icon: Globe,
@@ -172,23 +176,48 @@ export const ConnectionSectionAM = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto"
         >
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-              className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                <cert.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-display font-bold text-foreground text-sm mb-1">{cert.name}</h4>
-              <p className="text-xs text-primary mb-1">{cert.issuer}</p>
-              <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
-            </motion.div>
-          ))}
+          {certifications.map((cert, index) => {
+            const CardContent = (
+              <>
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <cert.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-display font-bold text-foreground text-sm mb-1 flex items-center justify-center gap-1">
+                  {cert.name}
+                  {cert.href && <ExternalLink className="w-3 h-3 text-primary" />}
+                </h4>
+                <p className="text-xs text-primary mb-1">{cert.issuer}</p>
+                <p className="text-xs text-muted-foreground line-clamp-3">{cert.description}</p>
+              </>
+            );
+
+            return cert.href ? (
+              <motion.a
+                key={cert.name}
+                href={cert.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors cursor-pointer hover:scale-105"
+              >
+                {CardContent}
+              </motion.a>
+            ) : (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                className="glass-card rounded-xl p-4 text-center border border-primary/20 hover:border-primary/40 transition-colors"
+              >
+                {CardContent}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

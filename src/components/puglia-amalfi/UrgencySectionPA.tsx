@@ -28,7 +28,7 @@ export const UrgencySectionPA = () => {
             <p className="text-xl font-bold text-primary">Data: Junho de 2026</p>
           </div>
           <p className="text-xl font-bold text-primary">Você merecia essa transformação.</p>
-          <Button size="lg" onClick={scrollToContact} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">QUERO VIVER A ITÁLIA - AGENDAR CONSULTA</Button>
+          <Button size="lg" onClick={scrollToContact} className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">AGENDAR MINHA CONSULTA PRIVADA AGORA</Button>
         </motion.div>
       </div>
     </section>

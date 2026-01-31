@@ -2,20 +2,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 
-import hotel01 from "@/assets/china/hotel-01.jpeg";
-import hotel02 from "@/assets/china/hotel-02.jpeg";
-import hotel03 from "@/assets/china/hotel-03.jpeg";
-import hotel04 from "@/assets/china/hotel-04.jpeg";
-import hotel05 from "@/assets/china/hotel-05.jpeg";
-import hotel06 from "@/assets/china/hotel-06.webp";
+import hotel01 from "@/assets/china/Midtown_ShangriLa_Hangzhou.webp";
+import hotel02 from "@/assets/china/The_First_Collection_Business_Bay.jpeg";
+import hotel03 from "@/assets/china/Novotel_Beijing_Peace.jpeg";
+import hotel04 from "@/assets/china/Dorsett_Chengdu.jpeg";
+import hotel05 from "@/assets/china/Grand_Noble_Hotel_Xian.jpeg";
+import hotel06 from "@/assets/china/Guilin_Bravo_Hotel.jpeg";
+import hotel07 from "@/assets/china/Central_Hotel_Shanghai.webp";
 
 const galleryImages = [
-  { src: hotel01, title: "Dubai", category: "Hotel Conexão" },
-  { src: hotel02, title: "Beijing", category: "Hotel 5 Estrelas" },
-  { src: hotel03, title: "Xian", category: "Hotel Centro" },
-  { src: hotel04, title: "Chengdu", category: "Hotel Panda" },
-  { src: hotel05, title: "Zhangjiajie", category: "Hotel Montanha" },
-  { src: hotel06, title: "Shanghai", category: "Hotel Bund" },
+  { src: hotel01, title: "Zhangjiajie", category: "Midtown Shangri-La Hangzhou" },
+  { src: hotel02, title: "Dubai", category: "The First Collection Business Bay" },
+  { src: hotel03, title: "Pequin", category: "Novotel Beijing Peace Parking Lot" },
+  { src: hotel04, title: "Chengdu", category: "Dorsett Chengdu" },
+  { src: hotel05, title: "Xian", category: "Grand Noble Hotel Parking Lot" },
+  { src: hotel06, title: "Guilin", category: "Guilin Bravo Hotel" },
+  { src: hotel07, title: "Xangai", category: "Central Hotel Xangai" }
 ];
 
 export const HotelsPhotoGalleryCH = () => {
